@@ -1,9 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
+import Router from "./router/Router";
+import "./styles/styles.scss";
 
 ReactDOM.render(
-  <React.StrictMode></React.StrictMode>,
+  <React.StrictMode>
+    <Router />
+  </React.StrictMode>,
   document.getElementById("root")
 );
 
