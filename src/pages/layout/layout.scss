@@ -1,0 +1,41 @@
+// Setting up grid areas
+@use "../../styles/abstract/variables" as *;
+
+#root {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header"
+    "main";
+  height: 100vh;
+}
+
+header {
+  background-color: $topBarBg;
+  grid-area: header;
+}
+
+main {
+  background-image: url("../../assets/images/monkeBg.jpeg");
+  background-position: center;
+  background-size: cover;
+  grid-area: main;
+}
+
+footer {
+  background-color: $navBg;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+nav {
+  background-color: black;
+}
+
+.contact {
+  width: 65px;
+}
