@@ -2,23 +2,28 @@ import About from "../../assets/images/AboutIcon.svg";
 import Blog from "../../assets/images/BlogIcon.svg";
 import Contact from "../../assets/images/ContactIcon.svg";
 import Projects from "../../assets/images/ProjectsIcon.svg";
+import "./nav.scss";
 
 const Nav = () => {
   return (
     <nav>
       <ul>
-        <li>
-          <img src={About} alt="" />
+        <li className="nav-item">
+          <img className="about-icon" src={About} alt="" />
+          <p className="nav-text">About</p>
         </li>
-        <li>
-          <img className="contact" src={Contact} alt="" />
+        <li className="nav-item">
+          <img className="contact-icon" src={Contact} alt="" />
+          <p className="nav-text">Contact</p>
         </li>
-        <li>
-          <img src={Projects} alt="" />
+        <li className="nav-item">
+          <img className="project-icon" src={Projects} alt="" />
+          <p className="nav-text">Projects</p>
         </li>
-        <li>
+        <li className="nav-item">
           <a href="https://blog.randygulak.com">
-            <img src={Blog} alt="" />
+            <img className="blog-icon" src={Blog} alt="" />
+            <p className="nav-text">Blog</p>
           </a>
         </li>
       </ul>

@@ -8,3 +8,6 @@
 
 @use "./generic/normalize";
 @use "./generic/box-sizing";
+
+// Import Base
+@use "./base/base.scss";

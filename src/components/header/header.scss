@@ -1,0 +1,6 @@
+@use "../../styles/abstract/variables" as *;
+
+header {
+  background-color: $topBarBg;
+  grid-area: header;
+}
