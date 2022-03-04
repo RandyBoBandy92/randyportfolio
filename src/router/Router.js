@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../pages/home/Home";
+import Layout from "../pages/layout/Layout";
 import WorkShop from "../pages/workshop/Workshop";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Layout />} />
       </Routes>
     </BrowserRouter>
   );
