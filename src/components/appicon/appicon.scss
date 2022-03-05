@@ -1,0 +1,7 @@
+@use "../../styles/abstract/variables" as *;
+
+button {
+  background: none;
+  border: none;
+  color: $textPrimary;
+}
