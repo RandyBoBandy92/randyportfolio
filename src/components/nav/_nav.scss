@@ -1,14 +1,7 @@
 @use "../../styles/abstract/variables" as *;
 
 nav {
-  // background-color: rgba(0, 0, 0, 0.733);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  //   need to round the border radius of top left and top right corners
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  margin-bottom: 2rem;
   ul {
     display: flex;
     justify-content: space-evenly;

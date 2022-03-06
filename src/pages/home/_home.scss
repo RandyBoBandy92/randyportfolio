@@ -1,6 +1,8 @@
 #app {
   background-color: black;
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 main {
@@ -9,8 +11,11 @@ main {
 }
 
 .projects {
-  display: flex;
-  flex-wrap: wrap;
   max-width: 90vw;
   margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-auto-flow: row;
+  place-items: center;
+  row-gap: 4rem;
 }
