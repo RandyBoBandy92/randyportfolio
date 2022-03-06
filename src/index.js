@@ -11,7 +11,7 @@ ReactDOM.render(
       <Home />
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.querySelector("body")
 );
 
 // If you want to start measuring performance in your app, pass a function
