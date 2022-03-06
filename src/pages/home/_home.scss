@@ -2,3 +2,15 @@
   background-color: black;
   min-height: 100vh;
 }
+
+main {
+  display: grid;
+  place-items: center;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 90vw;
+  margin: auto;
+}
