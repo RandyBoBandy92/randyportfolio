@@ -1,0 +1,22 @@
+@use "../../styles/abstract/variables" as *;
+
+button {
+  background-color: white;
+  position: relative;
+  border: none;
+  color: $textPrimary;
+  height: 50px;
+  width: 50px;
+}
+
+.icon-img {
+  object-fit: cover;
+}
+
+.icon-text {
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $textPrimary;
+}

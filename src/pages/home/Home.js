@@ -4,7 +4,7 @@ import AppIcon from "../../components/appicon/AppIcon";
 import appsData from "../../utilities/appsData";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import "./home.scss";
+import "./_home.scss";
 
 const Home = () => {
   //   const [activeApps, setActiveApps] = useState([]);
@@ -15,10 +15,14 @@ const Home = () => {
   //     setActiveApps(appsToLaunch);
   //   }, [searchParams]);
   return (
-    <div id="root">
+    <div id="app">
       <Header />
-      <main style={{ backgroundColor: "#000000" }}>
-        <AppIcon appData={appsData.about} />
+      <main>
+        <section className="projects">
+          {Object.values(appsData.projects).map((app) => (
+            <AppIcon key={app.id} appData={app} />
+          ))}
+        </section>
       </main>
       <Footer />
     </div>
