@@ -7,8 +7,8 @@ const Header = () => {
 
   return (
     <header>
-      <img src={Logo} alt="Randy Gulak Portfolio Logo" />
-      <p>10:55AM</p>
+      <img className="logo" src={Logo} alt="Randy Gulak Portfolio Logo" />
+      <p className="clock">10:55AM</p>
     </header>
   );
 };

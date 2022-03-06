@@ -1,6 +1,13 @@
 @use "../../styles/abstract/variables" as *;
 
-header {
-  background-color: $topBarBg;
-  grid-area: header;
+#root header {
+  color: $textPrimary;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 1rem;
+}
+
+.clock {
+  align-self: center;
+  justify-self: center;
 }
