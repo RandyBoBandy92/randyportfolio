@@ -1,15 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-<<<<<<< HEAD
 import { BrowserRouter } from "react-router-dom";
 import Home from "./pages/home/Home";
 import reportWebVitals from "./reportWebVitals";
 import "./styles/styles.scss";
-=======
-import "./index.scss";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
->>>>>>> 9d18d3674753a8e3fb425f01254d2b2fa7acae83
 
 ReactDOM.render(
   <React.StrictMode>
