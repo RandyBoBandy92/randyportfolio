@@ -1,9 +1,9 @@
 import Nav from "../nav/Nav";
 import "./_footer.scss";
-const Footer = () => {
+const Footer = ({ launchApp }) => {
   return (
     <footer>
-      <Nav />
+      <Nav launchApp={launchApp} />
     </footer>
   );
 };

@@ -1,0 +1,11 @@
+// .app-window needs to be position absolute and take up the entire screen, high z-index. But it needs to show the header
+
+.app-window {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: white;
+}

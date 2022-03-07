@@ -1,6 +1,7 @@
 @use "../../styles/abstract/variables" as *;
 
-button {
+button.icon,
+a.icon {
   background-color: white;
   position: relative;
   border: none;
