@@ -25,7 +25,7 @@ const appsData = {
       title: "Contact",
       icon: contactIcon,
       component: (
-        <AppWindow>
+        <AppWindow key={"contact"}>
           <Contact />
         </AppWindow>
       ),

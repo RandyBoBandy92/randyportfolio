@@ -13,17 +13,10 @@ const Home = () => {
   // need a add component
   const launchApp = (appData) => {
     // Update the URL to reflect the appId
-    // only add the appId if it's not already in the URL
-    const appIsNotActive =
-      activeApps.every((app) => app !== appData.component) &&
-      searchParams.getAll("app").every((app) => app !== appData.id);
-    if (appIsNotActive) {
-      const newSearchParams = [...searchParams.getAll("app"), appData.id];
-      console.log(newSearchParams);
-      setSearchParams({ app: newSearchParams });
-      // Update the activeApps with the component from the appData
-      setActiveApps([...activeApps, appData.component]);
-    }
+    // Todo - this is a temporary solution, don't allow the same app to be launched twice
+    const newSearchParams = [...searchParams.getAll("app"), appData.id];
+    console.log(newSearchParams);
+    setSearchParams({ app: newSearchParams });
   };
 
   // need a delete component
@@ -33,9 +26,24 @@ const Home = () => {
       .getAll("app")
       .filter((app) => app !== appData.id);
     setSearchParams({ app: newSearchParams });
-    // Update the activeApps to remove the component from the appData
-    setActiveApps(activeApps.filter((app) => app !== appData.component));
   };
+
+  // rather than settingActiveApps within the launchApp and closeApp functions,
+  // we can use useEffect to update the activeApps state
+  useEffect(() => {
+    // Update the activeApps state with the components from the appsData
+    // because of how i wrote my data structure... I think I have to do some funky operations
+    // to end up with a single filtered array of components
+    const projects = Object.values(appsData.projects);
+    const navigation = Object.values(appsData.navigation);
+    const allApps = [...projects, ...navigation];
+    const filteredApps = allApps.filter((app) =>
+      searchParams.getAll("app").includes(app.id)
+    );
+    const appComponents = filteredApps.map((app) => app.component);
+
+    setActiveApps(appComponents);
+  }, [searchParams]);
 
   return (
     <div id="app">
