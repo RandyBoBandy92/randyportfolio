@@ -32,10 +32,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   h2 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   h3 {
     font-size: 0.9rem;
     justify-self: end;
+    text-align: right;
   }
 }
