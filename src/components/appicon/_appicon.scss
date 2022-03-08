@@ -5,7 +5,6 @@ a.icon {
   background-color: white;
   position: relative;
   border: none;
-  color: $textPrimary;
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -28,7 +27,6 @@ a.icon {
   bottom: -2rem;
   left: 50%;
   transform: translateX(-50%);
-  color: $textPrimary;
   white-space: nowrap;
 }
 

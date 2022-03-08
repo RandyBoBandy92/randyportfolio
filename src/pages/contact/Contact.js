@@ -29,7 +29,6 @@ const Contact = () => {
         <p>(no spam pls.)</p>
         <img className="contact-background" src={logoWhite} alt="" />
       </div>
-      <AppMenu />
     </>
   );
 };

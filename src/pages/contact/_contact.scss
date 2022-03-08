@@ -7,7 +7,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: $textPrimary;
   position: relative;
   .contact-background {
     position: absolute;
@@ -30,11 +29,9 @@
       background-color: $windowMainSecondaryBg;
       border-radius: 10px;
       padding: 0.4rem;
-      color: $textPrimary;
     }
   }
   .email-link a {
     font-size: 1.5rem;
-    color: white;
   }
 }

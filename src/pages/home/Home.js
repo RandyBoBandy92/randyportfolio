@@ -2,6 +2,7 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import AppIcon from "../../components/appicon/AppIcon";
 import appsData from "../../utilities/appsData";
+import AppWindow from "../appWindow/AppWindow";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import "./_home.scss";
@@ -41,10 +42,15 @@ const Home = () => {
     const appsToShow = [];
     for (let index = 0; index < searchParams.getAll("app").length; index++) {
       const app = searchParams.getAll("app")[index];
-      appsToShow.push(allApps.find((appData) => appData.id === app));
+      const appData = allApps.find((appData) => appData.id === app);
+      appsToShow.push(
+        <AppWindow appData={appData} key={app}>
+          {appData.component}
+        </AppWindow>
+      );
     }
 
-    setActiveApps(appsToShow.map((app) => app.component));
+    setActiveApps(appsToShow);
   }, [searchParams]);
 
   return (

@@ -24,11 +24,7 @@ const appsData = {
       external: false,
       title: "Contact",
       icon: contactIcon,
-      component: (
-        <AppWindow key={"contact"}>
-          <Contact />
-        </AppWindow>
-      ),
+      component: <Contact />,
     },
     blog: {
       id: "blog",
