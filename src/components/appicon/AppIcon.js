@@ -4,7 +4,7 @@ const AppIcon = ({ appData, launchApp }) => {
   if (appData.external) {
     return (
       <a
-        className={`icon ${appData.id}`}
+        className={`icon icon-${appData.id}`}
         href={appData.hyperlink}
         target="_blank"
         rel="noreferrer noopener"
@@ -15,7 +15,10 @@ const AppIcon = ({ appData, launchApp }) => {
     );
   }
   return (
-    <button onClick={() => launchApp(appData)} className={`icon ${appData.id}`}>
+    <button
+      onClick={() => launchApp(appData)}
+      className={`icon icon-${appData.id}`}
+    >
       <img className="icon-img" src={appData.icon} alt="" />
       <p className="icon-text">{appData.title}</p>
     </button>

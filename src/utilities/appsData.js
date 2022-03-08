@@ -8,8 +8,8 @@ import rayBikeIcon from "../assets/images/icons/raybikesupreme.png";
 import bdmiIcon from "../assets/images/icons/bdmi.svg";
 import iChingIcon from "../assets/images/icons/Iching-hexagram-56new.svg";
 import logoIcon from "../assets/images/logo/black/favicon-32x32.png";
-import AppWindow from "../pages/appWindow/AppWindow";
 import Contact from "../pages/contact/Contact";
+import About from "../pages/about/About";
 
 const appsData = {
   navigation: {
@@ -18,6 +18,7 @@ const appsData = {
       external: false,
       title: "About",
       icon: aboutIcon,
+      component: <About />,
     },
     contact: {
       id: "contact",

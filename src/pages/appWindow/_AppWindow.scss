@@ -11,4 +11,17 @@
   background-color: $windowMainBg;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  .app-header {
+    background-color: $topBarBg;
+    display: grid;
+    place-items: center;
+    font-size: 0.8rem;
+    padding: 0.2rem;
+  }
+  .app-content {
+    overflow: scroll;
+  }
+  .app-footer {
+    width: 100%;
+  }
 }

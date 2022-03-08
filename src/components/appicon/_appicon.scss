@@ -32,14 +32,14 @@ a.icon {
 
 // Ray Bike Icon Styles
 
-.ray-bike-supreme .icon-text {
+.icon-ray-bike-supreme .icon-text {
   bottom: -3rem;
   white-space: normal;
 }
 
 // bDMI Icon Styles
 
-.bDMI .icon-img {
+.icon-bDMI .icon-img {
   // need to change the svg background color to #ff840b
   filter: invert(60%) sepia(27%) saturate(4303%) hue-rotate(352deg)
     brightness(99%) contrast(104%);
@@ -47,14 +47,14 @@ a.icon {
 
 // Contact Icon Styles
 
-.contact .icon-img {
+.icon-contact .icon-img {
   filter: invert(12%) sepia(97%) saturate(7060%) hue-rotate(238deg)
     brightness(97%) contrast(90%);
 }
 
 // Blog Icon Styles
 
-.blog .icon-img {
+.icon-blog .icon-img {
   filter: invert(51%) sepia(18%) saturate(1394%) hue-rotate(68deg)
     brightness(95%) contrast(87%);
   stroke-width: 1rem;

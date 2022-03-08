@@ -1,0 +1,50 @@
+import "./_about.scss";
+import profilePic from "../../assets/images/profilePic.jpeg";
+import linkedIn from "../../assets/images/icons/linkedin.svg";
+import gitHub from "../../assets/images/icons/github.svg";
+
+const About = () => {
+  return (
+    <>
+      <div className="about">
+        <img className="profile-pic" src={profilePic} alt="" />
+        <div className="social-icons">
+          <img src={linkedIn} alt="" className="social-icon" />
+          <img src={gitHub} alt="" className="social-icon" />
+        </div>
+        <div className="about-content">
+          <div className="about-item device-name">
+            <h2>Device Name</h2>
+            <h3>Randy Gulak</h3>
+          </div>
+          <div className="about-item memory-type">
+            <h2>Memory Type</h2>
+            <h3>Random Access Memory</h3>
+          </div>
+          <div className="about-item processor">
+            <h2>Processor</h2>
+            <h3>Caffeine Overclocked</h3>
+          </div>
+          <div className="about-item built-pc">
+            <h2>Built First PC</h2>
+            <h3>Age 7</h3>
+          </div>
+          <div className="about-item broke-pc">
+            <h2>Broke First PC</h2>
+            <h3>Age 7.001</h3>
+          </div>
+          <div className="about-item hobbies">
+            <h2>Hobbies</h2>
+            <h3>Hiking, Reading, Tai Chi, Travel, VR</h3>
+          </div>
+          <div className="about-item languages">
+            <h2>Languages</h2>
+            <h3>English, Spanish, HTML, CSS, JavaScript, Python</h3>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default About;
