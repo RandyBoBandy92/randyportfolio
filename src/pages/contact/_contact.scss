@@ -1,3 +1,5 @@
+@use "../../styles/abstract/variables" as *;
+
 .contact {
   height: 100%;
   width: 100%;
@@ -5,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: $textPrimary;
   position: relative;
   .contact-background {
     position: absolute;
@@ -17,6 +19,18 @@
   .copy-email {
     width: 35px;
     fill: white;
+    position: relative;
+    &.active::before {
+      position: absolute;
+      top: -2.7rem;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "Copied!";
+      background-color: $windowMainSecondaryBg;
+      border-radius: 10px;
+      padding: 0.4rem;
+      color: $textPrimary;
+    }
   }
   .email-link a {
     font-size: 1.8rem;
