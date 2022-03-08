@@ -11,6 +11,7 @@ import logoIcon from "../assets/images/logo/black/favicon-32x32.png";
 // Import components
 import Contact from "../pages/contact/Contact";
 import About from "../pages/about/About";
+import Post from "../components/post/Post";
 
 const appsData = {
   navigation: {
@@ -73,6 +74,7 @@ const appsData = {
       icon: iChingIcon,
       liveLink: "https://randybobandy92.github.io/ReactIChing/",
       gitHubLink: "https://github.com/RandyBoBandy92/ReactIChing",
+      component: <Post postName={"iChingReact"} />,
     },
     portfolio: {
       id: "portfolio",

@@ -1,11 +1,3 @@
----
-title: I-Ching in React
-date: 2021-06-03
-tags:
-  - projects
-  - react
----
-
 I have been fascinated by divinatory systems for many years now. The system I am best acquainted with is the I-Ching (pronounced Yi-Jing); the book of changes.
 
 While I was learning React, I thought I would try to create a SPA (single page application) based on that divination system. I've built an application similar to this in Python before, so I already had a vague idea of how I wanted to approach things.
