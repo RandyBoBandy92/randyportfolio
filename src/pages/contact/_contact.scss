@@ -20,6 +20,7 @@
     width: 35px;
     fill: white;
     position: relative;
+    cursor: pointer;
     &.active::before {
       position: absolute;
       top: -2.7rem;
@@ -33,7 +34,7 @@
     }
   }
   .email-link a {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: white;
   }
 }
