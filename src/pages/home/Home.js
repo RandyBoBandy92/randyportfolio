@@ -7,6 +7,8 @@ import { useSearchParams } from "react-router-dom";
 import "./_home.scss";
 
 const Home = () => {
+  // searchParams and activeApps work together to determine which apps are active
+  //
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeApps, setActiveApps] = useState([]);
 
@@ -28,8 +30,6 @@ const Home = () => {
     setSearchParams({ app: newSearchParams });
   };
 
-  // rather than settingActiveApps within the launchApp and closeApp functions,
-  // we can use useEffect to update the activeApps state
   useEffect(() => {
     // Update the activeApps state with the components from the appsData
     // because of how i wrote my data structure... I think I have to do some funky operations
@@ -37,12 +37,14 @@ const Home = () => {
     const projects = Object.values(appsData.projects);
     const navigation = Object.values(appsData.navigation);
     const allApps = [...projects, ...navigation];
-    const filteredApps = allApps.filter((app) =>
-      searchParams.getAll("app").includes(app.id)
-    );
-    const appComponents = filteredApps.map((app) => app.component);
+    // now I do a for loop over the searchParams to see which apps are active
+    const appsToShow = [];
+    for (let index = 0; index < searchParams.getAll("app").length; index++) {
+      const app = searchParams.getAll("app")[index];
+      appsToShow.push(allApps.find((appData) => appData.id === app));
+    }
 
-    setActiveApps(appComponents);
+    setActiveApps(appsToShow.map((app) => app.component));
   }, [searchParams]);
 
   return (
