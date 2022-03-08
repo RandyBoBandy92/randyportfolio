@@ -8,6 +8,7 @@ import rayBikeIcon from "../assets/images/icons/raybikesupreme.png";
 import bdmiIcon from "../assets/images/icons/bdmi.svg";
 import iChingIcon from "../assets/images/icons/Iching-hexagram-56new.svg";
 import logoIcon from "../assets/images/logo/black/favicon-32x32.png";
+// Import components
 import Contact from "../pages/contact/Contact";
 import About from "../pages/about/About";
 
@@ -54,18 +55,24 @@ const appsData = {
       external: false,
       title: "Ray Bike Supreme",
       icon: rayBikeIcon,
+      liveLink: "https://www.randygulak.com/RayBikeSupreme/",
+      gitHubLink: "",
     },
     bDMI: {
       id: "bDMI",
       external: false,
       title: "bDMI",
       icon: bdmiIcon,
+      liveLink: "https://www.randygulak.com/bdmi/",
+      gitHubLink: "https://github.com/RandyBoBandy92/moviedatabase",
     },
     iChing: {
       id: "i-ching",
       external: false,
       title: "I-Ching",
       icon: iChingIcon,
+      liveLink: "https://randybobandy92.github.io/ReactIChing/",
+      gitHubLink: "https://github.com/RandyBoBandy92/ReactIChing",
     },
     portfolio: {
       id: "portfolio",

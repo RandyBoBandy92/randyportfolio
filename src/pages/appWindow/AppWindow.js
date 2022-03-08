@@ -9,7 +9,7 @@ const appWindow = ({ appData, children }) => {
       </section>
       <section className="app-content">{children}</section>
       <section className="app-footer">
-        <AppMenu />
+        <AppMenu liveLink={appData.liveLink} gitHubLink={appData.gitHubLink} />
       </section>
     </div>
   );

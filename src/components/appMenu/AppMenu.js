@@ -17,7 +17,7 @@ const AppMenu = ({ liveLink = "", gitHubLink = "" }) => {
           <p>Back</p>
         </li>
         {gitHubLink && (
-          <li className="app-menu-icon">
+          <li className="app-menu-icon github-link">
             <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
               <img src={gitHubIcon} alt="" />
               <p>Code</p>
@@ -25,7 +25,7 @@ const AppMenu = ({ liveLink = "", gitHubLink = "" }) => {
           </li>
         )}
         {liveLink && (
-          <li className="app-menu-icon">
+          <li className="app-menu-icon live-site-link">
             <a href={liveLink} target="_blank" rel="noopener noreferrer">
               <img src={openIcon} alt="" />
               <p>View</p>

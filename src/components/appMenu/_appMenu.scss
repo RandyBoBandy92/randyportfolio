@@ -18,4 +18,10 @@
         brightness(114%) contrast(108%);
     }
   }
+  .github-link {
+    grid-column-start: 2;
+  }
+  .live-site-link {
+    grid-column-start: 3;
+  }
 }
