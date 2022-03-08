@@ -1,5 +1,6 @@
 import Markdown from "markdown-to-jsx";
 import { useEffect, useState } from "react";
+import Code from "../code/Code";
 
 const Post = ({ postName }) => {
   const [postContent, setPostContent] = useState("");
@@ -14,7 +15,17 @@ const Post = ({ postName }) => {
 
   return (
     <div className="post">
-      <Markdown>{postContent}</Markdown>
+      <Markdown
+        options={{
+          overrides: {
+            code: {
+              component: Code,
+            },
+          },
+        }}
+      >
+        {postContent}
+      </Markdown>
     </div>
   );
 };

@@ -127,7 +127,7 @@ basically it does this
 
 This is the render function for that component, you can read thru the comments to get an idea of what's going on.
 
-```js
+```jsx
 
  render() {
     function getUpdatedDisplayProperty(hexagram) {
@@ -196,7 +196,7 @@ But in short, the app does the following:
 
 I'll include the render function here, if you want more information I have a more detailed breakdown [here](https://publish.obsidian.md/randybobandy/App+Component)
 
-```js
+```jsx
   render() {
     const lineComponents = this.state.lines.map((line) => (
 	// so we map over the line data from state and convert it
@@ -245,7 +245,7 @@ Contextual button rendering & Modifying title
 
 The JSON data is extracted, and wrapped in appropriate HTML tags.
 
-```js
+```jsx
 return (
   <div>
     {renderHexTitle(hexType)}
