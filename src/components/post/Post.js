@@ -1,9 +1,13 @@
 import Markdown from "markdown-to-jsx";
 import { useEffect, useState } from "react";
+import appsData from "../../utilities/appsData";
+import AppIcon from "../appicon/AppIcon";
 import Code from "../code/Code";
+import "./_post.scss";
 
-const Post = ({ postName }) => {
+const Post = ({ appId, postName }) => {
   const [postContent, setPostContent] = useState("");
+  const appData = appsData.projects[appId];
   useEffect(() => {
     import(`../../assets/markdown/${postName}.md`).then((post) => {
       fetch(post.default)
@@ -15,6 +19,10 @@ const Post = ({ postName }) => {
 
   return (
     <div className="post">
+      <div className="app-info">
+        <h2>App Info</h2>
+        <AppIcon appData={appData} />
+      </div>
       <Markdown
         options={{
           overrides: {

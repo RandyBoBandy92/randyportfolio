@@ -74,7 +74,7 @@ const appsData = {
       icon: iChingIcon,
       liveLink: "https://randybobandy92.github.io/ReactIChing/",
       gitHubLink: "https://github.com/RandyBoBandy92/ReactIChing",
-      component: <Post postName={"iChingReact"} />,
+      component: <Post appId="iChing" postName={"iChingReact"} />,
     },
     portfolio: {
       id: "portfolio",
