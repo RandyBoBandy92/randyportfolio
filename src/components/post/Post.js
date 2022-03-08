@@ -19,9 +19,18 @@ const Post = ({ appId, postName }) => {
 
   return (
     <div className="post">
-      <div className="app-info">
+      <div className="app-info-header">
         <h2>App Info</h2>
         <AppIcon appData={appData} />
+      </div>
+      <div className="app-info tech">
+        <h3>Tech Stack</h3>
+        <ul>
+          <li>HTML 5</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+        </ul>
       </div>
       <Markdown
         options={{
