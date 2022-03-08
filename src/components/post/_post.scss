@@ -1,0 +1,16 @@
+.post {
+  .app-info-header {
+    margin-bottom: 2rem;
+    .icon-text {
+      bottom: unset;
+      top: 50%;
+      right: -7rem;
+      transform: translateY(-50%);
+    }
+  }
+  .app-content {
+    & > * {
+      margin-bottom: 1rem;
+    }
+  }
+}
