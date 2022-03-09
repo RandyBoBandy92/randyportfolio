@@ -14,7 +14,12 @@ const Code = ({ children, className }) => {
   // i need to run a split on the className prop to get the language
   const language = className ? className.split("lang-")[1] : "";
   return (
-    <SyntaxHighlighter language={language} style={materialDark}>
+    <SyntaxHighlighter
+      showLineNumbers
+      wrapLongLines
+      language={language}
+      style={materialDark}
+    >
       {children}
     </SyntaxHighlighter>
   );

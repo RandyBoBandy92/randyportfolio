@@ -7,6 +7,7 @@ The repo is available here: [GitHub - RandyBoBandy92/ReactIChing](https://github
 If you want to try the application yourself, it is hosted here: [React I-Ching](https://randybobandy92.github.io/ReactIChing/)
 
 Before I get into the review, here is a visual demo of what the application does
+
 ![](https://i.imgur.com/tbw31zx.gif)
 
 I've never really done a post-mortem on one of my earlier projects before, and given that reading code is much harder than writing code, I thought this would be a useful exercise.
@@ -89,7 +90,6 @@ example:
 "Wu": "The Originator is primordial, pervasive, prosperous and persevering."
 
 },
-...
 ```
 
 # The App itself
