@@ -58,6 +58,7 @@ const appsData = {
       icon: rayBikeIcon,
       liveLink: "https://www.randygulak.com/RayBikeSupreme/",
       gitHubLink: "",
+      component: <Post appId="rayBikeSupreme" postName={"rayBikeSupreme"} />,
     },
     bDMI: {
       id: "bDMI",
