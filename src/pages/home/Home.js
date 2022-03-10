@@ -6,6 +6,7 @@ import AppWindow from "../appWindow/AppWindow";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import "./_home.scss";
+import monkeBg from "../../assets/images/monkeBg.jpeg";
 
 const Home = () => {
   // searchParams and activeApps work together to determine which apps are active
@@ -54,7 +55,7 @@ const Home = () => {
   }, [searchParams]);
 
   return (
-    <div id="app">
+    <div id="app" style={{ backgroundImage: `url(${monkeBg})` }}>
       <Header />
       <main>
         <section className="projects">

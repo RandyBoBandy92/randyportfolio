@@ -3,6 +3,8 @@
   min-height: 100vh;
   display: grid;
   grid-template-rows: 1fr auto;
+  background-position: center;
+  background-size: cover;
   main {
     padding-top: 2rem;
   }
