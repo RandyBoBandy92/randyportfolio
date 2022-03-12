@@ -158,23 +158,23 @@ I had never used the canvas API before, so I had a lot of experimenting to do.
 ```
 
 Things began rather humbly...
-![[square 1.webp]]
+![square 1](square 1.webp)
 
 I followed the [MDN Canvas Breakout Tutorial](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) to wrap my head around the canvas API.
 
-![[breakout.webp]]
+![breakout](breakout.webp)
 
 I figured out how to draw a grid, and got some basic movement and controls implemented.
 
-![[basics.webp]]
+![basics](basics.webp)
 
 I imported my bike images, and got basic line drawing complete. i also created "debug" hit boxes to help me understand the collision detection as I worked out how to implement it.
 
-![[basics2.webp]]
+![basics2](basics2.webp)
 
 Working through the collision detection algorithm was without a doubt the biggest challenge of the entire project. 
 
-![[notes.png.jpg]]
+![notes](notes.jpg)
 
 Each players `move()` method would calculate it's potential next position of x y coordinates, and then runs a `checkBounds(newX, newY)` method as well as a `checkObstacles(newX, newY)` method. If after both methods the players isAlive property remains true, the player moves; otherwise the `die()` method is called.
 
@@ -328,11 +328,11 @@ Checking for obstacles however took me several weeks of iterative improvements b
 
 I ended up something I was happy with
 
-![[final-edge-detection.webp]]
+![final-edge-detection](final-edge-detection.webp)
 
 With the primary gameplay loop complete, I added some quality of life components to improve the main menu, like keyboard navigation, a custom modal with a short tutorial inside, an option to turn on game audio to be compliant with not having auto play music on page load, and custom notifications for when players are added.
 
-![[main-menu 2.webp]]
+![main-menu 2](main-menu-2.webp)
 
 # Summary
 I am particularly proud of this project because of how little I knew when I started, and how much I was able to learn in a few short weeks. I learned a lot, enjoyed the process and also found the end result rather fun to play!

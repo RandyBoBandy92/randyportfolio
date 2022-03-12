@@ -16,7 +16,7 @@ const AppIcon = ({ appData, launchApp }) => {
   }
   return (
     <button
-      onClick={() => launchApp(appData)}
+      onClick={launchApp ? () => launchApp(appData) : null}
       className={`icon icon-${appData.id}`}
     >
       <img className="icon-img" src={appData.icon} alt="" />

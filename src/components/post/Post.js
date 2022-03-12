@@ -5,16 +5,28 @@ import AppIcon from "../appicon/AppIcon";
 import Code from "../code/Code";
 import "./_post.scss";
 
+const Img = (props) => {
+  return (
+    <img
+      className="post__img"
+      src={`${process.env.PUBLIC_URL}/markdown/${props.postName}/${props.src}`}
+      alt={props.alt}
+    />
+  );
+};
+
 const Post = ({ appId, postName }) => {
   const [postContent, setPostContent] = useState("");
   const appData = appsData.projects[appId];
   useEffect(() => {
-    import(`../../assets/markdown/${postName}.md`).then((post) => {
-      fetch(post.default)
-        .then((response) => response.text())
-        .then((text) => setPostContent(text))
-        .catch((error) => console.log(error));
-    });
+    import(`../../../public/markdown/${postName}/${postName}.md`).then(
+      (post) => {
+        fetch(post.default)
+          .then((response) => response.text())
+          .then((text) => setPostContent(text))
+          .catch((error) => console.log(error));
+      }
+    );
   }, []);
 
   return (
@@ -30,6 +42,10 @@ const Post = ({ appId, postName }) => {
           overrides: {
             code: {
               component: Code,
+            },
+            img: {
+              component: Img,
+              props: { postName: postName },
             },
           },
         }}
