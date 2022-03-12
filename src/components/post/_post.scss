@@ -20,5 +20,18 @@
     img {
       max-width: 100%;
     }
+    ul {
+      list-style-type: disc;
+      padding-left: 1rem;
+    }
+  }
+  // Styling inner Code component
+  pre.inline-code {
+    display: inline-block;
+    margin: 0 !important;
+    padding: 0 !important;
+    .linenumber {
+      display: none !important;
+    }
   }
 }
