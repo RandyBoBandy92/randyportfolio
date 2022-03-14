@@ -326,7 +326,7 @@ Checking for obstacles however took me several weeks of iterative improvements b
   };
 ```
 
-I ended up something I was happy with
+I ended up with something I was happy with.
 
 ![final-edge-detection](final-edge-detection.webp)
 

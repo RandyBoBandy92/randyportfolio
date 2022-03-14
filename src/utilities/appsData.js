@@ -67,6 +67,7 @@ const appsData = {
       icon: bdmiIcon,
       liveLink: "https://www.randygulak.com/bdmi/",
       gitHubLink: "https://github.com/RandyBoBandy92/moviedatabase",
+      component: <Post appId="bDMI" postName={"bdmi"} />,
     },
     iChing: {
       id: "i-ching",

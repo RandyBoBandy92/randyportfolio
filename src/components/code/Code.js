@@ -17,7 +17,6 @@ const Code = ({ children, className }) => {
     <SyntaxHighlighter
       showLineNumbers
       className={className ? className : "inline-code"}
-      wrapLongLines
       language={language}
       style={materialDark}
     >

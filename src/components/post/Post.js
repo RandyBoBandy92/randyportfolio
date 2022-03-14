@@ -8,7 +8,7 @@ import "./_post.scss";
 const Img = (props) => {
   return (
     <img
-      className="post__img"
+      className="post-img"
       src={`${process.env.PUBLIC_URL}/markdown/${props.postName}/${props.src}`}
       alt={props.alt}
     />

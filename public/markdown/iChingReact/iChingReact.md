@@ -96,7 +96,7 @@ example:
 
 ### IChingData.js
 
-Can't say I used a lot of best practice when I built this thing. Nothing is compartmentalized, and I created a massive javascript object in `iChingData.js` which I import into `App.js` to track state.
+Can't say I used a lot of best practice when I built this thing. Nothing is compartmentalized, and I created a massive javascript object in iChingData.js which I import into App.js to track state.
 
 File structure looks something like this.
 
@@ -292,15 +292,14 @@ Being a little more serious, I think this was a really good challenge for me! Du
 possible combinations! Coming up with functions to resolve those possibiltiies without writing endless
 lines of code really forced me to think logically about the problem. I enjoyed the challenge. I may return to this project at some
 later date. But if I do, I think I will rewrite it from scratch.
-
+<div class="video-container">
 <iframe
-  width="560"
-  height="315"
   src="https://www.youtube.com/embed/2Ls4n_13QQI"
   title="YouTube video player"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
 ></iframe>
+</div>
 
 _when your code still gets the job done_
