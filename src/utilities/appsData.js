@@ -50,6 +50,8 @@ const appsData = {
       external: false,
       title: "Fetch",
       icon: fetchIcon,
+      liveLink: "https://fetch.bcitwebdeveloper.ca/",
+      gitHubLink: "",
     },
     rayBikeSupreme: {
       id: "ray-bike-supreme",
@@ -57,7 +59,7 @@ const appsData = {
       title: "Ray Bike Supreme",
       icon: rayBikeIcon,
       liveLink: "https://www.randygulak.com/RayBikeSupreme/",
-      gitHubLink: "",
+      gitHubLink: "https://github.com/RandyBoBandy92/RayBikeSupreme",
       component: <Post appId="rayBikeSupreme" postName={"rayBikeSupreme"} />,
     },
     bDMI: {
@@ -83,6 +85,8 @@ const appsData = {
       external: false,
       title: "Portfolio",
       icon: logoIcon,
+      liveLink: "https://www.randygulak.com/",
+      gitHubLink: "https://github.com/RandyBoBandy92/randyportfolio",
     },
   },
 };
