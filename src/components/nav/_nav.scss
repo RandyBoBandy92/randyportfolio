@@ -1,7 +1,7 @@
 @use "../../styles/abstract/variables" as *;
 
 nav {
-  max-width: 650px;
+  max-width: $mobileMenuWidth;
   margin: 0 auto 2rem auto;
   ul {
     display: grid;

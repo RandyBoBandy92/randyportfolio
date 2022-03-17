@@ -1,6 +1,9 @@
+@use "../../styles/abstract/variables" as *;
 .app-menu {
   padding-top: 0.5rem;
   height: 4.5rem;
+  max-width: $mobileMenuWidth;
+  margin: 0 auto;
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
