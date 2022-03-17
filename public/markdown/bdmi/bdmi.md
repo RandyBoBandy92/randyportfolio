@@ -1,7 +1,7 @@
 ![the main menu of better data movie interface project](bdmi-menu.webp)
 
 # Project Overview
-A front end for users to query the [The Movie Database]("https://www.themoviedb.org/") API, and save favorite movies.
+A front end for users to query the [The Movie Database](https://www.themoviedb.org/) API, and save favorite movies.
 
 ## Requirements
 
@@ -23,7 +23,7 @@ A front end for users to query the [The Movie Database]("https://www.themoviedb.
 
 ## Design
 
-The project was developed in collaboration with [Ciaran McGuigan]("https://github.com/CiaranMcGuigan") and our final design ended up a mixture of our two prototypes we originally created separately.
+The project was developed in collaboration with [Ciaran McGuigan](https://github.com/CiaranMcGuigan) and our final design ended up a mixture of our two prototypes we originally created separately.
 
 <figure>
 ![my original desktop prototype](prototype-desktop.PNG)
