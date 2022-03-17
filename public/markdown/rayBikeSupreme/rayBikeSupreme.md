@@ -158,6 +158,7 @@ I had never used the canvas API before, so I had a lot of experimenting to do.
 ```
 
 Things began rather humbly...
+
 ![square 1](square-1.webp)
 
 I followed the [MDN Canvas Breakout Tutorial](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) to wrap my head around the canvas API.
