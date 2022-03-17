@@ -3,7 +3,7 @@
 $headerBg: #272727;
 
 $topBarBg: #3b3b3b;
-$navBg: black;
+$navBg: rgba(46, 46, 46, 0.609);
 
 $windowHeadingBg: #363636;
 $windowMainBg: #303030;
@@ -22,3 +22,5 @@ $link-hover: #41d3ff;
 $mobileMenuWidth: 40.625rem;
 
 $desktopBreakpoint: 53.125rem;
+
+$navBorderRadius: 18px;
