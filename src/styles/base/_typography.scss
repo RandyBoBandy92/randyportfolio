@@ -7,6 +7,14 @@ p {
   line-height: 1.5rem;
 }
 
+figcaption {
+  margin-left: 0.5rem;
+  color: $textPrimary;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 1rem;
+}
+
 h1,
 h2,
 h3,
