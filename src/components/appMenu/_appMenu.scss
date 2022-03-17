@@ -1,19 +1,25 @@
 .app-menu {
   padding-top: 0.5rem;
+  height: 4.5rem;
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
+    height: 100%;
   }
-  .app-menu-icon {
+  a {
+    text-decoration: none;
+  }
+  .app-menu-icon,
+  .app-menu-icon a {
     display: flex;
-    justify-content: center;
+    height: 100%;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     cursor: pointer;
     img {
       width: 30px;
-      margin-bottom: 0.3rem;
       filter: invert(100%) sepia(14%) saturate(1742%) hue-rotate(85deg)
         brightness(114%) contrast(108%);
     }

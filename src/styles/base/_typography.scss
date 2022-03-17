@@ -28,8 +28,12 @@ h6 {
 }
 
 a {
-  color: $textPrimary;
+  color: $link;
   font-family: "Open Sans", sans-serif;
+  // text-decoration: none;
+  &:hover {
+    color: $link-hover;
+  }
 }
 
 ul,
