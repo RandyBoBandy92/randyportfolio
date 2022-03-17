@@ -3,7 +3,7 @@
 # Project Overview
 A front end for users to query the [The Movie Database]("https://www.themoviedb.org/") API, and save favorite movies.
 
-# Requirements
+## Requirements
 
 - User can add/remove Favorites
 - Persistent saving of user's favorites
@@ -21,7 +21,7 @@ A front end for users to query the [The Movie Database]("https://www.themoviedb.
   - Upcoming
 - Ability to search for movies by title 
 
-# Design
+## Design
 
 The project was developed in collaboration with [Ciaran McGuigan]("https://github.com/CiaranMcGuigan") and our final design ended up a mixture of our two prototypes we originally created separately.
 
@@ -37,7 +37,7 @@ The project was developed in collaboration with [Ciaran McGuigan]("https://githu
 
 We selected react-router to handle all the... routing, as well as bootstrap for icons, and slick to create swipe-able menus with movie image thumbnails.
 
-# Development
+## Development
 
 We began with a simple workshop component, and wrote a quick test to make sure the slick gallery was working, and the API was returning data.
 
@@ -45,7 +45,7 @@ We began with a simple workshop component, and wrote a quick test to make sure t
 
 This project is somewhat large, so I'll highlight a few challenges we encountered during the development process, and how we overcame them.
 
-## Reducing image sizes
+### Reducing image sizes
 
 We had some difficulties figuring out how to request the right sized images in order to lower the bandwidth requirements but still maintain good image quality.
 
@@ -70,7 +70,7 @@ src={`${URL_IMAGE}w185/${data.poster_path}`} />
 
 This lowered the file size of each image from megabytes to kilobytes, which greatly improved load times.
 
-## Minor Fixes
+### Minor Fixes
 
 There were a number of minor issues, including movie date formats arriving in an initially difficult to use format, the need to retrieve random values from indexed movies, as well as preventing movies with missing data from being displayed on the front end.
 
@@ -109,7 +109,7 @@ const sanitizeVideoData = (videos) => {
 export { ... }
 ```
 
-## Minimalistic Mobile Navigation
+### Minimalistic Mobile Navigation
 
 Since there were only 3 static pages (Home, Favourites, About) we elected to use a simple nav. In retrospect it would have been better if we could have found a way to display some text indicating where each link went, but I am still happy with the design.
 
@@ -150,13 +150,13 @@ This project was my first large project with SASS, and I made the cardinal sin o
 
 ~~There were worse examples~~ This was definitely the worst one.
 
-## Recommending Movies
+### Recommending Movies
 
 One of our goals was to mimic a low tech implementation of recommending movies based on what the user had favourited. After digging through the API documentation we found an interface that supported this. So we selected a random favourite if the user had one, then used that to recommend additional content.
 
 ![Recommended movies based on the users favourites being displayed](recommendation.PNG)
 
-## Engage the Cage
+### Engage the Cage
 
 But by and large the biggest problem with the site, **was the lack of Nicolas Cage movies.**
 
@@ -184,6 +184,6 @@ This would refresh the page, and load over 100+ Nic Cage movies on the home scre
 
 ![Hundreds of Nicolas Cage movies being rendered on the home page](cage-mode.webp)
 
-# Summary
+## Summary
 
 Collaborating on the visual aesthetic of the site was probably the highlight of the project, ending up with a final project that surpassed both of our prototypes was very satisfying. This was also my first real implementation of React Context, and I found it considerably more straight forward compared to redux. I came away from this project with a stronger understanding of how to work with API's, and of how to effectively use utility functions throughout the project to get more done and better leverage existing code. 

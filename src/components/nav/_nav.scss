@@ -1,11 +1,12 @@
 @use "../../styles/abstract/variables" as *;
 
 nav {
-  margin-bottom: 2rem;
+  max-width: $mobileMenuWidth;
+  margin: 0 auto 2rem auto;
   ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 1rem 0;
   }
 }

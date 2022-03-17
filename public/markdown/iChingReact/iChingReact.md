@@ -52,7 +52,7 @@ now for the src folder
 
 Interesting stuff is in the `/src/` folder, so let's go there next.
 
-# Dekorne Text
+## Dekorne Text
 
 The app contains text sourced from several translations of the I-Ching, compiled by [James Dekorne](http://www.jamesdekorne.com/GBCh/GBCh.htm)
 
@@ -92,7 +92,7 @@ example:
 },
 ```
 
-# The App itself
+## The App itself
 
 ### IChingData.js
 
@@ -287,11 +287,12 @@ even if your code is **hot garbage** it can still do cool shit.
 
 Being a little more serious, I think this was a really good challenge for me! Due to the various combinations of yin/yang and changing yin/yang lines, this app can display
 
-# 4096
+## 4096
 
 possible combinations! Coming up with functions to resolve those possibiltiies without writing endless
 lines of code really forced me to think logically about the problem. I enjoyed the challenge. I may return to this project at some
 later date. But if I do, I think I will rewrite it from scratch.
+
 <div class="video-container">
 <iframe
   src="https://www.youtube.com/embed/2Ls4n_13QQI"

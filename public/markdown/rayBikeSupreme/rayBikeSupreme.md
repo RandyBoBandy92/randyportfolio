@@ -2,7 +2,7 @@
 # Project Overview
 A tron inspired 2d arcade game, written in vanilla JavaScript via the canvas API.
 
-# Requirements
+## Requirements
 - 2 Player game
 - Multiple rounds
 - Players can enter their name and select a bike color
@@ -12,24 +12,24 @@ A tron inspired 2d arcade game, written in vanilla JavaScript via the canvas API
 - Game will have end credits
 - How to Play / Help Section
 
-# Design
+## Design
 Design proceeded through several stages:
-## 1. High level game description & Design statement
+### 1. High level game description & Design statement
 
 Ray Bike Supreme is a fast paced and action packed thrill ride set in a cyberpunk future where players duke it out on their hover-cycles in the metaverse. Two players at a time battle in an arena, leaving deadly energy walls trailing behind their hover-cycles; which if hit are a one hit K.O.! Players collect shield power ups, use boosts, and avoid obstacles while battling in either single matches or tournament mode. With 3 difficulty modes, and randomly generated obstacles, Ray Bike Supreme has a lot of replayability!
 
-## 2. Play by Play description of the user experience
+### 2. Play by Play description of the user experience
 
-### Start up
+#### Start up
 -   when the game first start-up to the start screen the player will input their name and click to select the difficulty level and match type
 -   A wicked sick guitar rift will also play during start-up and the title will have cool animations
 -   each player will input their name
 -   once two player have joined, they can click the start game button
 
-### Bike Selection
+#### Bike Selection
 -   Next, the hover-bike selection screen appears where each player selects their hover-bike
 
-### Gameplay!
+#### Gameplay!
 -   the game screen launches
 -   The grid and hover-bike for both player appears on screen. the grid-size growing or shrinking depending on the difficulty level selected, as well as rendering obstacles. a HUD displays each player count of shield powerups and amount of boost
 -   There are also help and quit buttons
@@ -38,7 +38,7 @@ Ray Bike Supreme is a fast paced and action packed thrill ride set in a cyberpun
 -   if a player hitting a obstacles or energy-wall the round is over. Best 2 out of 3 round determines the winner and goes to the game over screen
 -   from there player can play again or quit
 
-## 3. Distilling play by play into "ingredients":
+### 3. Distilling play by play into "ingredients":
 1. DOM Elements (visible elements)
 - div.game-container
  - div.start-screen
@@ -123,7 +123,7 @@ Ray Bike Supreme is a fast paced and action packed thrill ride set in a cyberpun
 	  - checkCollectPowerUp()
 		
 
-# Development
+## Development
 I typically begin my projects by constructing a "Workbench" where I can quickly prototype small components of code while I improve my understanding of the underlying API/Libraries I will be using. 
 
 A single html file with a style tag, a script tag and some html allows me to control logic, content and presentation without jumping around into different files.
@@ -158,6 +158,7 @@ I had never used the canvas API before, so I had a lot of experimenting to do.
 ```
 
 Things began rather humbly...
+
 ![square 1](square-1.webp)
 
 I followed the [MDN Canvas Breakout Tutorial](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) to wrap my head around the canvas API.
@@ -334,5 +335,5 @@ With the primary gameplay loop complete, I added some quality of life components
 
 ![main-menu 2](main-menu-2.webp)
 
-# Summary
+## Summary
 I am particularly proud of this project because of how little I knew when I started, and how much I was able to learn in a few short weeks. I learned a lot, enjoyed the process and also found the end result rather fun to play!

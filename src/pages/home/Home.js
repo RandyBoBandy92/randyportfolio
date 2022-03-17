@@ -10,15 +10,16 @@ import monkeBg from "../../assets/images/monkeBg.jpeg";
 
 const Home = () => {
   // searchParams and activeApps work together to determine which apps are active
-  //
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeApps, setActiveApps] = useState([]);
 
-  // need a add component
   const launchApp = (appData) => {
     // Update the URL to reflect the appId
-    // Todo - this is a temporary solution, don't allow the same app to be launched twice
-    const newSearchParams = [...searchParams.getAll("app"), appData.id];
+    const filteredSearchParams = searchParams
+      .getAll("app")
+      .filter((app) => app !== appData.id);
+    // By filtering out the appId, we can ensure that the app is not launched twice
+    const newSearchParams = [...filteredSearchParams, appData.id];
     console.log(newSearchParams);
     setSearchParams({ app: newSearchParams });
   };

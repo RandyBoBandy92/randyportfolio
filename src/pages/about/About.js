@@ -9,8 +9,30 @@ const About = () => {
       <div className="about">
         <img className="profile-pic" src={profilePic} alt="" />
         <div className="social-icons">
-          <img src={linkedIn} alt="" className="social-icon" />
-          <img src={gitHub} alt="" className="social-icon" />
+          <a
+            href="https://www.linkedin.com/in/ryangulak/"
+            className="social-link"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <img
+              src={linkedIn}
+              alt="LinkedIn | Randy Gulak"
+              className="social-icon"
+            />
+          </a>
+          <a
+            href="https://github.com/RandyBoBandy92"
+            className="social-link"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <img
+              src={gitHub}
+              alt="GitHub | RandyBoBandy92"
+              className="social-icon"
+            />
+          </a>
         </div>
         <div className="about-content">
           <div className="about-item device-name">

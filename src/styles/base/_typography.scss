@@ -7,6 +7,14 @@ p {
   line-height: 1.5rem;
 }
 
+figcaption {
+  margin-left: 0.5rem;
+  color: $textPrimary;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 1rem;
+}
+
 h1,
 h2,
 h3,
@@ -20,13 +28,17 @@ h6 {
 }
 
 a {
-  color: $textPrimary;
+  color: $link;
   font-family: "Open Sans", sans-serif;
+  // text-decoration: none;
+  &:hover {
+    color: $link-hover;
+  }
 }
 
 ul,
 ol {
   font-family: "Open Sans", sans-serif;
   color: $textPrimary;
-  line-height: 1.3rem;
+  line-height: 1.5rem;
 }

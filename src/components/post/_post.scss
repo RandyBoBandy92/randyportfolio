@@ -1,4 +1,5 @@
 .post {
+  padding: 1rem;
   .app-info-header {
     margin-bottom: 2rem;
     .icon-text {
@@ -25,6 +26,9 @@
       padding-left: 1rem;
     }
   }
+  pre {
+    padding: 0 !important;
+  }
   // Styling inner Code component
   pre.inline-code {
     // the library i am using to create a syntax highlighter is styling inline,
@@ -32,6 +36,7 @@
     display: inline-block;
     margin: 0 !important;
     padding: 0 !important;
+    overflow: unset !important;
     .linenumber {
       display: none !important;
     }
