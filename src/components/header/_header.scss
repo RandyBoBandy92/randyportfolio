@@ -1,4 +1,5 @@
 @use "../../styles/abstract/variables" as *;
+@use "../../styles/abstract/mixins" as *;
 
 #root header {
   position: fixed;
@@ -8,6 +9,9 @@
   z-index: 10000000;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  @include mqMin($desktopBreakpoint) {
+    background-color: $headerBg;
+  }
 }
 
 .clock {
