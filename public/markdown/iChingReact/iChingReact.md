@@ -292,6 +292,7 @@ Being a little more serious, I think this was a really good challenge for me! Du
 possible combinations! Coming up with functions to resolve those possibiltiies without writing endless
 lines of code really forced me to think logically about the problem. I enjoyed the challenge. I may return to this project at some
 later date. But if I do, I think I will rewrite it from scratch.
+
 <div class="video-container">
 <iframe
   src="https://www.youtube.com/embed/2Ls4n_13QQI"
