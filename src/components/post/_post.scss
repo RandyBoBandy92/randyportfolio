@@ -1,4 +1,5 @@
 .post {
+  padding: 1rem;
   .app-info-header {
     margin-bottom: 2rem;
     .icon-text {
@@ -24,6 +25,9 @@
       list-style-type: disc;
       padding-left: 1rem;
     }
+  }
+  pre {
+    padding: 0 !important;
   }
   // Styling inner Code component
   pre.inline-code {
