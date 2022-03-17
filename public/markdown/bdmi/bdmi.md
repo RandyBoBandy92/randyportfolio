@@ -185,3 +185,5 @@ This would refresh the page, and load over 100+ Nic Cage movies on the home scre
 ![Hundreds of Nicolas Cage movies being rendered on the home page](cage-mode.webp)
 
 # Summary
+
+Collaborating on the visual aesthetic of the site was probably the highlight of the project, ending up with a final project that surpassed both of our prototypes was very satisfying. This was also my first real implementation of React Context, and I found it considerably more straight forward compared to redux. I came away from this project with a stronger understanding of how to work with API's, and of how to effectively use utility functions throughout the project to get more done and better leverage existing code. 
