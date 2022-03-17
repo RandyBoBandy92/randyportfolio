@@ -2,12 +2,12 @@
   background-color: black;
   min-height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
-main {
-  display: grid;
-  place-items: center;
+  grid-template-rows: 1fr auto;
+  background-position: center;
+  background-size: cover;
+  main {
+    padding-top: 2rem;
+  }
 }
 
 .projects {
@@ -17,5 +17,5 @@ main {
   grid-template-columns: auto auto auto auto;
   grid-auto-flow: row;
   place-items: center;
-  row-gap: 4rem;
+  row-gap: 2rem;
 }

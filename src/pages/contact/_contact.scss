@@ -1,0 +1,38 @@
+@use "../../styles/abstract/variables" as *;
+
+.contact {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .contact-background {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    max-width: 450px;
+    filter: opacity(0.2);
+  }
+  .copy-email {
+    width: 35px;
+    fill: white;
+    position: relative;
+    cursor: pointer;
+    &.active::before {
+      position: absolute;
+      top: -2.7rem;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "Copied!";
+      color: $textPrimary;
+      background-color: $windowMainSecondaryBg;
+      border-radius: 10px;
+      padding: 0.4rem;
+    }
+  }
+  .email-link a {
+    font-size: 1.5rem;
+  }
+}
