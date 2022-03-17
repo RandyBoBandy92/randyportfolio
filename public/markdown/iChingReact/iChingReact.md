@@ -116,7 +116,7 @@ an "X" in the middle means a changing yin
 
 an "O" in the middle means a changing yang
 
-Because the I-Ching can yield a "transformed" result depending on the outcome, and because I didn't plan very well, each line ended up being two images. If there are no values that create a "transformed" result, then the second image stays hidden.
+Because the I-Ching can yield a "transformed" result depending on the outcome, each line ended up being two images. If there are no values that create a "transformed" result, then the second image stays hidden.
 
 ![iChingTransformedHex](iChingTransformedHex.gif)
 
@@ -164,7 +164,7 @@ This is the render function for that component, you can read thru the comments t
       <div className={`line line-${this.props.line.lineNum}`}>
         <img
           className="primary-hexagram"
-          ref={this.autoClick} // no idea what this is for anymore... Lol
+          ref={this.autoClick} // this was a debug utility 
           src={this.props.line.image} // state also tells the image what source to use
           style={this.primaryStyles}
           // this style value does not change, but I wanted it to be consistent..
@@ -201,7 +201,7 @@ I'll include the render function here, if you want more information I have a mor
     const lineComponents = this.state.lines.map((line) => (
 	// so we map over the line data from state and convert it
 	// into Line components
-	// yes.. i did forget ID. shaaaame.
+	// yes.. i did forget a key. shaaaame.
       <Line
         line={line}
         handleLineClick={this.handleLineClick}
