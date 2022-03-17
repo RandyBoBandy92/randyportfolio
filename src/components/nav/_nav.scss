@@ -39,7 +39,10 @@ nav li {
       display: grid;
       grid-template-columns: unset;
       grid-template-rows: 1fr 1fr 1fr 1fr;
-      padding: 0 0.5rem 2rem 0;
+      padding: 0.5rem 0.5rem 0 0.5rem;
+      li:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
     }
   }
 }

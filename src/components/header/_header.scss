@@ -11,6 +11,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   @include mqMin($desktopBreakpoint) {
     background-color: $headerBg;
+    .logo {
+      margin-left: 1rem;
+    }
   }
 }
 
