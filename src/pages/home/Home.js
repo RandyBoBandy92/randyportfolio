@@ -20,7 +20,6 @@ const Home = () => {
       .filter((app) => app !== appData.id);
     // By filtering out the appId, we can ensure that the app is not launched twice
     const newSearchParams = [...filteredSearchParams, appData.id];
-    console.log(newSearchParams);
     setSearchParams({ app: newSearchParams });
   };
 

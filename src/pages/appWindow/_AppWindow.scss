@@ -1,5 +1,5 @@
-// .app-window needs to be position absolute and take up the entire screen, high z-index. But it needs to show the header
-@use "../../styles//abstract/variables" as *;
+@use "../../styles/abstract/variables" as *;
+@use "../../styles/abstract/mixins" as *;
 
 .app-window {
   position: fixed;
@@ -23,5 +23,24 @@
   }
   .app-footer {
     width: 100%;
+  }
+}
+
+// Desktop Window Styles
+@include mqMin($desktopBreakpoint) {
+  .app-window {
+    position: absolute;
+    left: 20%;
+    top: 4rem;
+    bottom: unset;
+    right: unset;
+    height: 780px;
+    width: 720px;
+    .app-header {
+      cursor: move;
+      h2 {
+        cursor: default;
+      }
+    }
   }
 }

@@ -1,18 +1,97 @@
+import { useEffect, useRef, useState } from "react";
 import AppMenu from "../../components/appMenu/AppMenu";
 import "./_AppWindow.scss";
 
-const appWindow = ({ appData, children }) => {
+const AppWindow = ({ appData, children }) => {
+  const [draggable, setDraggable] = useState(false);
+  const [dragging, setDragging] = useState(false);
+  const appWindowRef = useRef(null);
+  const [positionDiff, setPositionDiff] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    if (window.innerWidth < 850) {
+      setDraggable(false);
+    } else if (window.innerWidth > 850) {
+      setDraggable(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 850) {
+        setDraggable(false);
+        // remove all inline styles on the appWindow
+        appWindowRef.current.removeAttribute("style");
+      } else if (window.innerWidth > 850) {
+        setDraggable(true);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const dragStart = (e) => {
+    if (!draggable) {
+      return;
+    }
+    e.preventDefault();
+    // e.screenX and screenY represent where the mouse is on the screen
+    // i use the ref to get the position of the appWindow
+    const { left, top } = appWindowRef.current.getBoundingClientRect();
+    // i use the mouse position relative to the appWindow to get the offset
+    // but i calculate the right instead of left
+    // because the appWindow is positioned right
+    const offsetX = e.screenX - left;
+    const offsetY = e.screenY - top;
+    setPositionDiff({ x: offsetX, y: offsetY });
+
+    console.log(e.screenX, e.screenY);
+    setDragging(true);
+  };
+
+  const dragEnd = () => {
+    if (!draggable) {
+      return;
+    }
+    setDragging(false);
+  };
+
+  const handleDrag = (e) => {
+    if (!draggable) {
+      return;
+    }
+    if (dragging) {
+      const left = e.screenX - positionDiff.x;
+      const top = e.screenY - positionDiff.y;
+      appWindowRef.current.style.left = `${left}px`;
+      appWindowRef.current.style.top = `${top}px`;
+    }
+  };
+  console.log(appWindowRef.current);
   return (
-    <div className="app-window">
-      <section className="app-header">
-        <h2>{appData.title}</h2>
-      </section>
-      <section className="app-content">{children}</section>
-      <section className="app-footer">
-        <AppMenu liveLink={appData.liveLink} gitHubLink={appData.gitHubLink} />
-      </section>
-    </div>
+    <>
+      <div className="app-window" ref={appWindowRef}>
+        <section
+          onMouseMove={handleDrag}
+          onMouseDown={dragStart}
+          onMouseUp={dragEnd}
+          className="app-header"
+        >
+          <h2>{appData.title}</h2>
+        </section>
+        <section className="app-content">{children}</section>
+        <section className="app-footer">
+          <AppMenu
+            liveLink={appData.liveLink}
+            gitHubLink={appData.gitHubLink}
+          />
+        </section>
+      </div>
+    </>
   );
 };
 
-export default appWindow;
+export default AppWindow;
