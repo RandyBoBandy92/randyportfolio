@@ -22,7 +22,8 @@
     }
   }
   .app-content {
-    overflow: scroll;
+    overflow-y: scroll;
+    // scrollbar-width: none;
   }
   .app-footer {
     width: 100%;
