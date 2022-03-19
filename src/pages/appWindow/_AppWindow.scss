@@ -65,10 +65,12 @@
 }
 
 @include mqMin($desktopWideBreakpoint) {
+  .app-window {
+    top: 14rem;
+  }
   .app-window:not(#about):not(#contact) {
     height: 800px;
     width: 900px;
-    top: 14rem;
   }
 }
 
