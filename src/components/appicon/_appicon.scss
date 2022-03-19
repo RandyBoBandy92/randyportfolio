@@ -64,24 +64,29 @@ a.icon {
 // Desktop Icon Styles
 
 @include mqMin($desktopBreakpoint) {
-  button.icon,
-  a.icon {
-    background-color: unset;
-    height: 80px;
-    width: 80px;
-    border-radius: $iconBorderRadiusDesktop;
-  }
+  // This alters the icons on the projects section
+  // as well as the nav
+  // icons displayed in posts are not affected
 
-  .icon-img {
-    height: 50px;
-    width: 50px;
+  nav,
+  .projects {
+    button.icon,
+    a.icon {
+      height: 80px;
+      width: 80px;
+      background-color: unset;
+      border-radius: $iconBorderRadiusDesktop;
+    }
+
+    .icon-img {
+      height: 50px;
+      width: 50px;
+    }
   }
-  // Nav Specific Icon Styles
 
   nav {
     button.icon,
     a.icon {
-      background-color: unset;
       height: 80px;
       width: 80px;
       margin: 0;
