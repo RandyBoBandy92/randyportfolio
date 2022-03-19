@@ -42,6 +42,11 @@ const Home = () => {
   }, [searchParams]);
 
   const launchApp = (appData) => {
+    // if the app is already active, focus it
+    if (activeApps.find((app) => app.props.appData.id === appData.id)) {
+      focusApp(appData.id);
+    }
+
     // Update the URL to reflect the appId
     const filteredSearchParams = searchParams
       .getAll("app")

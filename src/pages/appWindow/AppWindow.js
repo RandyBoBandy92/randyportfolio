@@ -120,6 +120,7 @@ const AppWindow = ({ closeApp, focusApp, appData, children }) => {
           <AppMenu
             liveLink={appData.liveLink}
             gitHubLink={appData.gitHubLink}
+            gitHubEmbedLink={appData.gitHubEmbedLink}
           />
         </section>
       </div>
