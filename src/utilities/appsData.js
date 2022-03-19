@@ -60,6 +60,7 @@ const appsData = {
       icon: rayBikeIcon,
       liveLink: "https://www.randygulak.com/RayBikeSupreme/",
       gitHubLink: "https://github.com/RandyBoBandy92/RayBikeSupreme",
+      gitHubEmbedLink: "https://github1s.com/RandyBoBandy92/RayBikeSupreme",
       component: <Post appId="rayBikeSupreme" postName={"rayBikeSupreme"} />,
     },
     bDMI: {
@@ -69,6 +70,7 @@ const appsData = {
       icon: bdmiIcon,
       liveLink: "https://www.randygulak.com/bdmi/",
       gitHubLink: "https://github.com/RandyBoBandy92/moviedatabase",
+      gitHubEmbedLink: "https://github1s.com/RandyBoBandy92/moviedatabase",
       component: <Post appId="bDMI" postName={"bdmi"} />,
     },
     iChing: {
@@ -78,6 +80,7 @@ const appsData = {
       icon: iChingIcon,
       liveLink: "https://randybobandy92.github.io/ReactIChing/",
       gitHubLink: "https://github.com/RandyBoBandy92/ReactIChing",
+      gitHubEmbedLink: "https://github1s.com/RandyBoBandy92/ReactIChing",
       component: <Post appId="iChing" postName={"iChingReact"} />,
     },
     portfolio: {
@@ -87,6 +90,7 @@ const appsData = {
       icon: logoIcon,
       liveLink: "https://www.randygulak.com/",
       gitHubLink: "https://github.com/RandyBoBandy92/randyportfolio",
+      gitHubEmbedLink: "https://github1s.com/RandyBoBandy92/randyportfolio",
     },
   },
 };
