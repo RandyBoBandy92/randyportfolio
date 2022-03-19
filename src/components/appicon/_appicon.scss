@@ -76,6 +76,7 @@ a.icon {
       width: 80px;
       background-color: unset;
       border-radius: $iconBorderRadiusDesktop;
+      transition: all 0.2s ease-in-out;
     }
 
     .icon-img {
@@ -84,14 +85,43 @@ a.icon {
     }
   }
 
+  // Projects Icon Styles
+
+  .projects {
+    button.icon {
+      height: 120px;
+      width: 120px;
+      &:hover {
+        background-color: $iconHoverBg;
+      }
+      .icon-img {
+        margin-bottom: 2rem;
+      }
+      .icon-text {
+        bottom: 1rem;
+      }
+    }
+    // Ray Bike Icon Styles
+
+    button.icon-ray-bike-supreme {
+      .icon-img {
+        // rotate 90 deg
+        margin-bottom: 3rem;
+        transform: rotate(90deg);
+      }
+      .icon-text {
+        bottom: 0.5rem;
+        white-space: normal;
+      }
+    }
+  }
+
+  // Nav Icon Styles
+
   nav {
     button.icon,
     a.icon {
-      height: 80px;
-      width: 80px;
       margin: 0;
-      border-radius: $iconBorderRadiusDesktop;
-      transition: all 0.2s ease-in-out;
       &:hover {
         background-color: $iconHoverBg;
         .icon-text {
