@@ -91,6 +91,8 @@ a.icon {
     button.icon {
       height: 120px;
       width: 120px;
+      margin-right: 3rem;
+      margin-bottom: unset;
       &:hover {
         background-color: $iconHoverBg;
       }
