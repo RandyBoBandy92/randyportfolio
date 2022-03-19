@@ -63,8 +63,21 @@ const AppWindow = ({ closeApp, focusApp, appData, children }) => {
       return;
     }
     if (dragging) {
-      const left = e.screenX - positionDiff.x;
-      const top = e.screenY - positionDiff.y;
+      let left = e.screenX - positionDiff.x;
+      let top = e.screenY - positionDiff.y;
+      // if the appWindow is dragged off the screen, it will be moved back
+      if (left < 0) {
+        left = 0;
+      }
+      if (top < 30) {
+        top = 30;
+      }
+      if (left > window.innerWidth - appWindowRef.current.offsetWidth) {
+        left = window.innerWidth - appWindowRef.current.offsetWidth;
+      }
+      if (top > window.innerHeight - appWindowRef.current.offsetHeight) {
+        top = window.innerHeight - appWindowRef.current.offsetHeight;
+      }
       appWindowRef.current.style.left = `${left}px`;
       appWindowRef.current.style.top = `${top}px`;
     }
