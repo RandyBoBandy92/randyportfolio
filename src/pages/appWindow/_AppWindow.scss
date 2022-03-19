@@ -36,6 +36,7 @@
     right: unset;
     height: 780px;
     width: 720px;
+    border: 2px solid $headerBg;
     .app-header {
       cursor: move;
       h2 {
