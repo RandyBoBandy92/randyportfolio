@@ -66,8 +66,8 @@ const AppWindow = ({ closeApp, focusApp, appData, children }) => {
       let left = e.screenX - positionDiff.x;
       let top = e.screenY - positionDiff.y;
       // if the appWindow is dragged off the screen, it will be moved back
-      if (left < 0) {
-        left = 0;
+      if (left < 100) {
+        left = 100;
       }
       if (top < 30) {
         top = 30;
