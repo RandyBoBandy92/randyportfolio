@@ -69,31 +69,47 @@ a.icon {
     background-color: unset;
     height: 80px;
     width: 80px;
-    margin: 0;
     border-radius: $iconBorderRadiusDesktop;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      background-color: $iconHoverBg;
-      .icon-text {
-        border-radius: $iconTextBorderRadiusDesktop;
-        background-color: $iconHoverBg;
-        display: block;
-        bottom: unset;
-        top: 50%;
-        left: unset;
-        right: -6rem;
-        transform: translateY(-50%);
-        width: 80px;
-        text-align: center;
-      }
-    }
   }
 
   .icon-img {
     height: 50px;
     width: 50px;
   }
-  .icon-text {
-    display: none;
+  // Nav Specific Icon Styles
+
+  nav {
+    button.icon,
+    a.icon {
+      background-color: unset;
+      height: 80px;
+      width: 80px;
+      margin: 0;
+      border-radius: $iconBorderRadiusDesktop;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        background-color: $iconHoverBg;
+        .icon-text {
+          border-radius: $iconTextBorderRadiusDesktop;
+          background-color: $iconHoverBg;
+          display: block;
+          bottom: unset;
+          top: 50%;
+          left: unset;
+          right: -6rem;
+          transform: translateY(-50%);
+          width: 80px;
+          text-align: center;
+        }
+      }
+    }
+
+    .icon-img {
+      height: 50px;
+      width: 50px;
+    }
+    .icon-text {
+      display: none;
+    }
   }
 }
