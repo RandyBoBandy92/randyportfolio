@@ -27,7 +27,12 @@ const Home = () => {
       const appData = allApps.find((appData) => appData.id === app);
       if (appData) {
         appsToShow.push(
-          <AppWindow focusApp={focusApp} appData={appData} key={app}>
+          <AppWindow
+            closeApp={closeApp}
+            focusApp={focusApp}
+            appData={appData}
+            key={app}
+          >
             {appData.component}
           </AppWindow>
         );
@@ -55,7 +60,8 @@ const Home = () => {
     setSearchParams({ app: newSearchParams });
   };
 
-  const focusApp = (appId) => {
+  const focusApp = (appId, e) => {
+    console.log(e);
     // After much experimenting with refs, I found vanilla JS to be the
     // only implementation that worked based on my current code structure
     // Not the best solution, but it gets the job done

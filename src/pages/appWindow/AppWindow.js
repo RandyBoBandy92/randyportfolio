@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import AppMenu from "../../components/appMenu/AppMenu";
 import "./_AppWindow.scss";
 
-const AppWindow = ({ focusApp, appData, children }) => {
+const AppWindow = ({ closeApp, focusApp, appData, children }) => {
   const [draggable, setDraggable] = useState(false);
   const [dragging, setDragging] = useState(false);
   const appWindowRef = useRef(null);
@@ -84,7 +84,7 @@ const AppWindow = ({ focusApp, appData, children }) => {
         style={{ zIndex: 9999 }}
         className="app-window"
         ref={appWindowRef}
-        onMouseDown={() => focusApp(appData.id)}
+        onMouseDown={(e) => focusApp(appData.id, e)}
         onMouseMove={handleDrag}
         onMouseLeave={dragEnd}
       >
@@ -94,6 +94,13 @@ const AppWindow = ({ focusApp, appData, children }) => {
           className="app-header"
         >
           <h2>{appData.title}</h2>
+          <button
+            onClick={() => closeApp(appData)}
+            aria-label="Close App"
+            className="close-button"
+          >
+            x
+          </button>
         </section>
         <section className="app-content">{children}</section>
         <section className="app-footer">
