@@ -22,7 +22,7 @@
     }
   }
   .app-content {
-    overflow-y: scroll;
+    overflow-y: auto;
     // scrollbar-width: none;
   }
   .app-footer {
@@ -38,8 +38,8 @@
     top: 4rem;
     bottom: unset;
     right: unset;
-    height: 780px;
-    width: 720px;
+    height: 80vh;
+    width: 700px;
     border: 2px solid $headerBg;
     .app-header {
       grid-template-columns: 1fr 1fr 1fr;
@@ -61,5 +61,28 @@
         margin-right: 1rem;
       }
     }
+  }
+  // Contact and About Styles
+  .app-window#about,
+  .app-window#contact {
+    width: 700px;
+    height: 800px;
+  }
+}
+
+@include mqMin($desktopWideBreakpoint) {
+  .app-window {
+    top: 13rem;
+  }
+  .app-window:not(#about):not(#contact) {
+    height: 72vh;
+    width: 70vw;
+  }
+}
+
+@include mqMin($desktopExtraWideBreakpoint) {
+  .app-window {
+    top: 14rem;
+    left: 14rem;
   }
 }

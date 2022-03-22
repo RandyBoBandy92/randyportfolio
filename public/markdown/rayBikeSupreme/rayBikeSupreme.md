@@ -177,7 +177,7 @@ Working through the collision detection algorithm was without a doubt the bigges
 
 ![notes](notes.jpg)
 
-Each players `move()` method would calculate it's potential next position of x y coordinates, and then runs a `checkBounds(newX, newY)` method as well as a `checkObstacles(newX, newY)` method. If after both methods the players isAlive property remains true, the player moves; otherwise the `die()` method is called.
+Each players `move()` method would calculate it's potential next position of x y coordinates, and then runs a `checkBounds(newX, newY)` method as well as a `checkObstacles(newX, newY)` method. If a collision is detected the player's `die()` method is called.
 
 Checking the outer boundaries was fairly straight forward, however all the collision detection in this game was made considerably harder by my early decision to make the players rectangular rather than perfect squares. I wound up writing switch statements to account for the players current direction when making my calculations.
 

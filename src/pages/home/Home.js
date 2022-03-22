@@ -23,15 +23,15 @@ const Home = () => {
     // now I do a for loop over the searchParams to see which apps are active
     const appsToShow = [];
     for (let index = 0; index < searchParams.getAll("app").length; index++) {
-      const app = searchParams.getAll("app")[index];
-      const appData = allApps.find((appData) => appData.id === app);
+      const appId = searchParams.getAll("app")[index];
+      const appData = allApps.find((appData) => appData.id === appId);
       if (appData) {
         appsToShow.push(
           <AppWindow
             closeApp={closeApp}
             focusApp={focusApp}
             appData={appData}
-            key={app}
+            key={appId}
           >
             {appData.component}
           </AppWindow>
@@ -42,6 +42,11 @@ const Home = () => {
   }, [searchParams]);
 
   const launchApp = (appData) => {
+    // if the app is already active, focus it
+    if (activeApps.find((app) => app.props.appData.id === appData.id)) {
+      focusApp(appData.id);
+    }
+
     // Update the URL to reflect the appId
     const filteredSearchParams = searchParams
       .getAll("app")
