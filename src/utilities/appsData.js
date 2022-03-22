@@ -53,6 +53,7 @@ const appsData = {
       icon: fetchIcon,
       liveLink: "https://fetch.bcitwebdeveloper.ca/",
       gitHubLink: "",
+      // will have to wait until i can fork this and put it on a public repo
     },
     rayBikeSupreme: {
       id: "ray-bike-supreme",
