@@ -89,13 +89,13 @@ const appsData = {
       liveLink: "https://www.randygulak.com/",
       gitHubLink: "https://github.com/RandyBoBandy92/randyportfolio",
     },
-    calculator: {
-      id: 'calculator',
-      external: false,
-      title: "Calculator",
-      icon: logoIcon,
-      component: <Calculator/>
-    },
+    // calculator: {
+    //   id: 'calculator',
+    //   external: false,
+    //   title: "Calculator",
+    //   icon: logoIcon,
+    //   component: <Calculator/>
+    // },
   },
 };
 
