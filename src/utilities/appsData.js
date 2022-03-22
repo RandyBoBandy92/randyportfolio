@@ -54,6 +54,7 @@ const appsData = {
       liveLink: "https://fetch.bcitwebdeveloper.ca/",
       gitHubLink: "",
       // will have to wait until i can fork this and put it on a public repo
+      component: <Post appId="fetch" postName={"fetch"} />,
     },
     rayBikeSupreme: {
       id: "ray-bike-supreme",
