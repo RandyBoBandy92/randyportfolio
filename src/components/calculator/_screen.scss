@@ -1,0 +1,18 @@
+@use './variables' as *;
+
+
+.screen {
+    margin: 0;
+    grid-area: screen;
+    background-color: $gray;
+
+    font-size: 2.5rem;
+    width: 500px;
+    height: 6rem;
+    overflow: auto;
+    text-align: right;
+    p {
+        margin: 0;
+        word-wrap: break-word;
+    }
+}

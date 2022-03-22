@@ -1,0 +1,18 @@
+@use "./_history.scss";
+@use "./_screen.scss";
+@use "./_buttons.scss";
+@use './_variables.scss' as *;
+
+.calculator {
+  display: grid;
+  grid-template-rows: 1fr auto 3fr;
+  grid-auto-columns: 500px;
+  grid-template-areas: "history" "screen" "buttons";
+  background-color: $darkGray;
+  max-width: 500px;
+  padding: 1rem;
+  border: 8px solid black;
+  border-radius: 5%;
+  max-height: 730px;
+  justify-content: center;
+}

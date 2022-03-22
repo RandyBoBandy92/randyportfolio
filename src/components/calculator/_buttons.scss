@@ -1,0 +1,29 @@
+@use './variables' as *;
+
+.buttons {
+  grid-area: buttons;
+  display: grid;
+  grid-template-columns: repeat(5, 90px);
+  justify-content: center;
+  grid-auto-rows: 90px;
+  grid-template-areas:
+    "ac left-bracket right-bracket square cubed "
+    "seven eight nine percent square-root"
+    "four five six multiply divide"
+    "one two three add subtract"
+    "inverse zero decimal . equal";
+  margin: 1rem 0;
+  gap: 5px 5px;
+  button {
+    font-size: 2rem;
+    background-color: $lightGray;
+    border-radius: 50%;
+    border: 2px solid $darkGray;
+    &:hover {
+      border: 2px solid $gray;
+    }
+    &:active {
+      border: 3px inset $gray;
+    }
+  }
+}
