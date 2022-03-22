@@ -1,7 +1,7 @@
 @use "./_history.scss";
 @use "./_screen.scss";
 @use "./_buttons.scss";
-@use './_variables.scss' as *;
+@use "../../styles/abstract/variables" as *;
 
 .calculator {
   display: grid;
