@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import "./_home.scss";
 import monkeBg from "../../assets/images/monkeBg.jpeg";
+import Calculator from '../../components/calculator/Calculator';
 
 const Home = () => {
   // searchParams and activeApps work together to determine which apps are active

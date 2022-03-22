@@ -12,6 +12,7 @@ import logoIcon from "../assets/images/logo/black/favicon-32x32.png";
 import Contact from "../pages/contact/Contact";
 import About from "../pages/about/About";
 import Post from "../components/post/Post";
+import Calculator from "../components/calculator/Calculator"
 
 const appsData = {
   navigation: {
@@ -87,6 +88,13 @@ const appsData = {
       icon: logoIcon,
       liveLink: "https://www.randygulak.com/",
       gitHubLink: "https://github.com/RandyBoBandy92/randyportfolio",
+    },
+    calculator: {
+      id: 'calculator',
+      external: false,
+      title: "Calculator",
+      icon: logoIcon,
+      component: <Calculator/>
     },
   },
 };
