@@ -3,12 +3,16 @@
 
   .post-info-header {
     margin-bottom: 2rem;
+    .icon:hover {
+      cursor: unset;
+    }
     .icon-text {
       bottom: unset;
       top: 50%;
       right: -7rem;
       transform: translateY(-50%);
     }
+  
     .icon-ray-bike-supreme {
       .icon-text {
         right: -12rem;

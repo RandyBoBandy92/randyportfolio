@@ -62,27 +62,17 @@
       }
     }
   }
-  // Contact and About Styles
-  .app-window#about,
-  .app-window#contact {
-    width: 700px;
-    height: 800px;
-  }
 }
 
 @include mqMin($desktopWideBreakpoint) {
-  .app-window {
-    top: 13rem;
-  }
   .app-window:not(#about):not(#contact) {
-    height: 72vh;
-    width: 70vw;
+    height: 84vh;
+    max-height: 1000px;
+    width: 850px;
   }
 }
 
 @include mqMin($desktopExtraWideBreakpoint) {
   .app-window {
-    top: 14rem;
-    left: 14rem;
   }
 }

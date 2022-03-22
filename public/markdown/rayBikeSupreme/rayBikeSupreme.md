@@ -13,6 +13,10 @@ A tron inspired 2d arcade game, written in vanilla JavaScript via the canvas API
 - How to Play / Help Section
 
 ## Design
+<object data="Ray-Bike-Supreme-Game-Plan.pdf" type="application/pdf" style="width: 100%; height:80vh">
+    <embed src="Ray-Bike-Supreme-Game-Plan.pdf"/>
+</object>
+
 Design proceeded through several stages:
 ### 1. High level game description & Design statement
 
