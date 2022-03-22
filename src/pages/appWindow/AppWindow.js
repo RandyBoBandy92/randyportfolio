@@ -2,12 +2,18 @@ import { useEffect, useRef, useState } from "react";
 import AppMenu from "../../components/appMenu/AppMenu";
 import "./_AppWindow.scss";
 
-const AppWindow = ({ appData, children }) => {
+const AppWindow = ({ closeApp, focusApp, appData, children }) => {
   const [draggable, setDraggable] = useState(false);
   const [dragging, setDragging] = useState(false);
   const appWindowRef = useRef(null);
   const [positionDiff, setPositionDiff] = useState({ x: 0, y: 0 });
 
+  // on first render, runs focusApp to give new window the highest z-index
+  useEffect(() => {
+    focusApp(appData.id);
+  }, []);
+
+  // Checks on first render to see if draggable windows should be enabled
   useEffect(() => {
     if (window.innerWidth < 850) {
       setDraggable(false);
@@ -16,6 +22,7 @@ const AppWindow = ({ appData, children }) => {
     }
   }, []);
 
+  // Checks on every resize event to see if draggable windows should be enabled
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 850) {
@@ -48,15 +55,7 @@ const AppWindow = ({ appData, children }) => {
     const offsetY = e.screenY - top;
     setPositionDiff({ x: offsetX, y: offsetY });
 
-    console.log(e.screenX, e.screenY);
     setDragging(true);
-  };
-
-  const dragEnd = () => {
-    if (!draggable) {
-      return;
-    }
-    setDragging(false);
   };
 
   const handleDrag = (e) => {
@@ -70,17 +69,38 @@ const AppWindow = ({ appData, children }) => {
       appWindowRef.current.style.top = `${top}px`;
     }
   };
-  console.log(appWindowRef.current);
+
+  const dragEnd = () => {
+    if (!draggable) {
+      return;
+    }
+    setDragging(false);
+  };
+
   return (
     <>
-      <div className="app-window" ref={appWindowRef}>
+      <div
+        id={appData.id}
+        style={{ zIndex: 9999 }}
+        className="app-window"
+        ref={appWindowRef}
+        onMouseDown={(e) => focusApp(appData.id, e)}
+        onMouseMove={handleDrag}
+        onMouseLeave={dragEnd}
+      >
         <section
-          onMouseMove={handleDrag}
           onMouseDown={dragStart}
           onMouseUp={dragEnd}
           className="app-header"
         >
           <h2>{appData.title}</h2>
+          <button
+            onClick={() => closeApp(appData)}
+            aria-label="Close App"
+            className="close-button"
+          >
+            x
+          </button>
         </section>
         <section className="app-content">{children}</section>
         <section className="app-footer">

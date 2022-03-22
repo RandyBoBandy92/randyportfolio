@@ -17,9 +17,13 @@
     place-items: center;
     font-size: 0.8rem;
     padding: 0.2rem;
+    .close-button {
+      display: none;
+    }
   }
   .app-content {
-    overflow: scroll;
+    overflow-y: scroll;
+    // scrollbar-width: none;
   }
   .app-footer {
     width: 100%;
@@ -36,10 +40,25 @@
     right: unset;
     height: 780px;
     width: 720px;
+    border: 2px solid $headerBg;
     .app-header {
+      grid-template-columns: 1fr 1fr 1fr;
       cursor: move;
       h2 {
         cursor: default;
+        grid-column-start: 2;
+      }
+      .close-button {
+        display: block;
+        text-align: center;
+        grid-column-start: 3;
+        justify-self: end;
+        background-color: $closeButtonBg;
+        border-radius: 50%;
+        color: $textPrimary;
+        font-size: 1.3rem;
+        padding: 0 0.45rem 0.1rem 0.45rem;
+        margin-right: 1rem;
       }
     }
   }

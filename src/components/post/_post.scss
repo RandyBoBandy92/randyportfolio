@@ -1,6 +1,7 @@
 .post {
   padding: 1rem;
-  .app-info-header {
+
+  .post-info-header {
     margin-bottom: 2rem;
     .icon-text {
       bottom: unset;
@@ -14,7 +15,7 @@
       }
     }
   }
-  .app-content {
+  .post-content {
     & > * {
       margin-bottom: 1rem;
     }

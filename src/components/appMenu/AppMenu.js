@@ -12,7 +12,7 @@ const AppMenu = ({ liveLink = "", gitHubLink = "" }) => {
   return (
     <div className="app-menu">
       <ul>
-        <li onClick={closeApps} className="app-menu-icon">
+        <li onClick={closeApps} className="app-menu-icon back">
           <img src={arrowLeft} alt="" />
           <p>Back</p>
         </li>

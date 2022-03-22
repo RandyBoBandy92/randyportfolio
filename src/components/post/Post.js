@@ -31,13 +31,13 @@ const Post = ({ appId, postName }) => {
 
   return (
     <div className="post">
-      <div className="app-info-header">
+      <div className="post-info-header">
         <h2>App Info</h2>
         <AppIcon appData={appData} />
       </div>
       <div className="app-info tech">{/* TODO add tech stack component */}</div>
       <Markdown
-        className="app-content"
+        className="post-content"
         options={{
           overrides: {
             code: {
