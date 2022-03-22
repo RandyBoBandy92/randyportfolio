@@ -15,6 +15,19 @@ const Img = (props) => {
   );
 };
 
+const ObjectComponent = (props) => {
+  console.log(props);
+  return (
+    <object
+      data={`${process.env.PUBLIC_URL}/markdown/${props.postName}/${props.data}`}
+      type={`${props.type}`}
+      style={props.style}
+    >
+    {props.children}
+    </object>
+  );
+};
+
 const Post = ({ appId, postName }) => {
   const [postContent, setPostContent] = useState("");
   const appData = appsData.projects[appId];
@@ -40,6 +53,10 @@ const Post = ({ appId, postName }) => {
         className="post-content"
         options={{
           overrides: {
+            object: {
+              component: ObjectComponent,
+              props: {postName: postName}
+            },
             code: {
               component: Code,
             },
