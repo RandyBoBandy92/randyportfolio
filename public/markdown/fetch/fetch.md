@@ -24,7 +24,50 @@ We we're given a writeup to build our plan from, here is a summary of the client
 
 ## Design
 
-Our design process went through a 
+Our design process went through several stages:
+
+1. Requirements gathering and creation of Memo of Understanding
+2. Content Plan & Information Architecture
+3. Low Fidelity Prototype
+4. Site Development Plan
+
+### Memo of Understanding
+- Researched competitors
+- Categorization of client requirements into Pages, Components, and "Nice to have" features.
+
+### Content Plan | Information Architecture
+
+
+#### Content Plan
+
+- Expanded on features to determine what content types and data each of our pages/components require.
+
+Example:
+- Home Page
+    - Hero Card
+        - Background image of dog walking
+        - Text - Elevator Pitch to sell dog walking subscriptions
+        - CTA buttons
+            - Primary - Book Now
+            - Secondary - Shop
+    - 1 Featured Testimonial
+        - Testimonial Text
+        - Testimonial Author
+    - What we do / Why use us
+        - Image - clipart 
+        - Heading - point 1
+        - Text - short description
+
+#### Information Architecture
+- Created a diagram to illustrate the relationship between the pages & components of the site.
+
+![information architecture](Information-Architecture.svg)
+
+
+### Low Fidelity Prototype
+- Mobile first prototype
+
+![low fidelity prototype](fetchPrototype.gif)
 
 ## Development
 
