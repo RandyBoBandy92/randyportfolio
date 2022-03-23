@@ -116,7 +116,7 @@ const appsData = {
     },
     bdmi: {
       id: 'code-bdmi',
-      title: "VS Code - bdmi",
+      title: "VS Code - bDMI",
       external: false,
       component: <VsCode gitHubEmbedLink={"https://github1s.com/RandyBoBandy92/moviedatabase"}/>
     }
