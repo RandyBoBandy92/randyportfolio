@@ -28,6 +28,9 @@
       filter: invert(100%) sepia(14%) saturate(1742%) hue-rotate(85deg)
         brightness(114%) contrast(108%);
     }
+    &:hover:not(.vs-code) {
+      @include filterLinkHover();
+    }
   }
   .github-link {
     grid-column-start: 2;
@@ -58,6 +61,11 @@
       .vs-code {
         grid-column-start: 3;
         display: flex;
+        &:hover {
+          p {
+            color: $link-hover
+          }
+        }
       }
     }
   }

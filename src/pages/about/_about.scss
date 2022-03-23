@@ -1,4 +1,5 @@
 @use "../../styles/abstract/variables" as *;
+@use "../../styles/abstract/mixins" as *;
 
 .about {
   display: flex;
@@ -11,14 +12,17 @@
     border-radius: 50%;
   }
   .social-icons {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg)
-      brightness(103%) contrast(103%);
     .social-link {
       padding: 1rem;
     }
-    .social-icon {
-      width: 35px;
-      margin: 0.5rem 0;
+  }
+  .social-icon {
+    width: 35px;
+    margin: 0.5rem 0;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg)
+      brightness(103%) contrast(103%);
+    &:hover {
+      @include filterLinkHover();
     }
   }
   .about-content {
