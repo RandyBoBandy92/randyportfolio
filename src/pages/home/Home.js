@@ -68,7 +68,6 @@ const Home = () => {
   };
 
   const focusApp = (appId, e) => {
-    console.log(e);
     // After much experimenting with refs, I found vanilla JS to be the
     // only implementation that worked based on my current code structure
     // Not the best solution, but it gets the job done
