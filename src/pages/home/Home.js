@@ -25,17 +25,17 @@ const Home = () => {
     const appsToShow = [];
     for (let index = 0; index < searchParams.getAll("app").length; index++) {
       const appId = searchParams.getAll("app")[index];
-      const appData = allApps.find((appData) => appData.id === appId);
-      if (appData) {
+      const matchingApp = allApps.find((appData) => appData.id === appId);
+      if (matchingApp) {
         appsToShow.push(
           <AppWindow
             launchApp={launchApp}
             closeApp={closeApp}
             focusApp={focusApp}
-            appData={appData}
+            appData={matchingApp}
             key={appId}
           >
-            {appData.component}
+            {matchingApp.component}
           </AppWindow>
         );
       }
