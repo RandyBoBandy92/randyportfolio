@@ -90,12 +90,14 @@ const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
     setDragging(false);
   };
 
+  const codeClass =  appData.id.includes("code") ? "code" : ""
+
   return (
     <>
       <article
         id={appData.id}
         style={{ zIndex: 9999 }}
-        className={`app-window ${appData.id}-window`}
+        className={`app-window ${appData.id}-window ${codeClass}`}
         ref={appWindowRef}
         onMouseDown={(e) => focusApp(appData.id, e)}
         onMouseMove={handleDrag}
