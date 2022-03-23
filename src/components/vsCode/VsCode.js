@@ -1,6 +1,6 @@
 import "./_vscode.scss"
 const VsCode = ({gitHubEmbedLink}) => {
-    return <><iframe src={gitHubEmbedLink} title="description"></iframe></>
+    return <><iframe allow="fullscreen" src={gitHubEmbedLink} title="description"></iframe></>
 }
 
 export default VsCode
