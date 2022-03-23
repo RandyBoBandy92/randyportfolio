@@ -16,6 +16,13 @@ const Img = (props) => {
   );
 };
 
+
+const Source = (props) => {
+  return (
+    <source src={`${process.env.PUBLIC_URL}/markdown/${props.postName}/${props.src}`} type="video/mp4"/>
+  );
+};
+
 const Post = ({ appId, postName }) => {
   const [postContent, setPostContent] = useState("");
   const appData = appsData.projects[appId];
@@ -48,6 +55,10 @@ const Post = ({ appId, postName }) => {
               component: Img,
               props: { postName: postName },
             },
+            source: {
+              component: Source,
+              props: {postName: postName}
+            }
           },
         }}
       >
