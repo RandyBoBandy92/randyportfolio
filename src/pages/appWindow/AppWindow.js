@@ -92,7 +92,7 @@ const AppWindow = ({ closeApp, focusApp, appData, children }) => {
 
   return (
     <>
-      <div
+      <article
         id={appData.id}
         style={{ zIndex: 9999 }}
         className="app-window"
@@ -122,7 +122,7 @@ const AppWindow = ({ closeApp, focusApp, appData, children }) => {
             gitHubLink={appData.gitHubLink}
           />
         </section>
-      </div>
+      </article>
     </>
   );
 };
