@@ -12,6 +12,7 @@ import logoIcon from "../assets/images/logo/black/favicon-32x32.png";
 import Contact from "../pages/contact/Contact";
 import About from "../pages/about/About";
 import Post from "../components/post/Post";
+import VsCode from "../components/vsCode/VsCode";
 
 const appsData = {
   navigation: {
@@ -60,7 +61,7 @@ const appsData = {
       icon: rayBikeIcon,
       liveLink: "https://www.randygulak.com/RayBikeSupreme/",
       gitHubLink: "https://github.com/RandyBoBandy92/RayBikeSupreme",
-      gitHubEmbedLink: "https://github1s.com/RandyBoBandy92/RayBikeSupreme",
+      vsCodeId: "code-ray-bike-supreme",
       component: <Post appId="rayBikeSupreme" postName={"rayBikeSupreme"} />,
     },
     bDMI: {
@@ -70,7 +71,7 @@ const appsData = {
       icon: bdmiIcon,
       liveLink: "https://www.randygulak.com/bdmi/",
       gitHubLink: "https://github.com/RandyBoBandy92/moviedatabase",
-      gitHubEmbedLink: "https://github1s.com/RandyBoBandy92/moviedatabase",
+      vsCodeId: "code-bdmi",
       component: <Post appId="bDMI" postName={"bdmi"} />,
     },
     iChing: {
@@ -80,7 +81,7 @@ const appsData = {
       icon: iChingIcon,
       liveLink: "https://randybobandy92.github.io/ReactIChing/",
       gitHubLink: "https://github.com/RandyBoBandy92/ReactIChing",
-      gitHubEmbedLink: "https://github1s.com/RandyBoBandy92/ReactIChing",
+      vsCodeId: "code-i-ching",
       component: <Post appId="iChing" postName={"iChingReact"} />,
     },
     portfolio: {
@@ -90,9 +91,36 @@ const appsData = {
       icon: logoIcon,
       liveLink: "https://www.randygulak.com/",
       gitHubLink: "https://github.com/RandyBoBandy92/randyportfolio",
-      gitHubEmbedLink: "https://github1s.com/RandyBoBandy92/randyportfolio",
+      vsCodeId: "code-portfolio",
     },
   },
+  vsCode: {
+    iChing: {
+      id: 'code-i-ching',
+      title: "VS Code - React I-Ching",
+      external: false,
+      component: <VsCode gitHubEmbedLink={ "https://github1s.com/RandyBoBandy92/ReactIChing"}/>
+    },
+    rayBikeSupreme: {
+      id: 'code-ray-bike-supreme',
+      title: "VS Code - Ray Bike Supreme",
+      external: false,
+      component: <VsCode gitHubEmbedLink={ "https://github1s.com/RandyBoBandy92/RayBikeSupreme"}/>
+    },
+    portfolio: {
+      id: 'code-portfolio',
+      title: "VS Code - Portfolio",
+      external: false,
+      component: <VsCode gitHubEmbedLink={"https://github1s.com/RandyBoBandy92/randyportfolio"}/>
+
+    },
+    bdmi: {
+      id: 'code-bdmi',
+      title: "VS Code - bDMI",
+      external: false,
+      component: <VsCode gitHubEmbedLink={"https://github1s.com/RandyBoBandy92/moviedatabase"}/>
+    }
+  }
 };
 
 export default appsData;

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import AppMenu from "../../components/appMenu/AppMenu";
 import "./_AppWindow.scss";
 
-const AppWindow = ({ closeApp, focusApp, appData, children }) => {
+const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
   const [draggable, setDraggable] = useState(false);
   const [dragging, setDragging] = useState(false);
   const appWindowRef = useRef(null);
@@ -90,12 +90,14 @@ const AppWindow = ({ closeApp, focusApp, appData, children }) => {
     setDragging(false);
   };
 
+  const codeClass =  appData.id.includes("code") ? "code" : ""
+
   return (
     <>
       <article
         id={appData.id}
         style={{ zIndex: 9999 }}
-        className="app-window"
+        className={`app-window ${appData.id}-window ${codeClass}`}
         ref={appWindowRef}
         onMouseDown={(e) => focusApp(appData.id, e)}
         onMouseMove={handleDrag}
@@ -120,6 +122,8 @@ const AppWindow = ({ closeApp, focusApp, appData, children }) => {
           <AppMenu
             liveLink={appData.liveLink}
             gitHubLink={appData.gitHubLink}
+            vsCodeId={appData.vsCodeId}
+            launchApp={launchApp}
           />
         </section>
       </article>

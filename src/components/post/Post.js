@@ -11,6 +11,7 @@ const Img = (props) => {
       className="post-img"
       src={`${process.env.PUBLIC_URL}/markdown/${props.postName}/${props.src}`}
       alt={props.alt}
+      loading="lazy"
     />
   );
 };
