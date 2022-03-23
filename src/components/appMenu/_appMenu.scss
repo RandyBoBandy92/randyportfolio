@@ -61,7 +61,9 @@
       }
     }
   }
-  .code .app-menu {
+  .code .app-menu,
+  .about-window .app-menu,
+  .contact-window .app-menu {
     display: none;
   }
 }

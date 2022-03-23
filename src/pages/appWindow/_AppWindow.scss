@@ -65,14 +65,12 @@
 }
 
 @include mqMin($desktopWideBreakpoint) {
-  .app-window:not(#about):not(#contact) {
+  .app-window {
     height: 84vh;
     max-height: 1000px;
+  }
+  .app-window:not(#about):not(#contact) {
     width: 850px;
   }
 }
 
-@include mqMin($desktopExtraWideBreakpoint) {
-  .app-window {
-  }
-}
