@@ -77,8 +77,10 @@ const Home = () => {
     Array.prototype.forEach.call(appElements, (appElement) => {
       if (appElement.id === appId) {
         appElement.style.zIndex = "10000";
+        appElement.classList.add("active")
       } else {
         appElement.style.zIndex = "9999";
+        appElement.classList.remove("active")
       }
     });
   };
