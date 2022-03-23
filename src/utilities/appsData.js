@@ -81,6 +81,7 @@ const appsData = {
       icon: iChingIcon,
       liveLink: "https://randybobandy92.github.io/ReactIChing/",
       gitHubLink: "https://github.com/RandyBoBandy92/ReactIChing",
+      vsCodeId: "code-i-ching",
       component: <Post appId="iChing" postName={"iChingReact"} />,
     },
     portfolio: {
@@ -96,7 +97,7 @@ const appsData = {
   vsCode: {
     iChing: {
       id: 'code-i-ching',
-      title: "React I-Ching",
+      title: "VS Code - React I-Ching",
       external: false,
       component: <VsCode gitHubEmbedLink={ "https://github1s.com/RandyBoBandy92/ReactIChing"}/>
     }

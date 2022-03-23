@@ -4,7 +4,7 @@ import gitHubIcon from "../../assets/images/icons/github.svg";
 import openIcon from "../../assets/images/icons/box-arrow-up-right.svg";
 import { useSearchParams } from "react-router-dom";
 
-const AppMenu = ({ liveLink = "", gitHubLink = "" }) => {
+const AppMenu = ({ launchApp, liveLink = "", gitHubLink = "", vsCodeId = "" }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const closeApps = () => {
     setSearchParams({ app: [] });
@@ -31,6 +31,12 @@ const AppMenu = ({ liveLink = "", gitHubLink = "" }) => {
               <p>View</p>
             </a>
           </li>
+        )}
+        {vsCodeId && (
+        <li onClick={() => launchApp({id: vsCodeId})} className="app-menu-icon vs-code">
+          <img src={gitHubIcon} alt="" />
+          <p>VsCode</p>
+        </li>
         )}
       </ul>
     </div>

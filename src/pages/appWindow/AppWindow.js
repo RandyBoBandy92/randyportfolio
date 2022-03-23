@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import AppMenu from "../../components/appMenu/AppMenu";
 import "./_AppWindow.scss";
 
-const AppWindow = ({ closeApp, focusApp, appData, children }) => {
+const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
   const [draggable, setDraggable] = useState(false);
   const [dragging, setDragging] = useState(false);
   const appWindowRef = useRef(null);
@@ -120,6 +120,8 @@ const AppWindow = ({ closeApp, focusApp, appData, children }) => {
           <AppMenu
             liveLink={appData.liveLink}
             gitHubLink={appData.gitHubLink}
+            vsCodeId={appData.vsCodeId}
+            launchApp={launchApp}
           />
         </section>
       </article>

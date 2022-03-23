@@ -1,3 +1,4 @@
+import "./_vscode.scss"
 const VsCode = ({gitHubEmbedLink}) => {
     return <><iframe src={gitHubEmbedLink} title="description"></iframe></>
 }

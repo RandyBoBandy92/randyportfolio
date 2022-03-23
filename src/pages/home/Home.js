@@ -19,7 +19,8 @@ const Home = () => {
     // to end up with a single filtered array of components
     const projects = Object.values(appsData.projects);
     const navigation = Object.values(appsData.navigation);
-    const allApps = [...projects, ...navigation];
+    const vsCodeBrowser = Object.values(appsData.vsCode)
+    const allApps = [...projects, ...navigation, ...vsCodeBrowser];
     // now I do a for loop over the searchParams to see which apps are active
     const appsToShow = [];
     for (let index = 0; index < searchParams.getAll("app").length; index++) {
@@ -28,6 +29,7 @@ const Home = () => {
       if (appData) {
         appsToShow.push(
           <AppWindow
+            launchApp={launchApp}
             closeApp={closeApp}
             focusApp={focusApp}
             appData={appData}
