@@ -1,4 +1,4 @@
-<video style="width: 100%; height:auto;" autoplay loop muted>
+<video title="the splash screen for Ray Bike Supreme" style="width: 100%; height:auto;" autoplay loop muted>
 <source src="rayBike.mp4" type="video/mp4">
 </video>
 # Project Overview

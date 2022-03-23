@@ -1,5 +1,7 @@
-![the main menu of better data movie interface project](bdmi-menu.webp)
 
+<video title="the main menu of better data movie interface project" style="width: 100%; height:auto;" autoplay loop muted>
+<source src="bdmiMenu.mp4" type="video/mp4">
+</video>
 # Project Overview
 A front end for users to query the [The Movie Database](https://www.themoviedb.org/) API, and save favorite movies.
 
@@ -182,7 +184,9 @@ Wrote some custom API queries to find Nicolas Cage's actor ID, and used it to ob
 
 This would refresh the page, and load over 100+ Nic Cage movies on the home screen.
 
-![Hundreds of Nicolas Cage movies being rendered on the home page](cage-mode.webp)
+<video title="Hundreds of Nicolas Cage movies being rendered on the home page" style="width: 100%; height:auto;" autoplay loop muted>
+<source src="cageMode.mp4" type="video/mp4">
+</video>
 
 ## Summary
 
