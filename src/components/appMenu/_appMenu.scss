@@ -35,12 +35,18 @@
   .live-site-link {
     grid-column-start: 3;
   }
+  .vs-code {
+    display: none;
+    img {
+      filter: none;
+    }
+  }
 }
 
 @include mqMin($desktopBreakpoint) {
   .app-menu {
     ul {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       .back {
         display: none;
       }
@@ -49,6 +55,10 @@
       }
       .live-site-link {
         grid-column-start: 2;
+      }
+      .vs-code {
+        grid-column-start: 3;
+        display: flex;
       }
     }
   }

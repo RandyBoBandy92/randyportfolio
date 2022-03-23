@@ -2,6 +2,7 @@ import "./_appMenu.scss";
 import arrowLeft from "../../assets/images/icons/arrow-left.svg";
 import gitHubIcon from "../../assets/images/icons/github.svg";
 import openIcon from "../../assets/images/icons/box-arrow-up-right.svg";
+import vsCodeIcon from '../../assets/images/icons/vs-code.svg';
 import { useSearchParams } from "react-router-dom";
 
 const AppMenu = ({ launchApp, liveLink = "", gitHubLink = "", vsCodeId = "" }) => {
@@ -34,8 +35,8 @@ const AppMenu = ({ launchApp, liveLink = "", gitHubLink = "", vsCodeId = "" }) =
         )}
         {vsCodeId && (
         <li onClick={() => launchApp({id: vsCodeId})} className="app-menu-icon vs-code">
-          <img src={gitHubIcon} alt="" />
-          <p>VsCode</p>
+          <img src={vsCodeIcon} alt="" />
+          <p>VS Code</p>
         </li>
         )}
       </ul>
