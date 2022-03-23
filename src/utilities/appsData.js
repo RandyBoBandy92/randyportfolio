@@ -12,6 +12,7 @@ import logoIcon from "../assets/images/logo/black/favicon-32x32.png";
 import Contact from "../pages/contact/Contact";
 import About from "../pages/about/About";
 import Post from "../components/post/Post";
+import VsCode from "../components/vsCode/VsCode";
 
 const appsData = {
   navigation: {
@@ -80,7 +81,6 @@ const appsData = {
       icon: iChingIcon,
       liveLink: "https://randybobandy92.github.io/ReactIChing/",
       gitHubLink: "https://github.com/RandyBoBandy92/ReactIChing",
-      gitHubEmbedLink: "https://github1s.com/RandyBoBandy92/ReactIChing",
       component: <Post appId="iChing" postName={"iChingReact"} />,
     },
     portfolio: {
@@ -93,6 +93,14 @@ const appsData = {
       gitHubEmbedLink: "https://github1s.com/RandyBoBandy92/randyportfolio",
     },
   },
+  vsCode: {
+    iChing: {
+      id: 'code-i-ching',
+      title: "React I-Ching",
+      external: false,
+      component: <VsCode gitHubEmbedLink={ "https://github1s.com/RandyBoBandy92/ReactIChing"}/>
+    }
+  }
 };
 
 export default appsData;
