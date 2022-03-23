@@ -1,6 +1,6 @@
 # Project Overview
 
-A fully functional e-commerce website for a fictitious dog walking company. I took the role of project coordinator in a team of 4.
+A fully functional e-commerce website for a fictitious dog walking company. I took the role of project coordinator in a team of 4. Built on WordPress using Woo-Commerce.
 
 ## Requirements
 
@@ -68,6 +68,23 @@ Example:
 - Mobile first prototype
 
 ![low fidelity prototype](fetchPrototype.gif)
+
+### Site Development Plan
+
+- Researched necessary plugins
+- Created schemas for all custom post types, taxonomies, and ACF data.
+
+Example: Custom Post Types
+
+Staff
+- Post Type Key: fetch-staff
+- Post Type Label: Staff
+- Rewrite Slug: staff
+- Supports: Title
+- Block Template: n/a
+- Post Type Items: Jane Doggerson,
+    Matthew Wooferton, Benjamin Poodlesberg, etc. 
+
 
 ## Development
 
