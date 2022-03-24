@@ -158,5 +158,171 @@ Each app renders as 1 main component, with 2 nested subcomponents:
 
 In order to make this component functional for both mobile and desktop, I needed to write a useEffect that toggled whether or not the windows could be dragged depending on the size of the viewport. 
 
+```jsx
+  // Checks on every resize event to see if
+  // draggable windows should be enabled
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 850) {
+        setDraggable(false);
+        // remove all inline styles on the appWindow
+        appWindowRef.current.removeAttribute("style");
+      } else if (window.innerWidth > 850) {
+        setDraggable(true);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    // Call it once so it also fires on first render.
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+```
+
+Then came the logic required to make windows draggable. After looking at some libraries I could use, I figured I may as well learn to do it myself. 
+
+I used 3 pieces of state, and 1 ref. I only wanted windows to be draggable when the user clicks on the header, but I needed to reference the entire window when calculating position. 
+
+I wrote 3 methods, startDrag, handleDrag, and endDrag
+
+```jsx
+  const startDrag = (e) => {
+    if (!draggable) {
+      return;
+    }
+    e.preventDefault();
+    // e.screenX and screenY represent where the mouse is on the screen
+    // i use the ref to get the position of the appWindow
+    const { left, top } = appWindowRef.current.getBoundingClientRect();
+    // i use the mouse position relative to the appWindow to get the offset
+    const offsetX = e.screenX - left;
+    const offsetY = e.screenY - top;
+    setPositionDiff({ x: offsetX, y: offsetY });
+
+    setDragging(true);
+  };
+
+  const handleDrag = (e) => {
+    if (!draggable) {
+      return;
+    }
+    if (dragging) {
+      let left = e.screenX - positionDiff.x;
+      let top = e.screenY - positionDiff.y;
+      // if the appWindow is dragged off the screen, it will be moved back
+      if (left < 100) {
+        // stops before the side navigation
+        left = 100;
+      }
+      if (top < 30) {
+        // stops before the header on the top of the viewport
+        top = 30;
+      }
+      if (left > window.innerWidth - appWindowRef.current.offsetWidth) {
+        // stops at the right side of the screen
+        left = window.innerWidth - appWindowRef.current.offsetWidth;
+      }
+      if (top > window.innerHeight - appWindowRef.current.offsetHeight) {
+        // stops at the bottom of the screen
+        top = window.innerHeight - appWindowRef.current.offsetHeight;
+      }
+      appWindowRef.current.style.left = `${left}px`;
+      appWindowRef.current.style.top = `${top}px`;
+    }
+  };
+
+  const endDrag = () => {
+    if (!draggable) {
+      return;
+    }
+    setDragging(false);
+  };
+```
+
+### Post
+
+I use the postName variable from my appsData schema to obtain the right filepath to the relevant markdown file. The markdown-to-jsx library worked great and blended well with the Syntax highlighter. I created a few custom components to handle some edge cases, as well as to get proper pathing to assets in my public folder for images and videos. 
+
+```jsx
+
+const Code = ({ children, className }) => {
+  SyntaxHighlighter.registerLanguage("jsx", jsx);
+  SyntaxHighlighter.registerLanguage("json", json);
+  // i need to run a split on the className prop to get the language
+  // in the proper format for styles to kick in
+  const language = className ? className.split("lang-")[1] : "";
+  return (
+    <SyntaxHighlighter
+      showLineNumbers
+      className={className ? className : "inline-code"}
+      // if there is no className passed in, i default to inline-code
+      // which I use for rendering `single lines` in code styling.
+      language={language}
+      style={materialDark}
+    >
+      {children}
+    </SyntaxHighlighter>
+  );
+};
+
+
+const Img = (props) => {
+  return (
+    <img
+      className="post-img"
+      src={`${process.env.PUBLIC_URL}/markdown/${props.postName}/${props.src}`}
+      alt={props.alt}
+      loading="lazy"
+    />
+  );
+};
+
+
+const Source = (props) => {
+  return (
+    <source src={`${process.env.PUBLIC_URL}/markdown/${props.postName}/${props.src}`} type="video/mp4"/>
+  );
+};
+
+const Post = ({ appId, postName }) => {
+  const [postContent, setPostContent] = useState("");
+  const appData = appsData.projects[appId];
+  useEffect(() => {
+    import(`../../../public/markdown/${postName}/${postName}.md`).then(
+      (post) => {
+        fetch(post.default)
+          .then((response) => response.text())
+          .then((text) => setPostContent(text))
+          .catch((error) => console.log(error));
+      }
+    );
+  }, []);
+
+  return (
+    //   ... abbreviated ...
+      <Markdown
+        className="post-content"
+        options={{
+          overrides: {
+            code: {
+              component: Code,
+            },
+            img: {
+              component: Img,
+              props: { postName: postName },
+            },
+            source: {
+              component: Source,
+              props: {postName: postName}
+            }
+          },
+        }}
+      >
+        {postContent}
+      </Markdown>
+  );
+};
+```
 
 ## Summary

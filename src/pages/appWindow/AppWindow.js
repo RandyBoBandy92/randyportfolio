@@ -25,13 +25,14 @@ const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
       }
     };
     window.addEventListener("resize", handleResize);
+    // Call it once so it also fires on first render.
     handleResize();
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  const dragStart = (e) => {
+  const startDrag = (e) => {
     if (!draggable) {
       return;
     }
@@ -40,8 +41,6 @@ const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
     // i use the ref to get the position of the appWindow
     const { left, top } = appWindowRef.current.getBoundingClientRect();
     // i use the mouse position relative to the appWindow to get the offset
-    // but i calculate the right instead of left
-    // because the appWindow is positioned right
     const offsetX = e.screenX - left;
     const offsetY = e.screenY - top;
     setPositionDiff({ x: offsetX, y: offsetY });
@@ -58,15 +57,19 @@ const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
       let top = e.screenY - positionDiff.y;
       // if the appWindow is dragged off the screen, it will be moved back
       if (left < 100) {
+        // stops before the side navigation
         left = 100;
       }
       if (top < 30) {
+        // stops before the header on the top of the viewport
         top = 30;
       }
       if (left > window.innerWidth - appWindowRef.current.offsetWidth) {
+        // stops at the right side of the screen
         left = window.innerWidth - appWindowRef.current.offsetWidth;
       }
       if (top > window.innerHeight - appWindowRef.current.offsetHeight) {
+        // stops at the bottom of the screen
         top = window.innerHeight - appWindowRef.current.offsetHeight;
       }
       appWindowRef.current.style.left = `${left}px`;
@@ -74,7 +77,7 @@ const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
     }
   };
 
-  const dragEnd = () => {
+  const endDrag = () => {
     if (!draggable) {
       return;
     }
@@ -92,11 +95,11 @@ const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
         ref={appWindowRef}
         onMouseDown={(e) => focusApp(appData.id, e)}
         onMouseMove={handleDrag}
-        onMouseLeave={dragEnd}
+        onMouseLeave={endDrag}
       >
         <section
-          onMouseDown={dragStart}
-          onMouseUp={dragEnd}
+          onMouseDown={startDrag}
+          onMouseUp={endDrag}
           className="app-header"
         >
           <h2>{appData.title}</h2>
