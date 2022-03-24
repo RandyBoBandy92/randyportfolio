@@ -11,6 +11,23 @@ const Home = () => {
   // searchParams and activeApps work together to determine which apps are active
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeApps, setActiveApps] = useState([]);
+  const [mobileView, setMobileView] = useState(
+    window.matchMedia("(max-width: 600px)").matches
+  );
+
+  useEffect(() => {
+    const handleViewportChange = (e) => {
+      setMobileView(e.matches);
+    };
+    window
+      .matchMedia("(max-width: 600px)")
+      .addEventListener("change", handleViewportChange);
+    return () => {
+      window
+        .matchMedia("(max-width: 600px)")
+        .removeEventListener("change", handleViewportChange);
+    };
+  }, []);
 
   useEffect(() => {
     // Update the activeApps state with the components from the appsData
@@ -18,7 +35,7 @@ const Home = () => {
     // to end up with a single filtered array of components
     const projects = Object.values(appsData.projects);
     const navigation = Object.values(appsData.navigation);
-    const vsCodeBrowser = Object.values(appsData.vsCode)
+    const vsCodeBrowser = Object.values(appsData.vsCode);
     const allApps = [...projects, ...navigation, ...vsCodeBrowser];
     // now I do a for loop over the searchParams to see which apps are active
     const appsToShow = [];
@@ -75,16 +92,23 @@ const Home = () => {
     Array.prototype.forEach.call(appElements, (appElement) => {
       if (appElement.id === appId) {
         appElement.style.zIndex = "10000";
-        appElement.classList.add("active")
+        appElement.classList.add("active");
       } else {
         appElement.style.zIndex = "9999";
-        appElement.classList.remove("active")
+        appElement.classList.remove("active");
       }
     });
   };
 
+  const backgroundFile = mobileView ? "monkeBgMobile.webp" : "monkeBg.webp";
+
   return (
-    <div id="app" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/monkeBg.webp)` }}>
+    <div
+      id="app"
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/${backgroundFile})`,
+      }}
+    >
       <Header />
       <main>
         <section className="projects">
