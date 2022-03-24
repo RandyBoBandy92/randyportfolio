@@ -6,6 +6,7 @@ import AppWindow from "../appWindow/AppWindow";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import "./_home.scss";
+import SkipToContent from "../../components/skip/SkipToContent";
 
 const Home = () => {
   // searchParams and activeApps work together to determine which apps are active
@@ -105,6 +106,8 @@ const Home = () => {
   const backgroundFile = mobileView ? "monkeBgMobile.webp" : "monkeBg.webp";
 
   return (
+    <>
+    <SkipToContent/>
     <div
       id="app"
       style={{
@@ -112,9 +115,9 @@ const Home = () => {
       }}
     >
       <Header />
-      <main id="main">
+      <main>
         <section className="projects">
-          {Object.values(appsData.projects).map((app) => (
+          {Object.values(appsData.projects).map((app, index) => (
             <AppIcon launchApp={launchApp} key={app.id} appData={app} />
           ))}
         </section>
@@ -122,6 +125,7 @@ const Home = () => {
       </main>
       <Footer launchApp={launchApp} />
     </div>
+    </>
   );
 };
 
