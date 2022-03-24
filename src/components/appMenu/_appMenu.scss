@@ -50,7 +50,7 @@
   .app-menu {
     ul {
       li:focus-within {
-        @include focusVisibleBorder;
+        @include focusBorder;
       }
       .back {
         display: none;

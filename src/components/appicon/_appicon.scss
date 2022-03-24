@@ -78,7 +78,7 @@ a.icon {
       border-radius: $iconBorderRadiusDesktop;
       transition: all 0.2s ease-in-out;
       &:focus-visible {
-        @include focusVisibleBorder;
+        @include focusBorder;
       }
     }
 
