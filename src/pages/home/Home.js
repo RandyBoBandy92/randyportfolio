@@ -16,6 +16,8 @@ const Home = () => {
   );
 
   useEffect(() => {
+    // for adding the right background image
+    // depending on viewport size
     const handleViewportChange = (e) => {
       setMobileView(e.matches);
     };
