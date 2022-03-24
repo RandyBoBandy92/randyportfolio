@@ -118,6 +118,7 @@ const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
             gitHubLink={appData.gitHubLink}
             vsCodeId={appData.vsCodeId}
             launchApp={launchApp}
+            title={appData.title}
           />
         </section>
       </article>

@@ -10,6 +10,7 @@ const AppMenu = ({
   liveLink = "",
   gitHubLink = "",
   vsCodeId = "",
+  title
 }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const closeApps = () => {
@@ -20,14 +21,14 @@ const AppMenu = ({
       <ul>
         <li onClick={closeApps} className="app-menu-icon back">
           <button>
-            <img src={arrowLeft} alt="" />
+            <img src={arrowLeft} alt="Go back to the main screen" />
             <p>Back</p>
           </button>
         </li>
         {gitHubLink && (
           <li className="app-menu-icon github-link">
             <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
-              <img src={gitHubIcon} alt="" />
+              <img src={gitHubIcon} alt={`View the ${title} GitHub repository`} />
               <p>Code</p>
             </a>
           </li>
@@ -35,7 +36,7 @@ const AppMenu = ({
         {liveLink && (
           <li className="app-menu-icon live-site-link">
             <a href={liveLink} target="_blank" rel="noopener noreferrer">
-              <img src={openIcon} alt="" />
+              <img src={openIcon} alt={`View the ${title} live site`} />
               <p>View</p>
             </a>
           </li>
@@ -46,7 +47,7 @@ const AppMenu = ({
             className="app-menu-icon vs-code"
           >
             <button>
-              <img src={vsCodeIcon} alt="" />
+              <img src={vsCodeIcon} alt={`Launch the Vs Code app`} />
               <p>VS Code</p>
             </button>
           </li>

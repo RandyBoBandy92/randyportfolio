@@ -23,7 +23,7 @@ const Contact = () => {
             onClick={copyEmail}
             className={`copy-email${copyClick ? " active" : ""}`}
           >
-            <img src={copyIcon} alt="" />
+            <img src={copyIcon} alt="Copy this email to clipboard" />
           </button>
         </span>
         <p>(no spam pls.)</p>
