@@ -325,4 +325,45 @@ const Post = ({ appId, postName }) => {
 };
 ```
 
+### Tracking the active App
+
+I wrote a method that loops over all the currently loaded app-windows,
+and compares it to the id of the appwindow the user clicked on, or just launched. It assigns a class of active and a high z-index to the matching app, while removing the class and setting all other apps to a lower z-index.
+
+```jsx
+  const focusApp = (appId, e) => {
+    // After much experimenting with refs, I found vanilla JS to be the
+    // only implementation that worked based on my current code structure
+    // Not the best solution, but it gets the job done
+    const appElements = document.querySelectorAll(".app-window");
+    // I use Array.prototype as this method has the greatest browser support
+    Array.prototype.forEach.call(appElements, (appElement) => {
+      if (appElement.id === appId) {
+        appElement.style.zIndex = "10000";
+        appElement.classList.add("active")
+      } else {
+        appElement.style.zIndex = "9999";
+        appElement.classList.remove("active")
+      }
+    });
+  };
+```
+It also re-focuses any already open apps if you click the icon from the navigation, neat!
+
+<video title="active App switching" style="width: 100%; height:auto;" autoplay loop muted>
+<source src="activeApps.mp4" type="video/mp4">
+</video>
+
+
+### BONUS: VS-Code Embed
+
+I found an open source project called [github1s](https://github.com/conwnet/github1s) which supports embedding a read-only vs code client as an iframe. I added a VS-Code component which takes in the URL as a parameter and renders it inside an AppWindow.
+
+
+<video title="github1s embed running on the site" style="width: 100%; height:auto;" autoplay loop muted>
+<source src="vsCodeEmbed.mp4" type="video/mp4">
+</video>
+
 ## Summary
+
+I'm really happy with how this turned out. I pushed myself and learned a lot in the process. Setting up simple experiments to prove the approach I wanted to take to myself before going all in helped me avoid costly mistakes. I think the way I structured my app data in retrospect could have been made much simpler, in the future I may investigate ways I could refactor this to improve performance. 
