@@ -111,7 +111,7 @@ const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
             x
           </button>
         </section>
-        <section className="app-content">{children}</section>
+        <section tabIndex={0} className="app-content">{children}</section>
         <section className="app-footer">
           <AppMenu
             liveLink={appData.liveLink}

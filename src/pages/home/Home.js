@@ -96,6 +96,8 @@ const Home = () => {
       if (appElement.id === appId) {
         appElement.style.zIndex = "10000";
         appElement.classList.add("active");
+        // For accessibility, focus the post inside the window
+        document.getElementById(appElement.id).querySelector(".app-content").focus()
       } else {
         appElement.style.zIndex = "9999";
         appElement.classList.remove("active");

@@ -43,7 +43,6 @@ const Post = ({ appId, postName }) => {
         <h2>App Info</h2>
         <AppIcon appData={appData} />
       </div>
-      <div className="app-info tech">{/* TODO add tech stack component */}</div>
       <Markdown
         className="post-content"
         options={{
