@@ -69,6 +69,12 @@ The biggest challenge I encountered at the outset was coming up with a way to su
 
 I had to find a way to support both use cases without writing the site twice. My original plan used react router and url paths, but I quickly realized that would not support launching multiple apps at once. 
 
+I realized I could use the `useSearchParams` hook to create an array of open "apps" which solved my routing problem.
 
+<video title="Experimenting with useSearchParams" style="width: auto; height:auto;" autoplay loop muted>
+<source src="searchParamsExperiment.mp4" type="video/mp4">
+</video>
+
+With R&D out of the way, I got to work.
 
 ## Summary
