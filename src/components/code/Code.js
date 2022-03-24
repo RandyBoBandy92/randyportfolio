@@ -3,10 +3,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
 import json from "react-syntax-highlighter/dist/esm/languages/prism/json";
-import {
-  materialDark,
-  materialLight,
-} from "react-syntax-highlighter/dist/esm/styles/prism";
+import vscDarkPlus from "./vsc-dark-plus";
 
 const Code = ({ children, className }) => {
   SyntaxHighlighter.registerLanguage("jsx", jsx);
@@ -18,7 +15,7 @@ const Code = ({ children, className }) => {
       showLineNumbers
       className={className ? className : "inline-code"}
       language={language}
-      style={materialDark}
+      style={vscDarkPlus}
     >
       {children}
     </SyntaxHighlighter>
