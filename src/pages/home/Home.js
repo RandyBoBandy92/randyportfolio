@@ -112,7 +112,7 @@ const Home = () => {
       }}
     >
       <Header />
-      <main>
+      <main id="main">
         <section className="projects">
           {Object.values(appsData.projects).map((app) => (
             <AppIcon launchApp={launchApp} key={app.id} appData={app} />
