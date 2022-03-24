@@ -69,12 +69,32 @@ The biggest challenge I encountered at the outset was coming up with a way to su
 
 I had to find a way to support both use cases without writing the site twice. My original plan used react router and url paths, but I quickly realized that would not support launching multiple apps at once. 
 
-I realized I could use the `useSearchParams` hook to create an array of open "apps" which solved my routing problem.
+I found I could use the `useSearchParams` hook to create an array of open "apps" which solved my routing problem.
 
 <video title="Experimenting with useSearchParams" style="width: auto; height:auto;" autoplay loop muted>
 <source src="searchParamsExperiment.mp4" type="video/mp4">
 </video>
 
 With R&D out of the way, I got to work.
+
+## Mobile
+
+I refactored my design on mobile to resemble an android phone UI. All the data for the site lives in appsData.js, this seemed the most efficient approach given the overall small scope of the project. 
+
+Each navigation point within the site has the following schema (with some exceptions):
+```jsx
+{
+    id: "fetch",
+    external: false, // whether it navigates to another site, or within the site
+    title: "Fetch",
+    icon: fetchIcon,
+    liveLink: "https://fetch.bcitwebdeveloper.ca/", // if it is a project, it links to the live site
+    gitHubLink: "",
+    // will have to wait until i can fork this and put it on a public repo
+    component: <Post appId="fetch" postName={"fetch"} />,
+}
+```
+
+## Desktop
 
 ## Summary
