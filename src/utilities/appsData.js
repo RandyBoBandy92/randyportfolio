@@ -94,6 +94,7 @@ const appsData = {
       liveLink: "https://www.randygulak.com/",
       gitHubLink: "https://github.com/RandyBoBandy92/randyportfolio",
       vsCodeId: "code-portfolio",
+      component: <Post appId="portfolio" postName={"portfolio"} />,
     },
   },
   vsCode: {
