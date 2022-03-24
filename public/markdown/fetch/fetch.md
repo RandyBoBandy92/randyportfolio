@@ -88,4 +88,4 @@ Staff
 
 ## Development
 
-## Summary
+Project is still in progress... Expect updates soon! :D
