@@ -62,4 +62,13 @@ Early in development I receieved some useful feedback from my instructor at BCIT
 
 So I went back to the drawing board, and decided I would make the mobile design look like an android smart phone, then switch to the linux aesthetic at larger breakpoints. 
 
+The biggest challenge I encountered at the outset was coming up with a way to support the dual functionality my site required:
+
+1. On mobile, each "app" needs to be openable one at a time.
+2. On desktop, it needs to be able to open multiple apps simultaneously, with movable and independently closable windows.
+
+I had to find a way to support both use cases without writing the site twice. My original plan used react router and url paths, but I quickly realized that would not support launching multiple apps at once. 
+
+
+
 ## Summary
