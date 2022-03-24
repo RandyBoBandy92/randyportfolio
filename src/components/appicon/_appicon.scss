@@ -77,6 +77,9 @@ a.icon {
       background-color: unset;
       border-radius: $iconBorderRadiusDesktop;
       transition: all 0.2s ease-in-out;
+      &:focus-visible {
+        @include focusVisibleBorder;
+      }
     }
 
     .icon-img {

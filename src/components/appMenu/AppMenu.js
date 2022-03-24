@@ -2,10 +2,15 @@ import "./_appMenu.scss";
 import arrowLeft from "../../assets/images/icons/arrow-left.svg";
 import gitHubIcon from "../../assets/images/icons/github.svg";
 import openIcon from "../../assets/images/icons/box-arrow-up-right.svg";
-import vsCodeIcon from '../../assets/images/icons/vs-code.svg';
+import vsCodeIcon from "../../assets/images/icons/vs-code.svg";
 import { useSearchParams } from "react-router-dom";
 
-const AppMenu = ({ launchApp, liveLink = "", gitHubLink = "", vsCodeId = "" }) => {
+const AppMenu = ({
+  launchApp,
+  liveLink = "",
+  gitHubLink = "",
+  vsCodeId = "",
+}) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const closeApps = () => {
     setSearchParams({ app: [] });
@@ -14,8 +19,10 @@ const AppMenu = ({ launchApp, liveLink = "", gitHubLink = "", vsCodeId = "" }) =
     <div className="app-menu">
       <ul>
         <li onClick={closeApps} className="app-menu-icon back">
-          <img src={arrowLeft} alt="" />
-          <p>Back</p>
+          <button>
+            <img src={arrowLeft} alt="" />
+            <p>Back</p>
+          </button>
         </li>
         {gitHubLink && (
           <li className="app-menu-icon github-link">
@@ -34,10 +41,15 @@ const AppMenu = ({ launchApp, liveLink = "", gitHubLink = "", vsCodeId = "" }) =
           </li>
         )}
         {vsCodeId && (
-        <li onClick={() => launchApp({id: vsCodeId})} className="app-menu-icon vs-code">
-          <img src={vsCodeIcon} alt="" />
-          <p>VS Code</p>
-        </li>
+          <li
+            onClick={() => launchApp({ id: vsCodeId })}
+            className="app-menu-icon vs-code"
+          >
+            <button>
+              <img src={vsCodeIcon} alt="" />
+              <p>VS Code</p>
+            </button>
+          </li>
         )}
       </ul>
     </div>

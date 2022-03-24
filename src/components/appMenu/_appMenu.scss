@@ -49,6 +49,9 @@
 @include mqMin($desktopBreakpoint) {
   .app-menu {
     ul {
+      li:focus-within {
+        @include focusVisibleBorder;
+      }
       .back {
         display: none;
       }
@@ -63,7 +66,8 @@
         display: flex;
         &:hover {
           p {
-            color: $link-hover
+            color: $link-hover;
+            padding-bottom: 0.4rem;
           }
         }
       }

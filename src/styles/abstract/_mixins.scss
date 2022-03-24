@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @mixin mqMin($rem) {
   @media screen and (min-width: $rem) {
     @content;
@@ -13,4 +15,8 @@
 @mixin filterLinkHover() {
     // makes SVG's have the same color as the $linkHover variable
       filter: brightness(0) saturate(100%) invert(72%) sepia(70%) saturate(1526%) hue-rotate(162deg) brightness(101%) contrast(101%);
+}
+
+@mixin focusVisibleBorder() {
+  border: 2px solid $activeWindow;
 }
