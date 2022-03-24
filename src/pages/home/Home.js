@@ -6,7 +6,7 @@ import AppWindow from "../appWindow/AppWindow";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import "./_home.scss";
-import monkeBg from "../../assets/images/monkeBg.jpeg";
+import monkeBg from "../../assets/images/monkeBg.webp";
 
 const Home = () => {
   // searchParams and activeApps work together to determine which apps are active
