@@ -127,7 +127,8 @@ a.icon {
     button.icon,
     a.icon {
       margin: 0;
-      &:hover {
+      &:hover,
+      &:focus-visible {
         background-color: $iconHoverBg;
         .icon-text {
           border-radius: $iconTextBorderRadiusDesktop;

@@ -9,7 +9,7 @@ const AppIcon = ({ appData, launchApp }) => {
         target="_blank"
         rel="noreferrer noopener"
       >
-        <img className="icon-img" src={appData.icon} alt={`click to visit ${appData.hyperlink}`} />
+        <img className="icon-img" src={appData.icon} alt={`${appData.title} icon`} />
         <p className="icon-text">{appData.title}</p>
       </a>
     );

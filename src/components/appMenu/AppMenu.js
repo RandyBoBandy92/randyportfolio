@@ -28,7 +28,7 @@ const AppMenu = ({
         {gitHubLink && (
           <li className="app-menu-icon github-link">
             <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
-              <img src={gitHubIcon} alt={`View the ${title} GitHub repository`} />
+              <img src={gitHubIcon} alt={`GitHub icon`} />
               <p>Code</p>
             </a>
           </li>
@@ -36,7 +36,7 @@ const AppMenu = ({
         {liveLink && (
           <li className="app-menu-icon live-site-link">
             <a href={liveLink} target="_blank" rel="noopener noreferrer">
-              <img src={openIcon} alt={`View the ${title} live site`} />
+              <img src={openIcon} alt="Live site icon" />
               <p>View</p>
             </a>
           </li>
@@ -47,7 +47,7 @@ const AppMenu = ({
             className="app-menu-icon vs-code"
           >
             <button>
-              <img src={vsCodeIcon} alt={`Launch the Vs Code app`} />
+              <img src={vsCodeIcon} alt={`Launch the Vs Code app to view ${title} repository`} />
               <p>VS Code</p>
             </button>
           </li>
