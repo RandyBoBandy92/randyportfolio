@@ -1,5 +1,13 @@
+
+<video title="Showcasing the responsive design of my portfolio, from mobile to desktop view" style="width: 100%; height:auto;" autoplay loop muted>
+<source src="portfolioResponsive.mp4" type="video/mp4">
+</video>
+
+*I heard you like portfolios so I put a portfolio inside your portfolio \#wowsometa \#just90skidsthings*
+
 # Project Overview
 Ubuntu inspired. Come for the monke, but stay for the active window management algorithm. Built in React, with React-Router, Markdown-To-JSX, and React-Syntax-Highlighter.
+
 ## Requirements
 I already had begun cataloging my projects over on my [blog](https://blog.randygulak.com), which uses markdown files to create posts. I originally built that blog off a gatsby template, so while I had no idea how the markdown conversion was happening under the hood - I knew I wanted to replicate it here. That way, my blog posts would be reusable components on both my blog and portfolio.
 
@@ -56,6 +64,8 @@ Projects Page
 Site Map:
 ![Portfolio Sitemap](PortfolioSiteMap.svg)
 
+My original plan was for my projects to link directly to the corresponding blog post, but later on was refactored to display the markdown directly in the portfolio.
+
 ## Development
 
 Early in development I receieved some useful feedback from my instructor at BCIT that my idea of having multiple navigation menus, as well as trying to maintain the same UI at the mobile level as I intended at desktop breakpoints was not in line with UX best practices. 
@@ -86,10 +96,12 @@ Each navigation point within the site has the following schema (with some except
 ```jsx
 {
     id: "fetch",
-    external: false, // whether it navigates to another site, or within the site
+    external: false,
+    // whether it navigates to another site, or within the site
     title: "Fetch",
     icon: fetchIcon,
-    liveLink: "https://fetch.bcitwebdeveloper.ca/", // if it is a project, it links to the live site
+    liveLink: "https://fetch.bcitwebdeveloper.ca/",
+    // if it is a project, it links to the live site
     gitHubLink: "",
     component: <Post appId="fetch" postName={"fetch"} />,
 }
@@ -114,7 +126,8 @@ I wrote a launchApp method, which takes in the appData object and adds the id to
     const filteredSearchParams = searchParams
       .getAll("app")
       .filter((app) => app !== appData.id);
-    // By filtering out the appId, we can ensure that the app is not launched twice
+    // By filtering out the appId, we can
+    // ensure that the app is not launched twice
     const newSearchParams = [...filteredSearchParams, appData.id];
     setSearchParams({ app: newSearchParams });
   };
@@ -271,7 +284,7 @@ const Img = (props) => {
   return (
     <img
       className="post-img"
-      src={`${process.env.PUBLIC_URL}/markdown/${props.postName}/${props.src}`}
+      src={`${.../markdown/${props.postName}/${props.src}`}
       alt={props.alt}
       loading="lazy"
     />
@@ -281,7 +294,8 @@ const Img = (props) => {
 
 const Source = (props) => {
   return (
-    <source src={`${process.env.PUBLIC_URL}/markdown/${props.postName}/${props.src}`} type="video/mp4"/>
+    <source src={`$.../markdown/${props.postName}/${props.src}`}
+    type="video/mp4"/>
   );
 };
 
@@ -366,4 +380,4 @@ I found an open source project called [github1s](https://github.com/conwnet/gith
 
 ## Summary
 
-I'm really happy with how this turned out. I pushed myself and learned a lot in the process. Setting up simple experiments to prove the approach I wanted to take to myself before going all in helped me avoid costly mistakes. I think the way I structured my app data in retrospect could have been made much simpler, in the future I may investigate ways I could refactor this to improve performance. 
+I'm really happy with how this turned out! I pushed myself and learned a lot in the process. Setting up simple experiments to prove the approach I wanted to take to myself before going all in helped me avoid costly mistakes. I think the way I structured my app data in retrospect could have been made much simpler, in the future I may investigate ways I could refactor this to improve performance. 
