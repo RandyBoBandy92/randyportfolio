@@ -58,6 +58,9 @@
         font-size: 1.3rem;
         padding: 0 0.45rem 0.1rem 0.45rem;
         margin-right: 1rem;
+        &:focus-visible {
+          @include focusBorder
+        }
       }
     }
   }

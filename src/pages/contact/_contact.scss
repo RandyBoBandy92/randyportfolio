@@ -32,6 +32,9 @@
       border-radius: 10px;
       padding: 0.4rem;
     }
+    &:focus-visible {
+      @include focusBorder
+    }
   }
   .email-link a {
     font-size: 1.5rem;
