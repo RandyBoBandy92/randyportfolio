@@ -77,11 +77,12 @@ I found I could use the `useSearchParams` hook to create an array of open "apps"
 
 With R&D out of the way, I got to work.
 
-## Mobile
+### App Control
 
-I refactored my design on mobile to resemble an android phone UI. All the data for the site lives in appsData.js, this seemed the most efficient approach given the overall small scope of the project. 
+All the data for the site lives in appsData.js, this seemed the most efficient approach given the overall small scope of the project. 
 
 Each navigation point within the site has the following schema (with some exceptions):
+
 ```jsx
 {
     id: "fetch",
@@ -90,11 +91,72 @@ Each navigation point within the site has the following schema (with some except
     icon: fetchIcon,
     liveLink: "https://fetch.bcitwebdeveloper.ca/", // if it is a project, it links to the live site
     gitHubLink: "",
-    // will have to wait until i can fork this and put it on a public repo
     component: <Post appId="fetch" postName={"fetch"} />,
 }
 ```
 
-## Desktop
+These objects get used to both render icons and links on the site, but also is how I associate the url search params to the corresponding component.
+
+I use two pieces of state:
+1. searchParams (to track the URLs) 
+2. activeApps (array of components)
+
+I wrote a launchApp method, which takes in the appData object and adds the id to the array of searchParams. 
+
+```jsx
+  const launchApp = (appData) => {
+    // if the app is already active, focus it
+    if (activeApps.find((app) => app.props.appData.id === appData.id)) {
+      focusApp(appData.id);
+    }
+
+    // Update the URL to reflect the appId
+    const filteredSearchParams = searchParams
+      .getAll("app")
+      .filter((app) => app !== appData.id);
+    // By filtering out the appId, we can ensure that the app is not launched twice
+    const newSearchParams = [...filteredSearchParams, appData.id];
+    setSearchParams({ app: newSearchParams });
+  };
+```
+Next I wrote a useEffect that runs every time searchParams is updated, which iterates over the array and if it finds a matching app component, adds it to activeApps array.
+
+```jsx
+  useEffect(() => {
+    // ... abbreviated ...
+    const allApps = [...projects, ...navigation, ...vsCodeBrowser];
+    // now I do a for loop over the searchParams to see which apps are active
+    const appsToShow = [];
+    for (let index = 0; index < searchParams.getAll("app").length;
+    index++) {
+      const appId = searchParams.getAll("app")[index];
+      const matchingApp = allApps.find((appData) => appData.id === appId);
+      if (matchingApp) {
+        appsToShow.push(
+          <AppWindow
+            launchApp={launchApp}
+            closeApp={closeApp}
+            focusApp={focusApp}
+            appData={matchingApp}
+            key={appId}
+          >
+            {matchingApp.component}
+          </AppWindow>
+        );
+      }
+    }
+    setActiveApps(appsToShow);
+  }, [searchParams]);
+```
+
+Each app renders as 1 main component, with 2 nested subcomponents:
+- AppWindow - controls window movement
+    - Post - renders markdown as html
+    - AppMenu - contains additional project links
+
+### AppWindow
+
+In order to make this component functional for both mobile and desktop, I needed to write a useEffect that toggled whether or not the windows could be dragged depending on the size of the viewport. 
+
 
 ## Summary

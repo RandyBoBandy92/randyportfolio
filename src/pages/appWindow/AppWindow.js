@@ -13,15 +13,6 @@ const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
     focusApp(appData.id);
   }, []);
 
-  // Checks on first render to see if draggable windows should be enabled
-  useEffect(() => {
-    if (window.innerWidth < 850) {
-      setDraggable(false);
-    } else if (window.innerWidth > 850) {
-      setDraggable(true);
-    }
-  }, []);
-
   // Checks on every resize event to see if draggable windows should be enabled
   useEffect(() => {
     const handleResize = () => {
