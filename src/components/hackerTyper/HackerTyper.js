@@ -62,7 +62,9 @@ const HackerTyper = () => {
     setHackTimeout(null);
     setHackTimeout(
       setTimeout(() => {
-        audioRef.current.pause();
+        if (audioRef) {
+          audioRef.current.pause();
+        }
         document.querySelectorAll(".hacker-video").forEach((video) => {
           video.pause();
         });
