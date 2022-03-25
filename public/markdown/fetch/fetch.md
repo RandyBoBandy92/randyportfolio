@@ -67,7 +67,9 @@ Example:
 ### Low Fidelity Prototype
 - Mobile first prototype
 
-![low fidelity prototype](fetchPrototype.gif)
+<video title="Low fidelity prototype" style="width: auto; height:auto;" autoplay loop muted>
+<source src="fetchPrototype.mp4" type="video/mp4">
+</video>
 
 ### Site Development Plan
 
