@@ -186,7 +186,19 @@ I imported my bike images, and got basic line drawing complete. i also created "
 
 Working through the collision detection algorithm was without a doubt the biggest challenge of the entire project.
 
-![notes](notes.jpg)
+<!-- ![notes](notes.jpg) -->
+
+<img
+id="notes"
+sizes="(max-width: 1000px) 100vw, 1000px"
+srcset="
+notes_vpklxq_c_scale-w_300.jpg 300w,
+notes_vpklxq_c_scale-w_612.jpg 612w,
+notes_vpklxq_c_scale-w_814.jpg 814w,
+notes_vpklxq_c_scale-w_1000.jpg 1000w"
+src="notes_vpklxq_c_scale-w_1000.jpg"
+alt="a page from Randy's journal with largely illegible handwritten notes about collision detection.">
+
 
 Each players `move()` method would calculate it's potential next position of x y coordinates, and then runs a `checkBounds(newX, newY)` method as well as a `checkObstacles(newX, newY)` method. If a collision is detected the player's `die()` method is called.
 
