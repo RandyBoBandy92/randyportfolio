@@ -18,7 +18,6 @@ const HackerTyper = () => {
 
     document.getElementById("hacker-man").scrollTop =
       document.getElementById("hacker-man").scrollHeight;
-    console.log(audioRef.current.currentTime);
     // get the audioRef position
     if (releaseTheNerds || audioRef.current.currentTime > 15.9) {
       // get all the videos with a class of 'hacker-video'
