@@ -62,19 +62,29 @@ const Home = () => {
     setActiveApps(appsToShow);
   }, [searchParams]);
 
+  const updateSearchParams = (appId) => {
+    // Update the URL to reflect the appId
+    const filteredSearchParams = searchParams
+      .getAll("app")
+      .filter((app) => app !== appId);
+    // By filtering out the appId, we can ensure that the app is not launched twice
+    // and ensures that the last searchParam in the URL field reflects the active app
+    const newSearchParams = [...filteredSearchParams, appId];
+    setSearchParams({ app: newSearchParams });
+    // Upon this methods completion, the activeApps state will be updated
+    // via the useEffect hook
+  };
+
   const launchApp = (appData) => {
     // if the app is already active, focus it
     if (activeApps.find((app) => app.props.appData.id === appData.id)) {
       focusApp(appData.id);
+    } else {
+      // wrapping this in an else because focusApp
+      // also calls updateSearchParams
+      // and we don't want to call it twice
+      updateSearchParams(appData.id);
     }
-
-    // Update the URL to reflect the appId
-    const filteredSearchParams = searchParams
-      .getAll("app")
-      .filter((app) => app !== appData.id);
-    // By filtering out the appId, we can ensure that the app is not launched twice
-    const newSearchParams = [...filteredSearchParams, appData.id];
-    setSearchParams({ app: newSearchParams });
   };
 
   // need a delete component
@@ -97,36 +107,40 @@ const Home = () => {
         appElement.style.zIndex = "10000";
         appElement.classList.add("active");
         // For accessibility, focus the post inside the window
-        document.getElementById(appElement.id).querySelector(".app-content").focus()
+        document
+          .getElementById(appElement.id)
+          .querySelector(".app-content")
+          .focus();
       } else {
         appElement.style.zIndex = "9999";
         appElement.classList.remove("active");
       }
     });
+    updateSearchParams(appId);
   };
 
   const backgroundFile = mobileView ? "monkeBgMobile.webp" : "monkeBg.webp";
 
   return (
     <>
-    <SkipToContent/>
-    <div
-      id="app"
-      style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/${backgroundFile})`,
-      }}
-    >
-      <Header />
-      <main>
-        <section className="projects">
-          {Object.values(appsData.projects).map((app, index) => (
-            <AppIcon launchApp={launchApp} key={app.id} appData={app} />
-          ))}
-        </section>
-        {activeApps}
-      </main>
-      <Footer launchApp={launchApp} />
-    </div>
+      <SkipToContent />
+      <div
+        id="app"
+        style={{
+          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/${backgroundFile})`,
+        }}
+      >
+        <Header />
+        <main>
+          <section className="projects">
+            {Object.values(appsData.projects).map((app, index) => (
+              <AppIcon launchApp={launchApp} key={app.id} appData={app} />
+            ))}
+          </section>
+          {activeApps}
+        </main>
+        <Footer launchApp={launchApp} />
+      </div>
     </>
   );
 };

@@ -12,7 +12,7 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   .app-header {
-    background-color: $topBarBg;
+    background-color: $windowHeadingBg;
     display: grid;
     place-items: center;
     font-size: 0.8rem;
@@ -39,7 +39,7 @@
     right: unset;
     height: 80vh;
     width: 700px;
-    border: 2px solid $headerBg;
+    border: 2px solid $windowBorder;
     .app-header {
       grid-template-columns: 1fr 1fr 1fr;
       cursor: move;
@@ -59,7 +59,7 @@
         padding: 0 0.45rem 0.1rem 0.45rem;
         margin-right: 1rem;
         &:focus-visible {
-          @include focusBorder
+          @include focusBorder;
         }
       }
     }
@@ -81,4 +81,3 @@
     width: 850px;
   }
 }
-

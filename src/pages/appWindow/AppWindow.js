@@ -72,6 +72,7 @@ const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
         // stops at the bottom of the screen
         top = window.innerHeight - appWindowRef.current.offsetHeight;
       }
+      // inline styles are used to move the appWindow
       appWindowRef.current.style.left = `${left}px`;
       appWindowRef.current.style.top = `${top}px`;
     }
@@ -84,7 +85,9 @@ const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
     setDragging(false);
   };
 
-  const codeClass =  appData.id.includes("code") ? "code" : ""
+  // codeClass is used to detect when a vs code component is being rendered
+  // and adds another class for styling purposes
+  const codeClass = appData.id.includes("code") ? "code" : "";
 
   return (
     <>
@@ -111,7 +114,10 @@ const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
             x
           </button>
         </section>
-        <section tabIndex={0} className="app-content">{children}</section>
+        {/* tabIndex is for accessibility purposes */}
+        <section tabIndex={0} className="app-content">
+          {children}
+        </section>
         <section className="app-footer">
           <AppMenu
             liveLink={appData.liveLink}

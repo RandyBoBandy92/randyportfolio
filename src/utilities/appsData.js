@@ -14,6 +14,25 @@ import About from "../pages/about/About";
 import Post from "../components/post/Post";
 import VsCode from "../components/vsCode/VsCode";
 
+// appsData contains both routing information and components
+// the schema is flexible, as components which use this data
+// for example appIcons inside appMenu only render if matching props are passed
+
+// I used 3 categories to store the data
+// I don't think this was the best way to structure the data
+// but this is an MVP ok?!
+
+// Schema Properties:
+// id: string - used for routing
+// external: boolean - used for conditional rendering of the hyperlink property
+// title: string - used for appWindow heading and some alt text
+// hyperlink (optional): string - used for external links
+// icon: image - used for appIcon
+// component: component - used for appWindow content
+// liveLink (optional): string - used to link to the app's live site
+// githubLink (optional): string - used to link to the app's github repo
+// vsCodeId (optional): string - used to link to the app's Vs Code app
+
 const appsData = {
   navigation: {
     about: {
