@@ -78,7 +78,7 @@ const Home = () => {
   const launchApp = (appData) => {
     // if the app is already active, focus it
     if (activeApps.find((app) => app.props.appData.id === appData.id)) {
-      focusApp(appData.id);
+      focusApp(appData);
     } else {
       // wrapping this in an else because focusApp
       // also calls updateSearchParams
@@ -96,14 +96,14 @@ const Home = () => {
     setSearchParams({ app: newSearchParams });
   };
 
-  const focusApp = (appId, e) => {
+  const focusApp = (appData, e) => {
     // After much experimenting with refs, I found vanilla JS to be the
     // only implementation that worked based on my current code structure
     // Not the best solution, but it gets the job done
     const appElements = document.querySelectorAll(".app-window");
     // I use Array.prototype as this method has the greatest browser support
     Array.prototype.forEach.call(appElements, (appElement) => {
-      if (appElement.id === appId) {
+      if (appElement.id === appData.id) {
         appElement.style.zIndex = "10000";
         appElement.classList.add("active");
         // For accessibility, focus the post inside the window
@@ -116,7 +116,8 @@ const Home = () => {
         appElement.classList.remove("active");
       }
     });
-    updateSearchParams(appId);
+    updateSearchParams(appData.id);
+    document.title = `Randy Gulak | Portfolio - ${appData.title}`;
   };
 
   const backgroundFile = mobileView ? "monkeBgMobile.webp" : "monkeBg.webp";

@@ -10,7 +10,7 @@ const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
 
   // on first render, runs focusApp to give new window the highest z-index
   useEffect(() => {
-    focusApp(appData.id);
+    focusApp(appData);
   }, []);
 
   // Checks on every resize event to see if draggable windows should be enabled
@@ -96,7 +96,7 @@ const AppWindow = ({ launchApp, closeApp, focusApp, appData, children }) => {
         style={{ zIndex: 9999 }}
         className={`app-window ${appData.id}-window ${codeClass}`}
         ref={appWindowRef}
-        onMouseDown={(e) => focusApp(appData.id, e)}
+        onMouseDown={(e) => focusApp(appData, e)}
         onMouseMove={handleDrag}
         onMouseLeave={endDrag}
       >
