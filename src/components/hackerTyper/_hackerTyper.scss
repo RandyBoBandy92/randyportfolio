@@ -17,9 +17,9 @@
   display: none;
 }
 
-@include mqMin($desktopBreakpoint) {
+@include mqMin($desktopExtraWideBreakpoint) {
   .hacker-typer {
-    .hide {
+    .hacker-video.hide {
       display: none;
     }
     .hacker-video {

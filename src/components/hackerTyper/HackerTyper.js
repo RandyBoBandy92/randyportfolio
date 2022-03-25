@@ -50,7 +50,7 @@ const HackerTyper = () => {
       setCurrentWordIndex(index + 1);
     } else {
       setCurrentWordIndex(0);
-      newHackerOutput += "\n";
+      newHackerOutput = "";
     }
     setHackerOutput(newHackerOutput);
   };
@@ -121,7 +121,9 @@ const HackerTyper = () => {
         />
       </video>
       <Code id="hacker-man" className={"lang-jsx"}>
-        {!hackerOutput ? "click here and start typing!" : hackerOutput}
+        {!hackerOutput
+          ? "click here and start typing! ( PC Only - sorry tablets :( )) \nWARNING: will play audio"
+          : hackerOutput}
       </Code>
     </div>
   );
