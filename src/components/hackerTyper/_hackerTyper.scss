@@ -1,0 +1,47 @@
+@use "../../styles/abstract/variables" as *;
+@use "../../styles/abstract/mixins" as *;
+
+.hacker-typer {
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  position: relative;
+  pre {
+    width: 100% !important;
+    height: 100% !important;
+    overflow-y: hidden;
+  }
+}
+
+.hacker-video {
+  display: none;
+}
+
+@include mqMin($desktopBreakpoint) {
+  .hacker-typer {
+    .hide {
+      display: none;
+    }
+    .hacker-video {
+      position: fixed;
+      width: 400px;
+      display: block;
+      &.video-1 {
+        top: 0;
+        left: 0;
+      }
+      &.video-2 {
+        top: 0;
+        right: 0;
+      }
+      &.video-3 {
+        bottom: 0;
+        right: 0;
+      }
+      &.video-4 {
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+}

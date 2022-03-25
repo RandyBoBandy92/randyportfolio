@@ -6,9 +6,6 @@ import Code from "../code/Code";
 import "./_post.scss";
 
 const Img = (props) => {
-  if (props.id === "notes") {
-    console.log(props);
-  }
   if (props.srcSet) {
     // break down the string into an array
     const srcSetArray = props.srcSet.split(",");

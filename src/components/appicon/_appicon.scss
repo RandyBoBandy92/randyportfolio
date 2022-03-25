@@ -61,6 +61,12 @@ a.icon {
   stroke-width: 1rem;
 }
 
+// Hacker Typer Styles
+
+.icon.icon-hacker-typer {
+  display: none;
+}
+
 // Desktop Icon Styles
 
 @include mqMin($desktopBreakpoint) {
@@ -94,7 +100,7 @@ a.icon {
     button.icon {
       height: 120px;
       width: 120px;
-      margin-right: 3rem;
+      // margin-right: 3rem;
       margin-bottom: unset;
       &:hover {
         background-color: $iconHoverBg;
@@ -118,6 +124,12 @@ a.icon {
         bottom: 0.5rem;
         white-space: normal;
       }
+    }
+
+    // Hacker Typer Styles
+
+    .icon.icon-hacker-typer {
+      display: grid;
     }
   }
 
