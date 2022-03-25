@@ -19,6 +19,7 @@
   .social-icon {
     width: 35px;
     margin: 0.5rem 0;
+    // filter makes svgs white
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg)
       brightness(103%) contrast(103%);
     &:hover {
