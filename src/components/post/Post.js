@@ -27,6 +27,7 @@ const Img = (props) => {
         className={"post-img"}
         sizes={props.sizes}
         loading="lazy"
+        height="auto"
       />
     );
   }
@@ -36,6 +37,7 @@ const Img = (props) => {
       src={`${process.env.PUBLIC_URL}/markdown/${props.postName}/${props.src}`}
       alt={props.alt}
       loading="lazy"
+      height="auto"
     />
   );
 };
