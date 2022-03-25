@@ -43,23 +43,23 @@ A content plan was created breaking down the pages & components into their base 
 
 Example: 
 Projects Page
-    - Top Bar
-    - Projects will contain the following subpages:
-        - Capstone Project
-        - bdmi - React Movie Database
-        - Ray Bike Supreme
-        - I-Ching Divination React App
-        - Portfolio
-    - There will be an internal menu which handles navigation between projects
-    - Each project subpage will follow the same schema:
-        - Animated Image of the application (if there is movement to showcase)
-        - Title
-        - Link to view the live project
-        - Github Repository Link
-        - Requirements
-        - Design Considerations
-        - Code Overview
-        - Summary
+  - Top Bar
+  - Projects will contain the following subpages:
+      - Capstone Project
+      - bdmi - React Movie Database
+      - Ray Bike Supreme
+      - I-Ching Divination React App
+      - Portfolio
+  - There will be an internal menu which handles navigation between projects
+  - Each project subpage will follow the same schema:
+      - Animated Image of the application (if there is movement to showcase)
+      - Title
+      - Link to view the live project
+      - Github Repository Link
+      - Requirements
+      - Design Considerations
+      - Code Overview
+      - Summary
 
 Site Map:
 ![Portfolio Sitemap](PortfolioSiteMap.svg)
@@ -284,7 +284,7 @@ const Img = (props) => {
   return (
     <img
       className="post-img"
-      src={`${.../markdown/${props.postName}/${props.src}`}
+      src={`.../markdown/${props.postName}/${props.src}`}
       alt={props.alt}
       loading="lazy"
     />
