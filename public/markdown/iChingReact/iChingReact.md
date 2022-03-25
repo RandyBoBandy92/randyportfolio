@@ -12,46 +12,6 @@ Before I get into the review, here is a visual demo of what the application does
 
 I've never really done a post-mortem on one of my earlier projects before, and given that reading code is much harder than writing code, I thought this would be a useful exercise.
 
-# File Structure overview
-
-So, here's the file tree at root
-
-```
-├── public
-│   └── images
-└── src
-└── DekorneText
-└── hexagramJSONS
-```
-
-the images folder contains the images for each of the lines.
-
-```
-├── images
-│   ├── nothing.png
-│   ├── old_yang.png
-│   ├── old_yin.png
-│   ├── young_yang.png
-│   └── young_yin.png
-```
-
-now for the src folder
-
-```
-.
-├── App.js
-├── DekorneText
-│   ├── dekornetext.p
-│   ├── hexagramJSONS
-│   ├── hexagrams.p
-│   ├── IChing.py
-│   └── trigrams.p
-├── iChingData.js
-└── index.js
-```
-
-Interesting stuff is in the `/src/` folder, so let's go there next.
-
 ## Dekorne Text
 
 The app contains text sourced from several translations of the I-Ching, compiled by [James Dekorne](http://www.jamesdekorne.com/GBCh/GBCh.htm)
@@ -134,7 +94,8 @@ This is the render function for that component, you can read thru the comments t
       // Function looks at the current hexagram number contained in State,
       // and compares it to the Transformed Hexagram.
       // If the numbers are the same, it will only show 1 line.
-      // if they are not the same, the display css of the "transformed" line changes from "none" to "block" and is displayed.
+      // if they are not the same, the display css of the "transformed"
+      // line changes from "none" to "block" and is displayed.
       if (hexagram.number && hexagram.transformNumber) {
         // if they both are true, they equal something
         // console.log("both hexagrams are something")
@@ -164,8 +125,10 @@ This is the render function for that component, you can read thru the comments t
       <div className={`line line-${this.props.line.lineNum}`}>
         <img
           className="primary-hexagram"
-          ref={this.autoClick} // this was a debug utility 
-          src={this.props.line.image} // state also tells the image what source to use
+          ref={this.autoClick}
+          // this was a debug utility 
+          src={this.props.line.image}
+          // state also tells the image what source to use
           style={this.primaryStyles}
           // this style value does not change, but I wanted it to be consistent..
           // Probably could have simplified things.

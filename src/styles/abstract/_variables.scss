@@ -1,23 +1,30 @@
 // Declaring colors
 
+$darkGray: #212121;
+$black: #181818;
+$gray: #3d3d3d;
+$white: #fff;
+$lightGray: #aaa;
+$darkPurple: #310934;
 $headerBg: #272727;
 
-$topBarBg: #3b3b3b;
 $navBg: rgba(46, 46, 46, 0.609);
 
-$windowHeadingBg: #363636;
+$windowHeadingBg: #3b3b3b;
 $windowMainBg: #303030;
 $windowMainSecondaryBg: #272727;
+$windowBorder: #272727;
 
 $closeButtonBg: #f28c2a;
 
 $textPrimary: white;
-$textSecondary: #dd0e26;
 
 $link: #02c4ff;
 $link-hover: #41d3ff;
 
-$activeWindow: #39FF14;
+$activeWindow: #39ff14;
+
+$iconHoverBg: rgba(255, 255, 255, 0.192);
 
 // Declaring shared units
 
@@ -25,7 +32,6 @@ $mobileMenuWidth: 40.625rem;
 
 // Declaring units for desktop layout
 
-$iconHoverBg: rgba(255, 255, 255, 0.192);
 $iconBorderRadiusDesktop: 15px;
 $iconTextBorderRadiusDesktop: 5px;
 
@@ -33,15 +39,3 @@ $desktopBreakpoint: 53.125rem;
 $desktopWideBreakpoint: 67.5rem;
 
 $navBorderRadius: 18px;
-
-
-// Color declarations
-
-$brandColor: red;
-
-$darkGray: #212121;
-$black: #181818;
-$gray: #3d3d3d;
-$white: #fff;
-$lightGray: #aaa;
-$darkPurple: #310934;

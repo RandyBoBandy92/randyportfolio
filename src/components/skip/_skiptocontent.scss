@@ -1,0 +1,32 @@
+@use "../../styles/abstract/variables" as *;
+@use "../../styles/abstract/mixins" as *;
+
+a.skip-main {
+  display: none;
+}
+
+@include mqMin($desktopBreakpoint) {
+  a.skip-main {
+    display: block;
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+  }
+  a.skip-main:focus,
+  a.skip-main:active,
+  a.skip-main:focus-visible {
+    left: 50%;
+    top: 3rem;
+    transform: translateX(-50%);
+    z-index: 10000000000000;
+    background-color: $black;
+    color: $white;
+    padding: 1rem;
+    width: auto;
+    height: auto;
+  }
+}

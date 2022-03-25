@@ -9,7 +9,7 @@ const AppIcon = ({ appData, launchApp }) => {
         target="_blank"
         rel="noreferrer noopener"
       >
-        <img className="icon-img" src={appData.icon} alt="" />
+        <img className="icon-img" src={appData.icon} alt={`${appData.title} icon`} />
         <p className="icon-text">{appData.title}</p>
       </a>
     );
@@ -19,7 +19,7 @@ const AppIcon = ({ appData, launchApp }) => {
       onClick={launchApp ? () => launchApp(appData) : null}
       className={`icon icon-${appData.id}`}
     >
-      <img className="icon-img" src={appData.icon} alt="" />
+      <img className="icon-img" src={appData.icon} alt={`click to launch the ${appData.title} app`} />
       <p className="icon-text">{appData.title}</p>
     </button>
   );

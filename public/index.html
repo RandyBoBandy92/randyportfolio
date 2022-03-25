@@ -27,7 +27,12 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>React App</title>
+  <title>Randy Gulak | Portfolio</title>
+  <script>
+    // Firefox throws an error saying layout is force before content loads. I add a dummy script here to prevent
+    // the FOUC (flash of unstyled content)
+    let FF_FIX;
+  </script>
 </head>
 
 <body>

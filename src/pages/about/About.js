@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <div className="about">
-        <img className="profile-pic" src={profilePic} alt="" />
+        <img className="profile-pic" src={profilePic} alt="Randy Gulak standing on the beach at night during low tide" />
         <div className="social-icons">
           <a
             href="https://www.linkedin.com/in/ryangulak/"

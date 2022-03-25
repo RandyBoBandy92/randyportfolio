@@ -46,7 +46,6 @@ export default function Calculator() {
     setCalculationDisplay("");
     if (error) {
       setCalculationDisplay(`ERR`);
-      console.log(error);
     }
     if (customValues) {
       setCalculationDisplay(customValues.display);
@@ -55,17 +54,14 @@ export default function Calculator() {
   };
 
   const evaluateCalculation = () => {
-    console.log(calculationStatement);
     if (calculationStatement) {
       try {
         const sanitizedCalculations = calculationStatement.replace(
           /[^-()\d/*+.Mathsqr]/g,
           ""
         );
-        console.log(sanitizedCalculations);
         // eslint-disable-next-line
         const calculationResult = eval(sanitizedCalculations);
-        console.log(calculationResult);
         if (!isFinite(calculationResult)) {
           setCalculationStatement("");
           setCalculationDisplay("u can't do that lol");
