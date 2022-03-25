@@ -73,9 +73,9 @@
       }
     }
   }
-  .code .app-menu,
-  .about-window .app-menu,
-  .contact-window .app-menu {
+  // When on desktop and no additional menu items are required, the app menu
+  // is hidden
+  .hide-app-menu {
     display: none;
   }
 }

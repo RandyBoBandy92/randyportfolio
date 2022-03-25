@@ -10,14 +10,15 @@ const AppMenu = ({
   liveLink = "",
   gitHubLink = "",
   vsCodeId = "",
-  title
+  title,
 }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const closeApps = () => {
     setSearchParams({ app: [] });
   };
+  const noLinks = !liveLink && !gitHubLink && !vsCodeId;
   return (
-    <div className="app-menu">
+    <div className={`app-menu ${noLinks ? "hide-app-menu" : ""}`}>
       <ul>
         <li onClick={closeApps} className="app-menu-icon back">
           <button>
@@ -47,7 +48,10 @@ const AppMenu = ({
             className="app-menu-icon vs-code"
           >
             <button>
-              <img src={vsCodeIcon} alt={`Launch the Vs Code app to view ${title} repository`} />
+              <img
+                src={vsCodeIcon}
+                alt={`Launch the Vs Code app to view ${title} repository`}
+              />
               <p>VS Code</p>
             </button>
           </li>

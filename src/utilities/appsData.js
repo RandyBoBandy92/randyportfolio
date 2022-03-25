@@ -51,7 +51,7 @@ const appsData = {
       external: false,
       title: "Fetch",
       icon: fetchIcon,
-      liveLink: "https://fetch.bcitwebdeveloper.ca/",
+      // liveLink: "https://fetch.bcitwebdeveloper.ca/",
       gitHubLink: "",
       // will have to wait until i can fork this and put it on a public repo
       component: <Post appId="fetch" postName={"fetch"} />,
@@ -99,31 +99,46 @@ const appsData = {
   },
   vsCode: {
     iChing: {
-      id: 'code-i-ching',
+      id: "code-i-ching",
       title: "VS Code - React I-Ching",
       external: false,
-      component: <VsCode gitHubEmbedLink={ "https://github1s.com/RandyBoBandy92/ReactIChing"}/>
+      component: (
+        <VsCode
+          gitHubEmbedLink={"https://github1s.com/RandyBoBandy92/ReactIChing"}
+        />
+      ),
     },
     rayBikeSupreme: {
-      id: 'code-ray-bike-supreme',
+      id: "code-ray-bike-supreme",
       title: "VS Code - Ray Bike Supreme",
       external: false,
-      component: <VsCode gitHubEmbedLink={ "https://github1s.com/RandyBoBandy92/RayBikeSupreme"}/>
+      component: (
+        <VsCode
+          gitHubEmbedLink={"https://github1s.com/RandyBoBandy92/RayBikeSupreme"}
+        />
+      ),
     },
     portfolio: {
-      id: 'code-portfolio',
+      id: "code-portfolio",
       title: "VS Code - Portfolio",
       external: false,
-      component: <VsCode gitHubEmbedLink={"https://github1s.com/RandyBoBandy92/randyportfolio"}/>
-
+      component: (
+        <VsCode
+          gitHubEmbedLink={"https://github1s.com/RandyBoBandy92/randyportfolio"}
+        />
+      ),
     },
     bdmi: {
-      id: 'code-bdmi',
+      id: "code-bdmi",
       title: "VS Code - bDMI",
       external: false,
-      component: <VsCode gitHubEmbedLink={"https://github1s.com/RandyBoBandy92/moviedatabase"}/>
-    }
-  }
+      component: (
+        <VsCode
+          gitHubEmbedLink={"https://github1s.com/RandyBoBandy92/moviedatabase"}
+        />
+      ),
+    },
+  },
 };
 
 export default appsData;
