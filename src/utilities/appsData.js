@@ -8,11 +8,13 @@ import rayBikeIcon from "../assets/images/icons/raybikesupreme.png";
 import bdmiIcon from "../assets/images/icons/bdmi.svg";
 import iChingIcon from "../assets/images/icons/Iching-hexagram-56new.svg";
 import logoIcon from "../assets/images/logo/black/favicon-32x32.png";
+import hackerIcon from "../assets/images/icons/code-slash.svg";
 // Import components
 import Contact from "../pages/contact/Contact";
 import About from "../pages/about/About";
 import Post from "../components/post/Post";
 import VsCode from "../components/vsCode/VsCode";
+import HackerTyper from "../components/hackerTyper/HackerTyper";
 
 // appsData contains both routing information and components
 // the schema is flexible, as components which use this data
@@ -114,6 +116,13 @@ const appsData = {
       gitHubLink: "https://github.com/RandyBoBandy92/randyportfolio",
       vsCodeId: "code-portfolio",
       component: <Post appId="portfolio" postName={"portfolio"} />,
+    },
+    hackerTyper: {
+      id: "hacker-typer",
+      external: false,
+      title: "Hacker Typer",
+      icon: hackerIcon,
+      component: <HackerTyper />,
     },
   },
   vsCode: {

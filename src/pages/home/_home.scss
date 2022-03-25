@@ -37,9 +37,18 @@
 
 @include mqMin($desktopBreakpoint) {
   .projects {
-    max-width: fit-content;
+    max-width: 650px;
     margin: 2rem auto 0 auto;
     row-gap: unset;
-    display: flex;
+    // display: flex;
+    // justify-content: center;
+    // flex-wrap: wrap;
+  }
+}
+
+@include mqMin($desktopWideBreakpoint) {
+  .projects {
+    max-width: 900px;
+    grid-template-columns: auto auto auto auto auto;
   }
 }
