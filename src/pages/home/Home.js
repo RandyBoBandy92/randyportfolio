@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import "./_home.scss";
 import SkipToContent from "../../components/skip/SkipToContent";
+import { siteTitle } from "../../globals/globals";
 
 const Home = () => {
   // searchParams and activeApps work together to determine which apps are active
@@ -60,6 +61,10 @@ const Home = () => {
       }
     }
     setActiveApps(appsToShow);
+    // if there are no apps to show, change the site title to "Randy Gulak | Portfolio"
+    if (appsToShow.length === 0) {
+      document.title = siteTitle;
+    }
   }, [searchParams]);
 
   const updateSearchParams = (appId) => {
@@ -117,7 +122,8 @@ const Home = () => {
       }
     });
     updateSearchParams(appData.id);
-    document.title = `Randy Gulak | Portfolio - ${appData.title}`;
+    // document.title = `Randy Gulak | Portfolio - ${appData.title}`;
+    document.title = siteTitle + ` - ${appData.title}`;
   };
 
   const backgroundFile = mobileView ? "monkeBgMobile.webp" : "monkeBg.webp";
