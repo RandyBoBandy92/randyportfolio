@@ -62,7 +62,7 @@ const HackerTyper = () => {
     setHackTimeout(null);
     setHackTimeout(
       setTimeout(() => {
-        if (audioRef) {
+        if (audioRef.current !== null) {
           audioRef.current.pause();
         }
         document.querySelectorAll(".hacker-video").forEach((video) => {
@@ -80,7 +80,7 @@ const HackerTyper = () => {
       <video
         className="hacker-video video-1 hide"
         title="hacker hacking"
-        autoplay
+        autoPlay
         muted
       >
         <source
@@ -91,7 +91,7 @@ const HackerTyper = () => {
       <video
         className="hacker-video video-2 hide"
         title="hacker hacking"
-        autoplay
+        autoPlay
         muted
       >
         <source
@@ -102,7 +102,7 @@ const HackerTyper = () => {
       <video
         className="hacker-video video-3 hide"
         title="hacker hacking"
-        autoplay
+        autoPlay
         muted
       >
         <source
@@ -113,7 +113,7 @@ const HackerTyper = () => {
       <video
         className="hacker-video video-4 hide"
         title="hacker hacking"
-        autoplay
+        autoPlay
         muted
       >
         <source
