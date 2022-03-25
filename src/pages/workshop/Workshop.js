@@ -15,7 +15,6 @@ const WorkShop = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const testFunc = () => {
     // setSearchParams({ test: [1, 2, 3] });
-    console.log(searchParams.getAll("app"));
   };
   const app = searchParams.getAll("app");
 
