@@ -94,7 +94,8 @@ This is the render function for that component, you can read thru the comments t
       // Function looks at the current hexagram number contained in State,
       // and compares it to the Transformed Hexagram.
       // If the numbers are the same, it will only show 1 line.
-      // if they are not the same, the display css of the "transformed" line changes from "none" to "block" and is displayed.
+      // if they are not the same, the display css of the "transformed"
+      // line changes from "none" to "block" and is displayed.
       if (hexagram.number && hexagram.transformNumber) {
         // if they both are true, they equal something
         // console.log("both hexagrams are something")
@@ -124,8 +125,10 @@ This is the render function for that component, you can read thru the comments t
       <div className={`line line-${this.props.line.lineNum}`}>
         <img
           className="primary-hexagram"
-          ref={this.autoClick} // this was a debug utility 
-          src={this.props.line.image} // state also tells the image what source to use
+          ref={this.autoClick}
+          // this was a debug utility 
+          src={this.props.line.image}
+          // state also tells the image what source to use
           style={this.primaryStyles}
           // this style value does not change, but I wanted it to be consistent..
           // Probably could have simplified things.
