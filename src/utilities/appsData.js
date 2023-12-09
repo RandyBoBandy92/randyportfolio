@@ -9,12 +9,14 @@ import bdmiIcon from "../assets/images/icons/bdmi.svg";
 import iChingIcon from "../assets/images/icons/Iching-hexagram-56new.svg";
 import logoIcon from "../assets/images/logo/black/favicon-32x32.png";
 import hackerIcon from "../assets/images/icons/code-slash.svg";
+import calculatorIcon from "../assets/images/icons/calculator.svg";
 // Import components
 import Contact from "../pages/contact/Contact";
 import About from "../pages/about/About";
 import Post from "../components/post/Post";
 import VsCode from "../components/vsCode/VsCode";
 import HackerTyper from "../components/hackerTyper/HackerTyper";
+import Calculator from "../components/calculator/Calculator";
 
 // appsData contains both routing information and components
 // the schema is flexible, as components which use this data
@@ -51,20 +53,20 @@ const appsData = {
       icon: contactIcon,
       component: <Contact />,
     },
-    blog: {
-      id: "blog",
-      external: true,
-      title: "Blog",
-      hyperlink: "https://blog.randygulak.com/",
-      icon: blogIcon,
-    },
-    garden: {
-      id: "garden",
-      external: true,
-      title: "Garden",
-      hyperlink: "https://publish.obsidian.md/randybobandy/Garden+entrance",
-      icon: gardenIcon,
-    },
+    // blog: {
+    //   id: "blog",
+    //   external: true,
+    //   title: "Blog",
+    //   hyperlink: "https://blog.randygulak.com/",
+    //   icon: blogIcon,
+    // },
+    // garden: {
+    //   id: "garden",
+    //   external: true,
+    //   title: "Garden",
+    //   hyperlink: "https://publish.obsidian.md/randybobandy/Garden+entrance",
+    //   icon: gardenIcon,
+    // },
   },
   projects: {
     fetch: {
@@ -123,6 +125,13 @@ const appsData = {
       title: "Hacker Typer",
       icon: hackerIcon,
       component: <HackerTyper />,
+    },
+    calculator: {
+      id: "calculator",
+      external: false,
+      title: "Calculator",
+      icon: calculatorIcon,
+      component: <Calculator />,
     },
   },
   vsCode: {

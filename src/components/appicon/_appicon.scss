@@ -17,6 +17,14 @@ a.icon {
   }
 }
 
+// between 0px wide and 500px of viewport width: .icon.icon-calculator should not be displayed
+
+@media (max-width: 500px) {
+  .icon.icon-calculator {
+    display: none;
+  }
+}
+
 .icon-img {
   object-fit: contain;
   height: 30px;
