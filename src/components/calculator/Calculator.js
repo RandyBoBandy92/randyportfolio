@@ -28,7 +28,6 @@ export default function Calculator() {
           regex,
           ""
         );
-        debugger;
         setCalculationStatement(
           choppedCalculationStatement + value + lastNumber + ")"
         );
@@ -42,7 +41,6 @@ export default function Calculator() {
           regex2,
           ""
         );
-        debugger;
         setCalculationStatement(
           choppedCalculationStatement2 + value + lastNumber2 + ")"
         );
@@ -81,7 +79,6 @@ export default function Calculator() {
 
   const evaluateCalculation = () => {
     if (calculationStatement) {
-      debugger;
       try {
         const calculationResult = compile(calculationStatement).evaluate();
         if (!isFinite(calculationResult)) {
