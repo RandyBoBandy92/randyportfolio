@@ -139,6 +139,20 @@ a.icon {
     .icon.icon-hacker-typer {
       display: grid;
     }
+
+    // windows styles
+
+    .icon.icon-windows98 {
+      height: 120px;
+      width: 120px;
+      margin-bottom: unset;
+      .icon-img {
+        margin-bottom: 2rem;
+      }
+      .icon-text {
+        bottom: 1rem;
+      }
+    }
   }
 
   // Nav Icon Styles

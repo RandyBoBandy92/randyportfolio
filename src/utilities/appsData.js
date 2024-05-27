@@ -6,6 +6,7 @@ import gardenIcon from "../assets/images/icons/obsidian.svg";
 import fetchIcon from "../assets/images/icons/fetch.svg";
 import rayBikeIcon from "../assets/images/icons/raybikesupreme.png";
 import bdmiIcon from "../assets/images/icons/bdmi.svg";
+import windowsIcon from "../assets/images/icons/windows.svg";
 import iChingIcon from "../assets/images/icons/Iching-hexagram-56new.svg";
 import logoIcon from "../assets/images/logo/black/favicon-32x32.png";
 import hackerIcon from "../assets/images/icons/code-slash.svg";
@@ -69,16 +70,6 @@ const appsData = {
     // },
   },
   projects: {
-    fetch: {
-      id: "fetch",
-      external: false,
-      title: "Fetch",
-      icon: fetchIcon,
-      // liveLink: "https://fetch.bcitwebdeveloper.ca/",
-      gitHubLink: "",
-      // will have to wait until i can fork this and put it on a public repo
-      component: <Post appId="fetch" postName={"fetch"} />,
-    },
     rayBikeSupreme: {
       id: "ray-bike-supreme",
       external: false,
@@ -132,6 +123,13 @@ const appsData = {
       title: "Calculator",
       icon: calculatorIcon,
       component: <Calculator />,
+    },
+    windows98: {
+      id: "windows98",
+      external: true,
+      title: "Windows",
+      icon: windowsIcon,
+      hyperlink: "https://www.randygulak.com/landingPageOld",
     },
   },
   vsCode: {
