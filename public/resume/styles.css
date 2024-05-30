@@ -1,0 +1,229 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+body {
+  padding: 10px;
+}
+
+/* Utility Classes */
+
+.hide {
+  display: none !important;
+}
+
+/* Component Styles */
+
+.button {
+  all: unset;
+  padding: 0.5rem 1rem;
+  background-color: green;
+  border-radius: 12px;
+  color: white;
+}
+
+.button:hover {
+  background-color: rgb(24, 165, 24);
+  cursor: pointer;
+}
+
+/* END Component Styles */
+
+/* Mobile Styles */
+
+.resume {
+  padding: 10px;
+}
+
+/* Header Styles */
+
+header h1 {
+  font-size: 1.5em;
+}
+
+.primary-header {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.links {
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+
+.title-and-print {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.title-and-print h1 {
+  grid-column: 1/4;
+}
+
+.title-and-print button {
+  grid-column: 4;
+  width: 2.5rem;
+  place-self: center;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+section h2 {
+  border-bottom: 2px solid #000;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-size: 1.2em;
+}
+
+/* Intro Styles */
+
+section.intro {
+  text-align: left;
+  margin: 7.5rem 0 1rem 0;
+}
+
+/* Job Styles */
+
+.job h3,
+.education h3 {
+  font-size: 1em;
+}
+
+/* Education Styles */
+
+@media (min-width: 600px) {
+  /* Responsive Styles */
+  .resume {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Header Styles */
+
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .primary-header {
+    position: static;
+    padding: 0;
+  }
+
+  .links {
+    border-bottom: unset;
+  }
+
+  header .title-and-print h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    grid-column: 2/4;
+  }
+
+  section.buttons {
+    justify-content: center;
+  }
+
+  header p {
+    margin-bottom: 5px;
+  }
+
+  header p.intro {
+    text-align: left;
+  }
+
+  section.intro {
+    margin: 1rem 0;
+  }
+
+  .title-timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .job,
+  .education {
+    margin-bottom: 10px;
+  }
+
+  .job h3,
+  .education h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 900px) {
+  .resume {
+    padding: 40px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  /* attempting to do uhhh the page calc thing */
+
+  @page {
+    size: auto;
+    margin: 1.7rem;
+  }
+
+  body {
+    padding: 0;
+    background: none;
+  }
+
+  .resume {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  section h2 {
+    font-size: 1.5em;
+  }
+
+  .job h3,
+  .education h3 {
+    font-size: 1.2em;
+  }
+}

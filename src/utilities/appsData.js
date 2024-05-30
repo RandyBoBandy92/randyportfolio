@@ -131,6 +131,13 @@ const appsData = {
       icon: windowsIcon,
       hyperlink: "https://www.randygulak.com/landingPageOld",
     },
+    resume: {
+      id: "resume",
+      external: true,
+      title: "Resume",
+      icon: windowsIcon,
+      hyperlink: "./resume",
+    },
   },
   vsCode: {
     iChing: {
