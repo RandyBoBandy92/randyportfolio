@@ -73,20 +73,14 @@ const HackerTyper = () => {
   };
   return (
     <div tabIndex={0} onKeyDown={hackThePlanet} className="hacker-typer">
-      <audio
-        ref={audioRef}
-        src={`${process.env.PUBLIC_URL}/assets/rageValley.mp3`}
-      ></audio>
+      <audio ref={audioRef} src={`/assets/rageValley.mp3`}></audio>
       <video
         className="hacker-video video-1 hide"
         title="hacker hacking"
         autoPlay
         muted
       >
-        <source
-          src={`${process.env.PUBLIC_URL}/assets/hacker1.mp4`}
-          type="video/mp4"
-        />
+        <source src={`/assets/hacker1.mp4`} type="video/mp4" />
       </video>
       <video
         className="hacker-video video-2 hide"
@@ -94,10 +88,7 @@ const HackerTyper = () => {
         autoPlay
         muted
       >
-        <source
-          src={`${process.env.PUBLIC_URL}/assets/hacker1.mp4`}
-          type="video/mp4"
-        />
+        <source src={`/assets/hacker1.mp4`} type="video/mp4" />
       </video>
       <video
         className="hacker-video video-3 hide"
@@ -105,10 +96,7 @@ const HackerTyper = () => {
         autoPlay
         muted
       >
-        <source
-          src={`${process.env.PUBLIC_URL}/assets/hacker1.mp4`}
-          type="video/mp4"
-        />
+        <source src={`/assets/hacker1.mp4`} type="video/mp4" />
       </video>
       <video
         className="hacker-video video-4 hide"
@@ -116,10 +104,7 @@ const HackerTyper = () => {
         autoPlay
         muted
       >
-        <source
-          src={`${process.env.PUBLIC_URL}/assets/hacker1.mp4`}
-          type="video/mp4"
-        />
+        <source src={`/assets/hacker1.mp4`} type="video/mp4" />
       </video>
       <Code id="hacker-man" className={"lang-jsx"}>
         {!hackerOutput

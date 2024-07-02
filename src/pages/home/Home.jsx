@@ -8,6 +8,8 @@ import { useSearchParams } from "react-router-dom";
 import "./_home.scss";
 import SkipToContent from "../../components/skip/SkipToContent";
 import { siteTitle } from "../../globals/globals";
+import desktopBG from "/assets/monkeBg.webp";
+import mobileBG from "/assets/monkeBgMobile.webp";
 
 const Home = () => {
   // searchParams and activeApps work together to determine which apps are active
@@ -126,7 +128,7 @@ const Home = () => {
     document.title = siteTitle + ` - ${appData.title}`;
   };
 
-  const backgroundFile = mobileView ? "monkeBgMobile.webp" : "monkeBg.webp";
+  const backgroundFile = mobileView ? mobileBG : desktopBG;
 
   return (
     <>
@@ -134,7 +136,7 @@ const Home = () => {
       <div
         id="app"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/${backgroundFile})`,
+          backgroundImage: `url(${backgroundFile})`,
         }}
       >
         <Header />
