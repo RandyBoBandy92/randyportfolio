@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { calculatorButtons } from "../../globals/calculator-button-data.js";
-import Screen from "./Screen";
-import Button from "./Button";
-import History from "./History";
+import Screen from "./Screen.jsx";
+import Button from "./Button.jsx";
+import History from "./History.jsx";
 import "./_calculator.scss";
 import { evaluate, compile } from "mathjs";
 

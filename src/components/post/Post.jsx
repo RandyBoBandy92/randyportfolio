@@ -15,13 +15,13 @@ const Img = (props) => {
     });
     // add the full file path to each item in the array
     const srcSetArrayWithPath = srcSetArray.map((item) => {
-      return `${process.env.PUBLIC_URL}/markdown/${props.postName}/${item}`;
+      return `/markdown/${props.postName}/${item}`;
     });
     // join the array back into a string
     const srcSet = srcSetArrayWithPath.join(",");
     return (
       <img
-        src={`${process.env.PUBLIC_URL}/markdown/${props.postName}/${props.src}`}
+        src={`/markdown/${props.postName}/${props.src}`}
         srcSet={srcSet}
         alt={props.alt}
         className={"post-img"}
@@ -34,7 +34,7 @@ const Img = (props) => {
   return (
     <img
       className="post-img"
-      src={`${process.env.PUBLIC_URL}/markdown/${props.postName}/${props.src}`}
+      src={`/markdown/${props.postName}/${props.src}`}
       alt={props.alt}
       loading="lazy"
       height="auto"
@@ -44,10 +44,7 @@ const Img = (props) => {
 
 const Source = (props) => {
   return (
-    <source
-      src={`${process.env.PUBLIC_URL}/markdown/${props.postName}/${props.src}`}
-      type="video/mp4"
-    />
+    <source src={`/markdown/${props.postName}/${props.src}`} type="video/mp4" />
   );
 };
 
@@ -55,14 +52,10 @@ const Post = ({ appId, postName }) => {
   const [postContent, setPostContent] = useState("");
   const appData = appsData.projects[appId];
   useEffect(() => {
-    import(`../../../public/markdown/${postName}/${postName}.md`).then(
-      (post) => {
-        fetch(post.default)
-          .then((response) => response.text())
-          .then((text) => setPostContent(text))
-          .catch((error) => console.log(error));
-      }
-    );
+    fetch(`/markdown/${postName}/${postName}.md`)
+      .then((response) => response.text())
+      .then((text) => setPostContent(text))
+      .catch((error) => console.log(error));
   }, []);
 
   return (
