@@ -1,5 +1,3 @@
-import { sqrt, square, cube } from "mathjs";
-
 export const calculatorButtons = [
   {
     type: "clear",

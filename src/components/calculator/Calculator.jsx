@@ -4,7 +4,6 @@ import Screen from "./Screen.jsx";
 import Button from "./Button.jsx";
 import History from "./History.jsx";
 import "./_calculator.scss";
-import { evaluate, compile } from "mathjs";
 
 export default function Calculator() {
   const [calculationStatement, setCalculationStatement] = useState("");
@@ -17,13 +16,9 @@ export default function Calculator() {
         setCalculationStatement(calculationStatement + value);
         setCalculationDisplay(calculationDisplay + `${text}(`);
         break;
-      case "square":
-        // chop up the calculation statement, I need to grab the last matching regex number at the end of the string:
-        // then I need to chop that number off the string, append the the value parameter
-        // then append the number back to the string and an enclosing rounded bracket
+      case "square": {
         const regex = /(\d+)(?!.*\d)/;
-
-        const lastNumber = calculationStatement.match(regex)[0]; // why is [0] the last item in the array?
+        const lastNumber = calculationStatement.match(regex)[0];
         const choppedCalculationStatement = calculationStatement.replace(
           regex,
           ""
@@ -31,12 +26,12 @@ export default function Calculator() {
         setCalculationStatement(
           choppedCalculationStatement + value + lastNumber + ")"
         );
-        setCalculationDisplay(calculationDisplay + "\u00b2"); // \u00b2 is the unicode for the superscript 2
+        setCalculationDisplay(calculationDisplay + "\u00b2");
         break;
-      case "cubed":
+      }
+      case "cubed": {
         const regex2 = /(\d+)(?!.*\d)/;
-
-        const lastNumber2 = calculationStatement.match(regex2)[0]; // why is [0] the last item in the array?
+        const lastNumber2 = calculationStatement.match(regex2)[0];
         const choppedCalculationStatement2 = calculationStatement.replace(
           regex2,
           ""
@@ -44,10 +39,9 @@ export default function Calculator() {
         setCalculationStatement(
           choppedCalculationStatement2 + value + lastNumber2 + ")"
         );
-
-        // setCalculationStatement(calculationStatement + value);
-        setCalculationDisplay(calculationDisplay + "\u00b3"); // \u00b3 is the unicode for the superscript 3
+        setCalculationDisplay(calculationDisplay + "\u00b3");
         break;
+      }
       case "inverse":
         setCalculationStatement(calculationStatement + value);
         setCalculationDisplay(calculationDisplay + value);
@@ -77,9 +71,11 @@ export default function Calculator() {
     }
   };
 
-  const evaluateCalculation = () => {
+  const evaluateCalculation = async () => {
     if (calculationStatement) {
       try {
+        // Lazy load the compile function from mathjs
+        const { compile } = await import("mathjs");
         const calculationResult = compile(calculationStatement).evaluate();
         if (!isFinite(calculationResult)) {
           setCalculationStatement("");
