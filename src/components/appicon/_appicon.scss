@@ -153,6 +153,19 @@ a.icon {
         bottom: 1rem;
       }
     }
+
+    a.icon.icon-resume {
+      height: 120px;
+      width: 120px;
+      .icon-img {
+        // make the svg background white
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+          brightness(100%) contrast(100%);
+      }
+      .icon-text {
+        bottom: 0.2rem;
+      }
+    }
   }
 
   // Nav Icon Styles

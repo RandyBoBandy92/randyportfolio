@@ -11,6 +11,7 @@ import iChingIcon from "../assets/images/icons/Iching-hexagram-56new.svg";
 import logoIcon from "../assets/images/logo/black/favicon-32x32.png";
 import hackerIcon from "../assets/images/icons/code-slash.svg";
 import calculatorIcon from "../assets/images/icons/calculator.svg";
+import resumeIcon from "../assets/images/icons/resume.svg";
 // Import components
 import Contact from "../pages/contact/Contact";
 import About from "../pages/about/About";
@@ -135,7 +136,7 @@ const appsData = {
       id: "resume",
       external: true,
       title: "Resume",
-      icon: windowsIcon,
+      icon: resumeIcon,
       hyperlink: "./resume",
     },
   },
