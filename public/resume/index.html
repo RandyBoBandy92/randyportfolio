@@ -3,13 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Resume</title>
+    <title>Randy Gulak Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="./resume.js"></script>
   </head>
   <body>
     <div class="content">
-      <div class="resume">
+      <div id="resume">
         <header>
           <div class="primary-header">
             <div class="title-and-print">
@@ -18,47 +24,52 @@
             </div>
             <p>Web Developer & Instructor</p>
             <p class="links">
-              <a href="mailto:randy@randygulak.com">randy@randygulak.com</a> |
-              <a href="tel:7788662928">(778) 866-2928</a>
+              <a href="mailto:randy@randygulak.com">randy@randygulak.com</a>
             </p>
           </div>
           <section class="intro">
             <p>
-              Front-End Web Developer, BCIT FWD Program graduate. Designed and
-              built complex web applications using HTML/CSS/JavaScript and React
-              while maintaining modern best practices in accessibility and user
-              experience. Diverse work background and areas of knowledge from
-              industrial sales, construction, to computer repair & web design.
-              Lifelong passion for learning and technology.
+              Web Developer and BCIT instructor. Designed and built complex web
+              applications using HTML/CSS/JavaScript and React while maintaining
+              modern best practices in accessibility and user experience.
+              Diverse work background and areas of knowledge from industrial
+              sales, construction, to computer repair & web design. Lifelong
+              passion for learning and technology.
             </p>
           </section>
           <section class="buttons">
-            <a class="button" href="#education">Education</a>
             <a class="button" href="#experience">Experience</a>
+            <a class="button" href="#education">Education</a>
+            <a class="button" href="#volunteering">Volunteering</a>
+            <a class="button" href="#references">References</a>
           </section>
         </header>
-        <section id="education">
-          <h2>Education</h2>
-          <div class="education">
-            <div class="title-timeline">
-              <h3>Front End Developer Certificate</h3>
-              <p class="timeline">Sept 2021 - April 2022</p>
-            </div>
-            <p>BCIT | School of Computing & Academic Studies</p>
-          </div>
-          <!-- More education entries -->
-        </section>
         <section id="experience">
           <h2>Experience</h2>
-          <div class="job">
+          <div class="job chunk">
             <div class="title-timeline">
               <h3>Instructor</h3>
               <p class="timeline">2023 - Present</p>
             </div>
             <p>BCIT | Hybrid - Vancouver BC</p>
             <p>Job Description</p>
+            <ul>
+              <li>
+                Created multiple courses following academic learning
+                requirements
+              </li>
+              <li>
+                Instructed students in classes of 30+ in the fundamentals of
+                JavaScript and React
+              </li>
+              <li>
+                Held weekly classes to assist students with projects and
+                assignments, as well as improvisational mini lessons on topics
+                students were struggling with
+              </li>
+            </ul>
           </div>
-          <div class="job">
+          <div class="job chunk">
             <div class="title-timeline">
               <h3>Intermediate Web Developer</h3>
               <p class="timeline">2023 - 2024</p>
@@ -68,9 +79,30 @@
               <p class="timeline">2022 - 2023</p>
             </div>
             <p>Silver Icing | Hybrid - Surrey BC</p>
-            <p>Job Description</p>
+            <ul>
+              <li>
+                Managed multiple tasks and projects in weekly sprints, as well
+                as handling emergent production issues.
+              </li>
+              <li>
+                Completed both front and back-end work, worked in all areas of
+                company tech stack (Wordpress, React, Redux, JQuery, PHP, MySQL)
+              </li>
+              <li>
+                Solved production deployment issues in Digital Ocean servers.
+              </li>
+              <li>
+                Developed and launched new RMA system to replace old paper based
+                return system, with over 10,000+ RMAs completed following deployment
+              </li>
+              <li>
+                Maintained PHP/JQuery based warehouse management system,
+                including picking, packing and shipping of orders.
+              </li>
+            </ul>
           </div>
-          <div class="job">
+          <div class="header-slot"></div>
+          <div class="job chunk">
             <div class="title-timeline">
               <h3>Lane Closure Technician</h3>
               <p class="timeline">2017 - 2020</p>
@@ -83,7 +115,7 @@
               </li>
               <li>
                 Managed teams of 6+ on complex long-term projects, coordinated
-                traffic flow on complex job sites up to 1km in length
+                traffic flow on complex job sites up to 1 KM in length
               </li>
               <li>
                 Supervised large inter-municipal projects, maintained accurate
@@ -92,7 +124,7 @@
               </li>
             </ul>
           </div>
-          <div class="job">
+          <div class="job chunk">
             <div class="title-timeline">
               <h3>Inside Sales Representative</h3>
               <p class="timeline">2014 - 2015</p>
@@ -107,11 +139,11 @@
                 Managed large contracts with complex logistics, with up to
                 $500,000 worth of materials shipping from dozens of locations,
                 requiring complex supply chain additions including tags written
-                in multiple languages and specialized heat- treated reels
+                in multiple languages and specialized heat-treated reels
               </li>
             </ul>
           </div>
-          <div class="job">
+          <div class="job chunk">
             <div class="title-timeline">
               <h3>Search Engine Evaluator</h3>
               <p class="timeline">2013 - 2013</p>
@@ -130,7 +162,8 @@
               </li>
             </ul>
           </div>
-          <div class="job">
+          <div class="header-slot"></div>
+          <div class="job chunk">
             <div class="title-timeline">
               <h3>Sole Proprietor</h3>
               <p class="timeline">2013 - 2017</p>
@@ -138,18 +171,99 @@
             <p>Computer Repair, Web Design | Remote - Vancouver BC</p>
             <ul>
               <li>
-                Rapidly evaluated pages on trustworthiness and flagged content
-                if Blackhat SEO tactics were being used (hidden text, keyword
-                stuffing, malware, etc.)
+                Designed and maintained websites for various small businesses, including environmental consulting firms and digital signage marketing companies.
               </li>
-              <li>Held an average of under 5 minutes per page reviewed</li>
+              <li>Executed successful Google AdSense campaigns to expand client base.</li>
               <li>
-                Maintained a secure workstation via virtual machine in order to
-                prevent infection of my host system
+                Established partnerships with local businesses to provide competitive pricing on hardware and software solutions.
+              </li>
+              <li>
+                Possess a diverse range of experience in computer repair, consulting, and web design.
+              </li>
+            </ul>
+            </ul>
+          </div>
+          <div class="job chunk">
+            <div class="title-timeline">
+              <h3>Technical Support | JavaScript Developer</h3>
+              <p class="timeline">2011 - 2012</p>
+            </div>
+            <p>Stream Global Services, Chilliwack BC</p>
+            <ul>
+              <li>
+                Developed a JavaScript call center agent support tool designed
+                to automate agent note taking and offer policy recommendations
+                based on the customer's issue(s). Created a training simulator
+                of the web application in PowerPoint for agent on-boarding
+              </li>
+              <li>
+                Offered premium technical & sales support on a variety of
+                electronics equipment including laptops, printers, and other
+                accessories while maintaining a 30-minute average call time
               </li>
             </ul>
           </div>
           <!-- More job entries -->
+        </section>
+        <section id="education">
+          <h2>Education</h2>
+          <div class="education">
+            <div class="title-timeline">
+              <h3>Polytechnic Teaching Certificate</h3>
+              <p class="timeline">2023 - Present</p>
+            </div>
+            <p>BCIT | School of Computing & Academic Studies</p>
+          </div>
+          <div class="education">
+            <div class="title-timeline">
+              <h3>Front End Developer Certificate</h3>
+              <p class="timeline">Sept 2021 - April 2022</p>
+            </div>
+            <p>BCIT | School of Computing & Academic Studies</p>
+          </div>
+          <!-- More education entries -->
+        </section>
+        <div class="header-slot"></div>
+        <section id="volunteering">
+          <h2>Volunteering</h2>
+          <div class="volunteer chunk">
+            <div class="title-timeline">
+              <h3>Support Group Co-Facilitator</h3>
+              <p class="timeline">2016 - 2017</p>
+            </div>
+            <p>Chilliwack Hospice Society</p>
+            <ul>
+              <li>
+                Co-Facilitator of a support group for youths affected by the
+                loss of a family member, primarily through art therapy
+              </li>
+            </ul>
+          </div>
+          <div class="volunteer chunk">
+            <div class="title-timeline">
+              <h3>Support Group Leader</h3>
+              <p class="timeline">2012 - 2016</p>
+            </div>
+            <p>People In Pain Network</p>
+            <ul>
+              <li>
+                Co-Leader of a support group for youths affected by chronic pain
+                conditions
+              </li>
+              <li>
+                Annual speaker for two years at children's hospital "PAIN 101"
+                program, on the topic of how parents can better relate to and
+                understand the needs of children with chronic pain conditions
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section id="references">
+          <h2>References</h2>
+          <p>References available upon request</p>
+          <p>
+            I have also worked several other jobs, for more info just ask :)
+          </p>
         </section>
         <!-- More sections as needed -->
       </div>
