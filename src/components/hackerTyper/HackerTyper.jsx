@@ -19,7 +19,7 @@ const HackerTyper = () => {
     document.getElementById("hacker-man").scrollTop =
       document.getElementById("hacker-man").scrollHeight;
     // get the audioRef position
-    if (releaseTheNerds || audioRef.current.currentTime > 15.9) {
+    if (releaseTheNerds || audioRef.current.currentTime > 1.6) {
       // get all the videos with a class of 'hacker-video'
       document.querySelectorAll(".hacker-video").forEach((video) => {
         video.play();
@@ -72,8 +72,13 @@ const HackerTyper = () => {
     );
   };
   return (
-    <div tabIndex={0} onKeyDown={hackThePlanet} className="hacker-typer">
-      <audio ref={audioRef} src={`/assets/rageValley.mp3`}></audio>
+    <div
+      tabIndex={0}
+      onKeyDown={hackThePlanet}
+      onTouchStart={hackThePlanet}
+      className="hacker-typer"
+    >
+      <audio ref={audioRef} src={`/assets/rageValley-short.mp3`}></audio>
       <video
         className="hacker-video video-1 hide"
         title="hacker hacking"
@@ -108,7 +113,7 @@ const HackerTyper = () => {
       </video>
       <Code id="hacker-man" className={"lang-jsx"}>
         {!hackerOutput
-          ? "click here and start typing! ( PC Only - sorry tablets :( )) \nWARNING: will play audio"
+          ? "click here and start typing/tapping!  \nWARNING: will play audio"
           : hackerOutput}
       </Code>
     </div>

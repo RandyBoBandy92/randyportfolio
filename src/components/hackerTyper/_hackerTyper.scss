@@ -10,11 +10,33 @@
     width: 100% !important;
     height: 100% !important;
     overflow-y: hidden;
+    code {
+      white-space: pre-wrap !important;
+    }
   }
 }
 
-.hacker-video {
+.hacker-video.hide {
   display: none;
+}
+
+.hacker-video {
+  position: fixed;
+  width: 100%;
+  display: block;
+  &.video-1 {
+    top: 0;
+    left: 0;
+  }
+  &.video-2 {
+    display: none;
+  }
+  &.video-3 {
+    display: none;
+  }
+  &.video-4 {
+    display: none;
+  }
 }
 
 @include mqMin($desktopExtraWideBreakpoint) {

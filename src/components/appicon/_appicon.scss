@@ -39,6 +39,39 @@ a.icon {
   white-space: nowrap;
 }
 
+// Nav Icon Styles
+
+nav {
+  // About Icon Styles
+
+  .icon.icon-about {
+    background-color: unset;
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    .icon-img {
+      width: 78px;
+      height: 78px;
+    }
+    .icon-text {
+      bottom: -21px;
+      left: 49%;
+    }
+  }
+  .icon.icon-contact {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    .icon-img {
+      // width: 80px;
+      // height: 80px;
+    }
+    .icon-text {
+      bottom: -30px;
+    }
+  }
+}
+
 // Ray Bike Icon Styles
 
 .icon-ray-bike-supreme .icon-text {
@@ -72,7 +105,7 @@ a.icon {
 // Hacker Typer Styles
 
 .icon.icon-hacker-typer {
-  display: none;
+  // display: none;
 }
 
 // Desktop Icon Styles

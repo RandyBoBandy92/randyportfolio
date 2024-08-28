@@ -11,6 +11,7 @@ nav {
     width: 100%;
     grid-template-columns: 1fr 1fr;
     padding: 1rem 0;
+    align-items: center;
   }
 }
 
@@ -19,6 +20,12 @@ nav li {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+// Nav button override
+
+nav button.icon {
+  margin: 0;
 }
 
 // Desktop Nav Styles

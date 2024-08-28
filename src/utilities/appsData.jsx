@@ -1,5 +1,6 @@
 // Import assets
 import aboutIcon from "../assets/images/icons/about.svg";
+import aboutIconAnimated from "../assets/images/logo/RG-small.gif";
 import contactIcon from "../assets/images/icons/contact.svg";
 import blogIcon from "../assets/images/icons/blog.svg";
 import gardenIcon from "../assets/images/icons/obsidian.svg";
@@ -45,7 +46,7 @@ const appsData = {
       id: "about",
       external: false,
       title: "About",
-      icon: aboutIcon,
+      icon: aboutIconAnimated,
       component: <About />,
     },
     contact: {
