@@ -15,7 +15,7 @@ const About = () => {
         />
         <div className="social-icons">
           <a
-            href="https://www.linkedin.com/in/ryangulak/"
+            href="https://www.linkedin.com/in/randygulak/"
             className="social-link"
             rel="noreferrer noopener"
             target="_blank"
