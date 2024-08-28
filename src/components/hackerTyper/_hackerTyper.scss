@@ -20,21 +20,32 @@
   display: none;
 }
 
-.hacker-video {
-  position: fixed;
-  width: 100%;
-  display: block;
-  &.video-1 {
-    top: 0;
-    left: 0;
-  }
-  &.video-2 {
+@include mqMax(500px) {
+  .hacker-video.hide {
     display: none;
   }
-  &.video-3 {
-    display: none;
+  .hacker-video {
+    position: fixed;
+    width: 100%;
+    display: block;
+    &.video-1 {
+      top: 0;
+      left: 0;
+    }
+    &.video-2 {
+      display: none;
+    }
+    &.video-3 {
+      display: none;
+    }
+    &.video-4 {
+      display: none;
+    }
   }
-  &.video-4 {
+}
+
+@include mqMin(500px) {
+  .hacker-video {
     display: none;
   }
 }
