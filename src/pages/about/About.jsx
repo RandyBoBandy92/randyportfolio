@@ -1,5 +1,5 @@
 import "./_about.scss";
-import profilePic from "../../assets/images/profilePic.jpeg";
+import profilePic from "../../assets/images/profile.jpg";
 import linkedIn from "../../assets/images/icons/linkedin.svg";
 import gitHub from "../../assets/images/icons/github.svg";
 
