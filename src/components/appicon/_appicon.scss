@@ -104,8 +104,10 @@ nav {
 
 // Hacker Typer Styles
 
-.icon.icon-hacker-typer {
+.icon.icon-hacker-typer .icon-text {
   // display: none;
+  bottom: -3.5rem;
+  white-space: normal;
 }
 
 // Desktop Icon Styles
@@ -171,6 +173,10 @@ nav {
 
     .icon.icon-hacker-typer {
       display: grid;
+      .icon-text {
+        bottom: -0.5rem;
+        white-space: normal;
+      }
     }
 
     // windows styles
