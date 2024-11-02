@@ -12,7 +12,7 @@ import iChingIcon from "../assets/images/icons/Iching-hexagram-56new.svg";
 import logoIcon from "../assets/images/logo/black/favicon-32x32.png";
 import hackerIcon from "../assets/images/icons/code-slash.svg";
 import calculatorIcon from "../assets/images/icons/calculator.svg";
-import resumeIcon from "../assets/images/icons/resume.svg";
+import resumeIcon from "../assets/images/icons/resumeFilled.svg";
 import codePencilIcon from "../assets/images/icons/codePencil.svg";
 // Import components
 import Contact from "../pages/contact/Contact";
@@ -56,6 +56,13 @@ const appsData = {
       title: "Contact",
       icon: contactIcon,
       component: <Contact />,
+    },
+    resume: {
+      id: "resume",
+      external: true,
+      title: "Resume",
+      icon: resumeIcon,
+      hyperlink: "./resume",
     },
     // blog: {
     //   id: "blog",
@@ -133,13 +140,6 @@ const appsData = {
       title: "Windows",
       icon: windowsIcon,
       hyperlink: "https://www.randygulak.com/landingPageOld",
-    },
-    resume: {
-      id: "resume",
-      external: true,
-      title: "Resume",
-      icon: resumeIcon,
-      hyperlink: "./resume",
     },
     codePencil: {
       id: "code-pencil",
