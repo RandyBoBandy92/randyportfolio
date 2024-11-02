@@ -13,6 +13,7 @@ import logoIcon from "../assets/images/logo/black/favicon-32x32.png";
 import hackerIcon from "../assets/images/icons/code-slash.svg";
 import calculatorIcon from "../assets/images/icons/calculator.svg";
 import resumeIcon from "../assets/images/icons/resume.svg";
+import codePencilIcon from "../assets/images/icons/codePencil.svg";
 // Import components
 import Contact from "../pages/contact/Contact";
 import About from "../pages/about/About";
@@ -140,6 +141,16 @@ const appsData = {
       icon: resumeIcon,
       hyperlink: "./resume",
     },
+    codePencil: {
+      id: "code-pencil",
+      external: false,
+      title: "Code Pencil",
+      icon: codePencilIcon,
+      liveLink: "https://randybobandy92.github.io/bcit_tutorials/",
+      gitHubLink: "https://github.com/RandyBoBandy92/bcit_tutorials",
+      vsCodeId: "code-codePencil",
+      component: <Post appId="codePencil" postName={"codePencil"} />,
+    },
   },
   vsCode: {
     iChing: {
@@ -179,6 +190,16 @@ const appsData = {
       component: (
         <VsCode
           gitHubEmbedLink={"https://github1s.com/RandyBoBandy92/moviedatabase"}
+        />
+      ),
+    },
+    codePencil: {
+      id: "code-codePencil",
+      title: "VS Code - Code Pencil",
+      external: false,
+      component: (
+        <VsCode
+          gitHubEmbedLink={"https://github1s.com/RandyBoBandy92/bcit_tutorials"}
         />
       ),
     },
