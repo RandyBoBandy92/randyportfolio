@@ -112,6 +112,10 @@ function updateShareUrl() {
 }
 ```
 
+### Templates
+
+My JSON import system allows me to take the small code snippets I've previously saved from my lectures, and turn them into templates. I finally have all my code in one place, and can easily share it with my students.
+
 ### VIM Mode
 
 This is just a CodeMirror addon, but you can't have an editor without VIM...
