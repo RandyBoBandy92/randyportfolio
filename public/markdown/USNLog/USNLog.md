@@ -1,14 +1,17 @@
 # USN Voyage Log Generator: Bringing Sea of Thieves Adventures to Life
 
-As a proud member of the United States Navy (USN) guild in *Sea of Thieves*, I wanted to create a tool to commemorate our adventures on the high seas. Enter the **USN Voyage Log Generator**—a web app designed to capture the essence of every plunder, skirmish, and triumphant return with a personalized and visually immersive logbook.
+![USN Log](usn_log.png)
+
+As a proud member of the United States Navy (USN) guild in *Sea of Thieves*, I wanted to create a tool to make it easier for people to create logs for their voyages. Enter the **USN Voyage Log Generator**—, a tool designed by pirates, for pirates.
 
 ## Inspiration and Goals
 
-Our guild keeps detailed logs of voyages, chronicling the highs and lows of our nautical escapades. But formatting these logs consistently and creatively was a challenge. The goal of the **USN Voyage Log Generator** was simple:
+The goal of the **USN Voyage Log Generator** was simple:
 
 1. Make it easy for members to create beautifully formatted logs.
 2. Incorporate our guild’s lore, aesthetics, and a touch of nautical charm.
 3. Provide options for exporting logs as PDFs or images, ready to share on Discord.
+4. Add an easy system to convert your logs into a Discord message.
 
 ## Features
 
@@ -44,17 +47,7 @@ Breaking long text into pages while maintaining a consistent and visually appeal
 - Overly long lines and single-page overflows were handled by enforcing page breaks and continuing content on the next page.
 
 ### **2. Multi-Page Export**
-Exporting pages as PDFs or images required the use of libraries like `html2pdf` and `html2canvas`. Generating files one page at a time ensured high resolution and format fidelity.
-
-### **3. Responsive Design**
-- On larger screens, logs mimic a parchment-like desktop experience.
-- On mobile, the UI adapts to ensure ease of use without sacrificing functionality.
-
-### **4. Seamless UX**
-Guild feedback led me to add features like:
-- Default templates for quick log creation.
-- A settings modal for intuitive customization.
-- A reset button to start fresh without hassle.
+Exporting pages as PDFs or images required the use of libraries like `html2pdf` and `html2canvas`. 
 
 ## Technical Stack
 
@@ -62,23 +55,3 @@ The app was built using **React** with a focus on maintainability and scalabilit
 - **`html2pdf.js`** and **`html2canvas`**: For high-quality file exports.
 - **Lucide React**: For clean and modern iconography.
 - **Tailwind CSS**: To streamline responsive and aesthetic styling.
-
-## Aesthetics and Thematic Design
-
-The design is steeped in *Sea of Thieves* aesthetics:
-- **Backgrounds**: Custom parchment textures for an old-world feel.
-- **Ship Logos**: Transparent, faded logos that give each log a sense of identity.
-- **Fonts**: Script and handwritten styles evoke the charm of pirate journals.
-
-## Reflection and Next Steps
-
-Developing the **USN Voyage Log Generator** was a labor of love, combining my passion for coding with the creativity of storytelling. It’s been immensely satisfying to see guildmates using the tool to share their adventures.
-
-### Planned Enhancements
-- **Multi-page PDFs**: Combine all pages into a single document for better portability.
-- **Dark Mode**: To better match the *Sea of Thieves* nocturnal vibe.
-- **Expanded Ship Options**: Add more ship logos as our fleet grows.
-
----
-
-If you’re a fellow pirate or a coding enthusiast, feel free to check out the **USN Voyage Log Generator**. It’s a tool designed by a pirate, for pirates—because every tale of treasure deserves to be told. 🏴‍☠️
