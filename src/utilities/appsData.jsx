@@ -14,6 +14,7 @@ import hackerIcon from "../assets/images/icons/code-slash.svg";
 import calculatorIcon from "../assets/images/icons/calculator.svg";
 import resumeIcon from "../assets/images/icons/resumeFilled.svg";
 import codePencilIcon from "../assets/images/icons/codePencil.svg";
+import usnLogIcon from "../assets/images/icons/USN_Logo.svg";
 // Import components
 import Contact from "../pages/contact/Contact";
 import About from "../pages/about/About";
@@ -150,6 +151,16 @@ const appsData = {
       gitHubLink: "https://github.com/RandyBoBandy92/bcit_tutorials",
       vsCodeId: "code-codePencil",
       component: <Post appId="codePencil" postName={"codePencil"} />,
+    },
+    usnLog: {
+      id: "usn-log",
+      external: false,
+      title: "USN Log",
+      icon: usnLogIcon,
+      liveLink: "https://randybobandy92.github.io/USN_Log/",
+      gitHubLink: "https://github.com/RandyBoBandy92/USN_Log",
+      vsCodeId: "code-usn-log",
+      component: <Post appId="usnLog" postName={"USNLog"} />,
     },
   },
   vsCode: {
